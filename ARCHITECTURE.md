@@ -64,3 +64,23 @@ Claude Code 中 `.claude/commands/` 和 `.claude/skills/` 的选择。
 
 ### 适用场景
 没有 CI/CD 的个人项目，但需要防止文件间定义漂移。
+
+---
+
+## 2026-06-12 · Git 安全原则
+
+### 话题
+在 Claude Code 会话中建立强制性的 Git 安全工作流，防止不可挽回的操作。
+
+### 内容
+新增原则 `principles.md#git-安全原则`，定义四条硬规则：
+
+1. **频繁提交** — 每 ~20-50 行修改一个 commit，不攒到"今天干完"
+2. **删除前必提交** — 任何删除操作前先 commit + push，确保 git history 中可恢复
+3. **Push 不拖延** — commit 后立即 push，本地 commit 不视为已保存
+4. **高风险操作前检查** — `reset --hard`、`clean -fd`、`rm -rf` 前确认工作区干净
+
+CLAUDE.md 工作流节新增 Git 安全流程小节，作为所有其他工作流的前提。
+
+### 适用场景
+所有 Claude Code 会话，无例外。尤其是涉及文件删除、批量重构、实验性修改时。

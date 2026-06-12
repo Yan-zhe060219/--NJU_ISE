@@ -78,6 +78,15 @@ pip install -r requirements.txt
 
 ## 工作流
 
+### Git 安全流程（所有操作的前提）
+
+> 详见 `.claude/references/principles.md#git-安全原则`
+
+1. **频繁提交**：每完成一个逻辑独立的修改单元（~20-50 行），立即 `git commit` + `git push`
+2. **删除前必提交**：任何删除操作前，先 commit + push 当前所有修改；删除完成后立即再 commit
+3. **Push 不拖延**：commit 后马上 push，本地 commit 不被视为"已保存"
+4. **高风险操作前检查**：`reset --hard`、`clean -fd`、批量删除前，确认工作区干净
+
 ### 学习流程（课程模式）
 1. 在 `inbox/` 下为每门课程创建文件夹
 2. 把该课程的所有课件（PDF/PPTX）拖入对应文件夹
