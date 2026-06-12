@@ -1,0 +1,17 @@
+1. 将 power of two choices 扩展到 power of d choices。此时 maximum load 是多少？分析和证明你的结论。
+
+2. 计算 FKS perfect hashing 的空间开销的期望和方差，并使用切比雪夫不等式证明其空间开销以高概率不超过 10n.
+
+3. 对于 FKS perfect hashing 如果调整第一层的桶的数目（不是 n 而是另一个供你自由调节的参数 n'），你可以得到空间复杂度更优秀的哈希表吗？分析并证明你的结论。
+
+4. 当 Cuckoo hashing 的负载率达到 0.500001 时，插入失败的概率是多少？(Hint. Let G(m, c/m) be Erdős–Rényi random graph with c > 1. Then with probability 1 − o(1), there exists a connected component H satisfying |V(H)| ≥ Ω(m) and |E(H)| − |V(H)| = Ω(m).)
+
+5. The Method of Four Russians 说到底就是分块并查表。使用 The Method of Four Russians, 构造一个大小为 O(n^{1/c} log n) bits 的 pre-computed look-up table（其中 c 是一个可以自由调节的参数）来在课堂上提到的大小为 O(log n) bits 的 Trie 上以 O(c) 的时间快速查找 Trie 中是否有一个串是查询串的前缀，并返回对应的串的在 Trie 中的字典序。
+
+6. Feistel cipher / Feistel permutation 是一种双射，按如下方式运行: (x₁, x₂) ↦ (f(x₂) ⊕ x₁, x₂)。若假设所有的 x₂ 都不相同，且哈希函数 h 是 k-universal，则 Feistel cipher 可以把 x₁ ∈ {0,1}^t 以 k-universal 的方式均匀随机地映射到 {0,1}^t 中。请构造一个一般的 Feistel cipher，若所有的 x₂ 都不相同，则新的 Feistel cipher 将 x₁ ∈ [n] 以 k-universal 的方式均匀随机地映射到 [n] 中，并证明它是 k-universal。
+
+7. Limited independence meets occupancy:
+• Occupancy problem 中如果使用的是 k-universal hash function family 来放置小球，那么在课堂中讲过的两种情况下以至少 1 − o(1) 的概率 maximum load 分别是多少？
+• 构造一组两两独立的 hash function family，使得 n balls into n bins 的情况下 maximum load 很高，并证明你的结论。
+
+8. 课程中介绍的 tabulation hashing 被称为 simple tabulation hashing。tabulation hashing 还有不少别的扩展和强化。尝试调查并介绍其中一些（你需要使用正规 citation 指出该算法的来源），并尝试解释该 tabulation hashing 克服了其他 tabulation hashing 的什么问题，有什么优点和缺点，尝试解释为什么。你也可以调查一个你喜欢的哈希函数。你的分数取决于你的解释的详细程度和准确程度。

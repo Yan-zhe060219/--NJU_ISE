@@ -1,0 +1,197 @@
+                     ch06--12
+
+q  F  F = { AC, ACD, EAD, EH }
+
+     Ø {   ,    }
+
+ch06__   F                      1
+       [ch06--12]  F  ­ step 1
+
+S=F={
+   fd1) A  C
+   fd2) A C  D
+   fd3) E  A D
+   fd4) E  H
+
+}
+
+ch06__                          2
+[ch06--12]  F  ­ step 1
+
+S={             S1 = {
+                   f1) A  C
+   fd1) A  C       f2) A C  D
+   fd2) A C  D     f3) E  A
+   fd3) E  A D     f4) E  D
+   fd4) E  H       f5) E  H
+}
+                }
+
+         Armstrong
+        fd3
+
+ch06__                         3
+[ch06--12]  F  ­ step 2
+
+S1 = {         q 
+   f1) A  C       
+   f2) A C  D
+   f3) E  A    q  f2 
+   f4) E  D       Ø  f2 
+   f5) E  H          f2 
+                      f2
+}
+
+q  f2 
+  
+
+ch06__                    4
+   [ch06--12]  F  ­ step 2
+
+S1 = {                q  f2 A
+   f1) A  C
+   f2) A C  D         Ø             {    }     +  ={}
+   f3) E  A                                 
+   f4) E  D
+   f5) E  H           Ø D S1 
+                          
+}
+                      Ø  f2 A
+                         A  !
+
+                      Ø  S1     
+
+q  f2 C
+
+Ø       {    }     +  = { , ,  }
+                
+
+Ø D   S1    
+
+Ø    S1 step 3
+      
+
+ch06__                                                 5
+[ch06--12]  F  ­ step 2
+
+        S1 = {         S2 = {
+           f1) A  C       f1) A  C
+           f2) A C  D     f2) A  D
+           f3) E  A       f3) E  A
+           f4) E  D       f4) E  D
+           f5) E  H       f5) E  H
+
+        }              }
+
+Ø  f2 C S2
+Ø S2step 2
+
+ch06__                              6
+[ch06--12]  F  ­ step 3
+
+S2 = {       q 
+   f1) A  C
+   f2) A  D  q 
+   f3) E  A    
+   f4) E  D    
+   f5) E  H
+
+}
+
+ch06__                   7
+[ch06--12]  F  ­ step 3
+
+S2 = {       q  f1           S3 = {
+   f1) A  C       =  - {  }     f1) --------
+   f2) A  D      + = + ?        f2) A  D
+   f3) E  A                     f3) E  A
+   f4) E  D  q                  f4) E  D
+   f5) E  H                     f5) E  H
+                 S3  f1 
+}                            }
+             q 
+                  {}+  f1 
+
+             (C)
+
+             q +  +
+
+ch06__                                        8
+[ch06--12]  F  ­ step 3
+
+S2 = {       q  f2          S3 = {
+   f1) A  C       =  ­ {}      f1) A  C
+   f2) A  D      + = + ?       f2) --------
+   f3) E  A                    f3) E  A
+   f4) E  D  q                 f4) E  D
+   f5) E  H       {}+  f2      f5) E  H
+
+}            (D)            }
+
+             q +  +
+
+ch06__                                       9
+[ch06--12]  F  ­ step 3
+
+S2 = {       q  f3         S3 = {
+   f1) A  C       =  ­ {}     f1) A  C
+   f2) A  D      + = + ?      f2) A  D
+   f3) E  A                   f3) --------
+   f4) E  D  q                f4) E  D
+   f5) E  H       {}+ f3      f5) E  H
+
+}            (A)           }
+
+             q +  +
+
+ch06__                                      10
+[ch06--12]  F  ­ step 3
+
+S2 = {       q  f4          S3 = {
+   f1) A  C       =  ­ {}      f1) A  C
+   f2) A  D      + = + ?       f2) A  D
+   f3) E  A                    f3) E  A
+   f4) E  D  q                 f4) --------
+   f5) E  H       {}+  f4      f5) E  H
+
+}            (D)            }
+
+q + = +
+    S2 S3  S2
+
+ch06__                                       11
+[ch06--12]  F  ­ step 3
+
+S3 = {       q  f5         S4 = {
+   f1) A  C       =  ­ {}     f1) A  C
+   f2) A  D      + = + ?      f2) A  D
+   f3) E  A                   f3) E  A
+             q 
+   f5) E  H       {}+  f5     f5) --------
+}                          }
+             (H)
+
+             q +  +
+
+             ( 3S3 )
+
+ch06__                                      12
+[ch06--12]  F  ­ step 4
+
+Ø 3 S3 
+
+S3 = {       S4 = {
+   f1) A  C     ACD
+   f2) A  D     EAH
+   f3) E  A
+   f5) E  H  }
+
+}
+
+Ø "3NF" step 4
+
+ch06__                   13
+        End of 12
+
+ch06__             14
+

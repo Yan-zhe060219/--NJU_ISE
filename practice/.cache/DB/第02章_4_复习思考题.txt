@@ -1,0 +1,241 @@
+        1
+
+1. 
+2. 
+
+     
+
+ /
+ 
+
+ 
+
+ 
+
+3.  `' 
+4. (SQL)`'  `' 
+
+5. `'
+     
+
+ 
+
+ (domain)
+ `' & 
+ n`n'
+
+ `'`'
+
+ch02__           2
+                                    2
+
+6. 
+     
+     
+     
+     
+
+7. (Key)
+    
+
+8. 
+    
+     
+     
+     
+
+ch02__                                 3
+                                    3
+
+9. 
+    
+
+10.
+
+11.
+   
+
+12.
+
+ch02__                                 4
+                                   4
+
+13.*T1 
+    T1 
+
+14.*T2 
+    T2 
+
+15.*13T1R1
+
+    1, , , 
+    2{, , }.
+
+16.*14T2
+
+    1, , , , 
+    2{, , , }.
+
+ch02__                                5
+        5
+
+17. 
+     
+
+     
+
+18.
+    
+
+    
+        
+
+     `' 
+    `'`'
+     `'  `'
+
+19.  `' (product) 
+
+ 
+
+ 
+
+
+
+ 
+
+ch02__              6
+          6
+
+20. ()
+
+                                              
+
+ , , ,                                        customers (cid, cname, city, discnt)
+
+ , , ,                                        agents (aid, aname, city, percent)
+
+ , , , ,                                      products (pid, pname, city, quantity, price)
+
+        , , , , ,                             orders(ordno, orddate, cid, aid, pid, qty, dollars)
+        , 
+
+
+
+1 Q1: pid='p01'(orders)                       Q2: pid'p01'(orders)
+2 Q3: cid(pid='p01'(orders))                  Q4: cid(pid'p01'(orders))
+3 Q5: cid(orders)  cid(pid='p01'(orders))     Q6: cid(orders)  cid(pid'p01'(orders))
+4 Q7: cid(customers)  cid(pid='p01'(orders))  Q8: cid(customers)  cid(pid'p01'(orders))
+5 Q9: orders  pid='p01'(orders)               Q10: orders  pid'p01'(orders)
+6 Q11: cid(orders  pid='p01'(orders))         Q12: cid(orders  pid'p01'(orders))
+
+ch02__                                                                                             7
+                                    7
+
+21. 
+     `'   `' 
+
+22. -
+     
+     `'
+
+23. `'`'
+    
+
+24.  /-/  `' 
+     `'
+         
+     
+
+25. 
+
+26. 
+
+ch02__                                 8
+            8
+
+27. (;ordno
+      ordno)
+
+                    
+
+         , , ,     C (cid, cname, city, discnt)
+
+         , , ,     A (aid, aname, city, percent)
+
+         , , , ,  P (pid, pname, city, quantity, price)
+
+          , , , ,  O (ordno, orddate, cid, aid, pid, qty, dollars)
+          , , 
+
+(1) cid
+      p01  p02 
+     "p01"  "p02";
+     
+
+(2) aname;
+
+(3) aid
+     
+     
+     
+
+ch02__                                                              9
+            9
+
+                   
+
+         , , ,     C (cid, cname, city, discnt)
+
+         , , ,     A (aid, aname, city, percent)
+
+         , , , ,  P (pid, pname, city, quantity, price)
+
+          , , , ,  O (ordno, orddate, cid, aid, pid, qty, dollars)
+          , , 
+
+(4) dols
+    
+
+(5) 
+    
+
+      cid, ordno, orddate 
+
+     cid, ordnoorddateordnoorddate
+         
+
+     *
+         
+         
+
+ch02__                                                              10
+          10
+
+                   
+
+         , , ,     S ( sno, sname, dept, grade )
+
+         , , ,     C ( cno, cname, dept, opt )
+
+         , ,       T ( tno, tname, dept )
+
+         , , , ,   L ( sno, cno, tno, score, years )
+
+28. `'
+     `'
+     
+
+
+
+ 
+
+ >=60
+ `'`'
+ `'
+ 2019`'
+
+     `'
+
+ch02__                                                11
+

@@ -1,0 +1,21 @@
+{
+  "_说明": "将此文件内容合并到 Claude Code 的 MCP 配置中。具体位置见各平台说明。",
+  "_配置方式": "在 Claude Code 中运行 /config → MCP Servers → Add，或在 settings.json 的 mcpServers 字段中添加。",
+
+  "mcpServers": {
+
+    "youtube-transcript": {
+      "comment": "获取 YouTube 视频字幕/脚本，用于视频学习",
+      "command": "npx",
+      "args": ["-y", "@macrat/mcp-youtube-transcript"],
+      "env": {}
+    },
+
+    "context7": {
+      "comment": "获取最新技术文档和库的 API 参考（如 React、Python 标准库等）",
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp@latest"],
+      "env": {}
+    }
+  }
+}

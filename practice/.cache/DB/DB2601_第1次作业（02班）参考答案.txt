@@ -1,0 +1,159 @@
+DB2601-02
+
+q ()
+
+                    
+
+ , , ,              C (cid, cname, city, discnt)
+
+ , , ,              A (aid, aname, city, percent)
+
+ , , , ,  P (pid, pname, city, quantity, price)
+
+          , , , ,   O (ordno, orddate, cid, aid, pid, qty, dols)
+          , , 
+
+q 
+
+1. 1000
+2. 
+
+     
+3. 
+4. 1000
+5. 
+
+     
+
+DB260102                                                          1
+          DB2601021 - 
+
+C (cid, cname, city, discnt)   P (pid, pname, city, quantity, price)
+
+A (aid, aname, city, percent)  O (ordno, orddate, cid, aid, pid, qty, dols)
+
+1. 1000
+
+q 1
+
+           ,  (   = ''   <  (  ) )
+
+DB260102                                                                     2
+          DB2601022 - 
+
+C (cid, cname, city, discnt)   P (pid, pname, city, quantity, price)
+
+A (aid, aname, city, percent)  O (ordno, orddate, cid, aid, pid, qty, dols)
+
+2. 
+   
+
+q 2
+
+          ., ., .(.=.  .=.  ..( ×  × ))
+
+q 2 
+     1., ., .(.=.  ..((  ) × ))
+     2., ., .(.=.  ..((  ) × ))
+
+ 3 (, _) = ,  ()
+                 ., ., ._ ( .  ._ (    ) )
+
+DB260102                                                                     3
+          DB2601023 -  1
+
+C (cid, cname, city, discnt)   P (pid, pname, city, quantity, price)
+
+A (aid, aname, city, percent)  O (ordno, orddate, cid, aid, pid, qty, dols)
+
+3. 
+
+q ""
+            ., . ( . = .  . = .  . = '' ( ×  × ))
+
+q ""  "
+    "
+
+ ""
+     ., . ( . = .  . = .  . = '' ( ×  × ))
+
+ ""
+     ., . ( . = .  . = .  .  '' ( ×  × ))
+
+q 3  1
+
+.,.(.=..=..=''( ×  × )) - .,.(.=..=..''( ×  × ))
+
+DB260102                                                                     4
+          DB2601023 -  2
+
+C (cid, cname, city, discnt)   P (pid, pname, city, quantity, price)
+
+A (aid, aname, city, percent)  O (ordno, orddate, cid, aid, pid, qty, dols)
+
+3. 
+
+q  3  1
+
+   .,.(.=..=..=''( ×  × )) - .,.(.=..=..''( ×  × ))
+
+q  "" 
+    ""3 2
+
+  .,.(.=.( × )) - .,.(.=.  .=.  .''( ×  × ))
+
+q 3 3
+          , ((  )) - , ((.''())    )
+
+q  1&2  3 
+
+DB260102                                                                     5
+          DB2601024 - 
+
+C (cid, cname, city, discnt)   P (pid, pname, city, quantity, price)
+
+A (aid, aname, city, percent)  O (ordno, orddate, cid, aid, pid, qty, dols)
+
+4. 
+   1000
+
+q 4., .(.=.  .<( × ))
+q "1000"  "
+
+    1000"
+
+q 4
+
+ ""
+     ., . ( . = . ( × ))
+
+ "1000"
+     ., . ( . = .  . <  ( × ))
+
+q 4 
+
+., .(.=.( × )) - ., .(.=.  .<( × ))
+DB260102                                                                     6
+          DB2601025 - 
+
+C (cid, cname, city, discnt)   P (pid, pname, city, quantity, price)
+
+A (aid, aname, city, percent)  O (ordno, orddate, cid, aid, pid, qty, dols)
+
+5. 
+  
+  
+
+q   = ,  = 
+
+ 
+
+          ., ., .(.=.  .<.( × ))
+
+     
+,,() - .,.,.(.=.  .<.( × ))
+
+q M ., ., .(. . . )
+
+DB260102                                                                     7
+

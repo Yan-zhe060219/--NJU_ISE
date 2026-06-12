@@ -1,0 +1,692 @@
+       
+
+                               
+                      
+                   225
+yafeng@nju.edu.cnhttps://yafengnju.github.io/
+      
+
+· 
+· 
+· 
+· 
+· 
+· 
+· 
+· 
+     1-
+
+
+
+
+1
+2
+3
+4
+5
+     1-
+
+
+
+TDMFDM
+1. TDMFDM
+
+2. TDMFDM
+TDMFDM
+3. 
+
+"
+"
+     1-
+
+
+
+5 
+
+:
+1. : 
+2. : 
+
+3. : (IP)
+
+4. : 
+5. : HTTP
+FTPSMTP
+
+,,,
+,
+    1-
+
+
+
+1. ,HTTP/FTP
+
+2. TCPUDPTCPUDP
+,,
+3. IPIP,
+IPIP,
+4. 
+()MAC,
+
+    1-
+
+
+
+
+
+      
+
+· 
+· 
+· 
+· 
+· 
+· 
+· 
+· 
+    2-
+
+
+
+
+
+IP
+
+      IMAP
+
+
+Alice-HTTP-Alice-SMTP-Bob-POP3-Bob
+    2-
+
+
+: ISPISP. 
+, CDN, 
+. , .
+: ISP. CDN
+(IXP). . 
+.
+    2-
+
+
+a) = (850,000)/(15,000,000/) = 0.0567
+=(16/)(0.0567/) = 0.907
+=(0.0567)/(1-0.907)0.6
+=0.6+3=3.6
+b) 40%=(0.0567)/[1-(0.6)(0.907)] = 0.124
+= 0.124+3=3.124
+0.4)(0)+(0.6)(3.124)=1.874
+  2-
+
+                                   =20Gb
+
+
+
+(1) -
+
+30 Mbpsu
+
+
+
+                                                              
+                                             !"#  =   max(      ,   )
+                                                             $   "
+
+(2) P2P
+
+u
+
+-
+
+         !"#                                                    
+                                          =  max[     ,   ,              ]
+                                                   $   "     $ + '#%& "
+
+
+
+         F=20Gb = 20 * 1024 Mb  F=20Gb = 20 * 1000 Mb
+
+         $ = 30Mbps
+         "=2Mbps
+2-
+      
+
+· 
+· 
+· 
+· 
+· 
+· 
+· 
+· 
+      3-
+
+
+
+1. (Reliability):
+  TCP
+
+UDP
+2. (Ordering):
+
+  TCP
+UDP
+3. (Flow Control):
+
+  TCP
+
+4.  UDP  TCP 
+     3-
+
+
+C Web
+""IP
+IPCIP
+TCP
+80
+ 3-
+
+X X  X  X X
+     3-
+
+
+
+ A  a, B  b
+a.  A  S (a, 23)
+b.  B  S (b, 23)
+c.  S  A (23 a)
+d.  S  B (23, b)
+e. A, B   a  b TCP  (dst_ip, dst_port, src_ip,
+
+      src_port) A   B  IP  S 
+      
+f. 
+    3-
+
+
+
+       1
+       01010011
+       01100110
+       01110100
+       00101110
+       3811010001
+       2UDP
+111
+       31bit, 
+
+       4bit, 
+
+     3-
+
+
+     bit 
+
+  16  0  1
+ 1  0 1 
+
+     3-
+
+
+ (rdt3.0) 
+1) 
+
+     
+      rdt3.0 1
+2) A(B) FSM A
+      B C C  B  ACK
+     B,C 
+3-
+3-
+3-
+3-
+     3-
+
+
+a. 20730280
+b. 20780302
+c. 127
+d.
+
+                                                 
+    3-
+
+
+a.
+b.
+c.
+3-
+
+                                    3-61
+
+                                                                                                             3-61
+    3-
+
+
+a. [1,6][23,26]
+b. [6,16][17,22]
+c. 3  ACK 
+d. 
+e. 32
+f. 21
+g. 14.514
+h. 7
+i. 4ssthresh7
+j. ssthresh211
+k. 52
+    3-
+
+       P48
+
+
+a)TCP
+L_m/10M=150x10^(-3) so L_m=150*10^(4)bit -> 150/8x10^4B->125
+b)
+W/2W0.75W=125x0.75=94[93.75
+]
+94x1500x8/150ms=7.52Mbps
+93.757.5Mbps
+c)TCP
+W/2=6262125125-62=63RTT63x150ms=9.45s
+     3-
+
+       P52
+
+
+a)1000msC1C2
+
+       C1  C2 C1  RTT  C2 C1  50  C2  100 
+C1  50 C2  100  TCP 
+ RTT  C1 50 
+ C1  C2 100 
+ C2  50 
+100  C1  C2 
+b)C1C2
+
+       C1RTTC2C1C2
+200ms         850ms  1000ms         C1       (40+20+40+20)=120   C2     
+(10+10+10+10)= 40
+     3-
+
+P54
+
+
+
+W 
+
+ TCP  W/2  W 
+
+                     W      W         W                                                1+a !  +  W    1+a "  +...+  W    1+a #
+                S= 2 +      2  1+a +  2                                                          2                  2
+                            !&%$
+k  =  log  $%&  2S  =  W  
+                             !&
+
+LW = $ = !( 
+
+                                                                             ' ) !(%$
+
+
+TCP  ) W 
+
+                                     !
+
+   =  $%( 2  ,  TCP 
+
+TCP:B = MSS  + = /++ .  TCP , B = $.!!23'' L 
+                ,%$ -.. 0 ,%$ -..                                                                            4552 6
+      
+
+· 
+· 
+· 
+· 
+· 
+· 
+· 
+· 
+  4-
+
+
+
+.
+, ;
+, .
+     4-
+
+
+DHCP
+IPDHCPIP
+IP
+IP
+DNSIPIPDNSIP
+DHCPDHCP
+
+DHCP
+IP192.168.1.100
+255.255.255.0
+192.168.1.1
+DNSIP192.168.1.1
+DHCP
+     4-
+
+:
+8020IP() +
+20TCP + (40)50%
+
+P11
+
+
+1 223.1.17.64/26
+2 223.1.17.128/25
+3 223.1.17.48/28
+
+     4-
+
+P15
+      4-
+
+
+     4-
+
+P19
+
+
+(a) IP  NAT 
+ IP  IP 
+ (ID) ID
+ IP   NAT 
+(b)(a)
+
+      
+
+· 
+· 
+· 
+· 
+· 
+· 
+· 
+· 
+    5-
+
+
+, , 
+. .
+
+, 
+, , .
+5-
+    5-
+
+
+    5-
+
+
+5-
+    5-
+
+
+
+a. Dx(w) = 2, Dx(y) = 4, Dx(u) = 7
+
+b. c(x, y)D[x][u] = min{7, c(x, y)+6}c(x, y)>=1c(x, y)
+     x
+
+   c(x, w)D[x][u] = min{c(x, w)+5, 11}c(x, w)<6x
+   c(x, w)+5c(x, w)>=6x
+   11
+
+a. bc(x, y)xc(x, w)x
+     
+    5-
+
+ASAS
+
+                                                                                                 
+                                                                                                 aeBGP
+                                                                                                 biBGP
+                                                                                                 ceBGP
+                                                                                                 diBGP
+      
+
+· 
+· 
+· 
+· 
+· 
+· 
+· 
+· 
+    6-
+
+
+
+
+
+
+
+
+5, 2^5, K=41 / 2^5 = 0.03125 1/32
+ 4 * 51.2 us = 204.8 us
+
+
+
+  L/R 
+        , 
+     6-
+
+
+
+ 2  3  2  3 
+
+
+ 2  2  3 2,  2 
+, 23
+    6-
+
+                                                                                                             Internet
+
+
+
+                       : 01011101 11110011
+    6-
+
+:
+
+G5, D40: 1010101010 0000
+1010101010 0000 / 10011 = 1011011100 mod 0100
+R = 0100
+
+                      b.N   # = #0.368
+                                               !' !  (
+a. () =  1 -  !"#
+$() =  1 -  1 -  !"%
+ = #
+
+            !
+     6-
+
+
+BAAA
+B324AB
+324+325=649AA576A
+
+  6-
+
+
+
+ A 879B805+96=901BA
+ AB
+A 879BB
+    6-
+
+
+AA1A2A3BB1
+B2B3CC1C2C3
+1A1<->A2100Mbps
+2B1<->B2100Mbps
+3C1<->C2100Mbps
+4web<->A3100Mbps
+5mail<->B350Mbps
+6mail<->C350Mbps
+7B3<->C350Mbps
+(100 * 4 + 50 * 3) * 2 = 1100Mbps
+2
+     6-
+
+
+   1web<->A100Mbps
+   2mail<->B50Mbps
+   3mail<->C50Mbps
+   4B<->C50Mbps
+   (100 + 50 * 3) * 2 = 500Mbps
+    100 Mbps
+    500 Mbps
+    6-
+
+ 100 Mbps
+
+
+
+1BEBMACACDEF 
+2EBBMACBMACB
+3ABAMACBMACB
+4BAAMACA
+      
+
+· 
+· 
+· 
+· 
+· 
+· 
+· 
+· 
+     7-
+
+: 
+
+
+a.  
+
+b. 
+    7-
+
+
+CSMA/CA 
+
+
+CSMA/CA
+
+
+CSMA/CA
+
+0
+
+7-
+      7-
+
+
+
+()
+
+aBB
+(1 message/2 slots)
+     7-
+
+bA->BD->C1
+23ACK
+(2 messages/slot)
+     7-
+
+cA->BC->D1AC
+23ACKAC
+"-----
+-"/message
+(1 message/slot)
+    7-
+
+d
+a(1 message/2
+slots)(1 message/slot)
+""B
+          b                    (2
+messages/slot)c
+                       b        (2
+messages/slot)
+
+eACKACK
+"
+"ACK
+:
+7-
+      
+
+· 
+· 
+· 
+· 
+· 
+· 
+· 
+· 
+    8-
+
+
+
+
+
+MAC, Alice
+,
+,
+    8-
+
+
+( PMS)Alice,
+PMSTrudy. TrudyAlice,PMS,
+Trudy,
+ BobMAC
+MAC , MAC,TCP
+8-
+
+                 d:
+
+a n = 55 z = 40  
+b: ez1           83 = 512
+c: d = 27        c = 83 mod 55 = 17
+                 g
+                 1727 = 1667711322168688287513535727415473
+                 m = 1727 mod 55 = 8
+8-
+      8-
+
+
+     8-
+
+
+a: AliceAlice
+b:
+
+                                                                                                  KB+(m)
+8-
+8-
+    8-
+
+
+
+a. 
+b. IP 216.75.194.220  443
+c. 283
+d. 3
+e. 
+f. First byte: bc; Last byte: 29
+g. 6
+
+
+          Q&A
+
+                                     
+                            
+                         225
+      yafeng@nju.edu.cnhttps://yafengnju.github.io/
+

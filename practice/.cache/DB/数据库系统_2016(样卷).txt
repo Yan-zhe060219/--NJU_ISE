@@ -1,0 +1,156 @@
+                       2016 
+
+
+
+1 
+     ________________________________
+
+2 -Entity-Relationship
+     ________________________________
+     ________________
+
+3 ________________ Consistency
+     IsolationDurability
+
+4  n ScheduleH n 
+     Serial Schedule H ________________
+
+5  SQL discntNULL WHERE 
+     WHERE discnt ________________________________________________
+
+6 ......
+
+
+
+1. .......................................                                            
+
+[A]         [B]       [C]        [D] 
+
+2. R1-First Normal Form Rule;
+
+R2-Access Rows by Content Only Rule; R3-The Unique Row Rule
+
+............................................................                          
+
+[A]  R1 [B]  R2 [C]  R3 [D] 
+
+3.  RUF U  R F  R 
+
+{R1(U1F1)R2(U2F2)} R 
+
+ .................................................................................  
+
+[A] R = R1 JOIN R2 [B] U = U1  U2 [C] F = F1  F2 [D] F+ = (F1  F2)+
+
+4. SQL ......................................................                       
+
+[A] DELETE  [B] DROP  [C] CLEAR  [D] REMOVE
+
+5.  WITH CHECK OPTION ..................                                              
+
+[A]                   [B] 
+
+[C] 
+
+[D] 
+
+6. ......
+
+
+
+1. .....................                                                
+
+[A]  [B] [C] [D] [E]
+
+2.  ..........................................                          
+
+[A]        [B]   [C] 
+
+[D]        [E] 
+
+3.  H  AB                                                               
+
+[A]R1(A)W2(B) [B]R1(A)W2(A) [C]W1(A)W2(B) [D]W1(B)W2(B) [E]R1(A);R2(A)
+
+4. ......
+
+()
+
+     
+           C (  cid,  cname,  city,  discnt )
+         A (  aid,  aname,  city )
+          P (  pid,  pname,  quantity,  price )
+          O (  ordno,  orddate,  cid,  aid,
+                        pid,  qty,  dols )
+
+     `'
+     (Relational Algebra)
+
+1) `'
+2) 
+3) 'a001'
+4) 
+
+(SQL )
+
+     
+           C (  cid,  cname,  city,  discnt )
+          A (  aid,  aname)
+           P (  pid,  pname,  quantity,  price )
+           O (  ordno,  orddate,  cid,  aid,
+                        pid,  qty,  dols )
+
+ SQL  YEAR(orddate) SQL  MONTH(orddate)
+         
+
+1 SQL  2015 
+ CustSum aid cname, 
+total_dols
+2 SQL 
+1)  10000 
+
+2) `'
+
+3) 
+      
+
+4)  2014  1  6  100000 
+
+5) 
+
+6) 
+
+
+      R(ABCDEF) F = { ABCBDEBDF
+
+EFACB }
+1  F  F ,,
+
+     
+
+2  R 
+
+3  R  3NF
+
+4  BCNF BCNF 
+
+
+     
+
+
+
+
+     1
+2
+3
+
+1.  E-R E-R Model
+
+2.  E-R 
+
+3.  b_no w_no r_no
+      m_date m_res :Rb_no, w_no, r_no, m_date, m_res
+     
+     1)  R 
+     2)  R 
+

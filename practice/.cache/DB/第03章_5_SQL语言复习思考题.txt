@@ -1,0 +1,136 @@
+
+                                       1
+
+1. 
+    
+
+2. `'SQL
+    
+
+3. `'SQL
+    SQLALL`'
+    
+
+4. SQL
+
+ch03_SQL_                                 2
+                                    2
+
+MyCAP
+
+                                       
+
+             customers(cid, cname, city, discnt)
+
+  agents(aid, aname, city, percent)
+
+  products(pid, pname, city, quantity, price)
+
+             orders(ordno,  orddate,   cid,  aid,  pid,  qty,  dols)
+  
+
+
+     cid, aid, pid, ordno
+     orddateDATE
+     ordno
+
+ch03_SQL_                                                             3
+                                       3
+
+5. SQLcidcname
+   Q1;
+   Q2(pid);
+   Q3(dols)1000;
+   Q41;
+
+6. SQL (cidpid)
+   Q5C
+   Q6CP 1 
+   Q7CP
+
+7. SQL
+   Q8
+   Q9
+   Q10discnt
+   Q11
+         
+   Q12
+
+ch03_SQL_                                 4
+                                       4
+
+8. like<>
+
+9. 
+      SQL
+      
+      
+      count(*)count(cid)count(distinct cid)
+
+10. group bySQL
+
+11. view
+      SQL`'`'
+      SQL`'`'
+      WITH CHECK OPTION
+      
+      SQL
+
+ch03_SQL_                                    5
+              5
+
+12. 
+
+                 
+
+ , , ,       Student (sno, sname, dept, regyear)
+ , ,         Teacher (tno, tname, dept)
+
+ , , , ,  Course (cno, cname, dept, credit, optional)
+
+  , , , ,    SC (sno, cno, tno, scyear, semester, grade)
+  ,          TC (tno, cno, tcyear, semester, hours)
+
+  , , ,
+  , 
+
+
+
+· 
+
+· 
+
+  
+
+· 60
+
+·  × .  ×  
+
+·  `'  `' 
+
+ch03_SQL_                                                 6
+                                       6
+
+12SQL
+  `'
+ `'
+ 20212023
+ 
+
+ `'`'
+ 2020
+
+     `'
+ 
+
+ 1000
+     
+
+ `'
+     `'`'
+
+ 
+     `'
+
+ch03_SQL_                                 7
+

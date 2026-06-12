@@ -1,0 +1,225 @@
+     DB2602-01
+
+q 
+  60`'
+
+                                                  
+  , , , 
+  , , ,                        S ( sno, sname, dept, grade )
+  , ,                          C ( cno, cname, dept, credit )
+  , , , ,                      T ( tno, tname, dept )
+                               L ( sno, cno, tno, score, year )
+
+     
+1. ""
+2. 
+3. `'
+4. 
+
+5. 
+
+201                                                              1
+     DB260201- 1 - 
+
+ S ( sno, sname, dept, grade )    T ( tno, tname, dept )
+
+ C ( cno, cname, dept, credit )   L ( sno, cno, tno, score, year )
+
+1. ""
+
+q 
+
+., . ( ( ( = '' ())  )   )
+
+Ø   (. . . ) 
+    
+
+q 
+        ., . ( .=.  .=.  .='' ( ×  × ) )
+
+201                                                                 2
+     DB260201- 2 -  1
+
+S(sno,sname,dept,grade) T(tno,tname,dept) C(cno,cname,dept,credit) L(sno,cno,tno,score,year)
+
+2. 
+
+q 12
+q `
+
+     '
+
+q 
+
+      `'
+                              . (.=.  .=.  .. ( ×  × ))
+
+      "`'"
+                       () - . (.=.  .=.  .. ( ×  × ))
+
+      
+        ,  (  (() - . (.=.  .=.  .. ( ×  × )) ) )
+
+q 
+
+Ø 
+      . (.=.  .. ( × (  ))) 
+      . (.=.  .. ( × (  )))
+
+Ø T
+201                                                                                           3
+                      DB260201- 2 -  2
+
+S(sno,sname,dept,grade) T(tno,tname,dept) C(cno,cname,dept,credit) L(sno,cno,tno,score,year)
+
+2. 
+
+q 
+      ""
+           = ., , . (.=.  .. ( × (  )))
+      ""
+           = , ,  () - 
+      ,  ()
+
+q 
+     , (, ,  () - ., , . (.=.  .. ( × (  ))))
+
+q 
+
+Ø `'
+
+Ø `'`.'
+    , 
+    , 
+
+201                                                                                           4
+     DB260201- 3 -  1
+
+ S ( sno, sname, dept, grade )    T ( tno, tname, dept )
+
+ C ( cno, cname, dept, credit )   L ( sno, cno, tno, score, year )
+
+3. `'
+
+q 
+
+Ø "`'"
+   
+
+Ø 
+
+q 
+     
+           , (  ( , (>=()) ÷ (=`'()) ) )
+     
+                 , , (  >=()) ÷ (=`'())
+
+201                                                                 5
+     DB260201- 3 -  2
+
+ S ( sno, sname, dept, grade )    T ( tno, tname, dept )
+
+ C ( cno, cname, dept, credit )   L ( sno, cno, tno, score, year )
+
+3. `'
+
+q 
+     
+
+,(  (() - ((() × (=`'())) - ,(>=()))))
+
+       
+
+,() - ,((,() × (=`'())) - .,,(>=()  ))
+
+201                                                                 6
+     DB260201- 4 -  1
+
+ S ( sno, sname, dept, grade )    T ( tno, tname, dept )
+
+ C ( cno, cname, dept, credit )   L ( sno, cno, tno, score, year )
+
+4. 
+
+q ""
+     
+
+q 
+      "="sno
+          cno(R1)
+      snocno(R2)
+      R1R2
+          R3
+      R3
+          (R4)
+      (R5)
+
+201                                                                 7
+     DB260201- 4 -  2
+
+ S ( sno, sname, dept, grade )    T ( tno, tname, dept )
+
+ C ( cno, cname, dept, credit )   L ( sno, cno, tno, score, year )
+
+4. 
+
+q 
+
+ "=" = , (  )
+  = , (())
+  =  - 
+
+ 
+     , (  )
+
+ 
+
+                                 , () - , (  )
+
+q 
+
+, () - , ((, (  ) - , (()))  )
+
+201                                                                 8
+     DB260201- 5 -  1
+
+ S ( sno, sname, dept,grade )     T ( tno, tname, dept )
+
+ C ( cno, cname, dept, credit )   L ( sno, cno, tno, score, year )
+
+5. 
+    
+
+q 
+    
+    
+     
+     
+     
+     
+
+     
+
+201                                                                 9
+     DB260201- 5 -  2
+
+ S ( sno, sname, dept,grade )     T ( tno, tname, dept )
+
+ C ( cno, cname, dept, credit )   L ( sno, cno, tno, score, year )
+
+5. 
+
+q   = ,  = 
+      
+          (, ) = ., .(. = .  . < .( × ))
+       (, _) = , () - 
+
+ 
+     (, ) = ., .(. = .  . < .( × ))
+
+  (, _) = , () - 
+
+    
+
+201                                                                 10
+

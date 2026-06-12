@@ -1,0 +1,1068 @@
+                                ch06--5
+
+     R(cno)(cname)
+(tno)(tname)(in_no)
+(s_date)(e_date)(room)
+
+     date(
+)
+ 
+ 
+ 
+
+    
+ 
+ 
+
+    
+ 
+
+                          R(cno, cname, tno, tname, in_no, s_date, e_date, room)
+
+1. 
+
+2. 
+
+ch06__                                                                            1
+
+        ch06--5 - 1
+
+     R(cno)(cname)
+(tno)(tname)(in_no)
+(s_date)(e_date)(room)
+
+     date(
+)
+ 
+
+ 
+
+ 
+
+    
+
+ 
+
+ 
+
+    
+
+ 
+
+                          R(cno, cname, tno, tname, in_no, s_date, e_date, room)
+
+(cnocname)(tno, tname)in_noroom
+  (s_datee_date)
+
+Ø 2 tnotname  cnocname
+
+Ø cnametname
+
+ch06__                                                                            3
+        ch06--5 - 2
+
+                     R(cno, cname, tno, tname, in_no, s_date, e_date, room)
+
+ 
+ 
+ 
+
+      
+ 
+ 
+
+      ;
+ 
+
+Ø  F = { tnotname, cnocname }
+
+q 
+
+Ø (s_date)(e_date)
+
+Ø `'`'
+    `'`'
+
+q 
+    `'`'"""" (next slide)
+
+ cno  (s_date, e_date)
+
+ch06__                                                                       4
+          ch06--5 - 3
+
+                       
+                       
+                       
+                       
+            :  
+        
+            
+            
+
+                   :   
+                       
+
+ch06__                   5
+                          ch06--5 - 4
+
+                     R(cno, cname, tno, tname, in_no, s_date, e_date, room)
+
+ 
+ 
+ 
+
+      
+ 
+ 
+
+      ;
+ 
+
+     F = { tnotname, cno(cname, s_date, e_date) }
+
+q 
+   
+
+    10
+
+ch06__                                                                       6
+        ch06--5 - 5
+
+                     R(cno, cname, tno, tname, in_no, s_date, e_date, room)
+
+ 
+ 
+ 
+
+      
+ 
+ 
+
+      ;
+ 
+
+     F = { tnotname, cno(cname, s_date, e_date) }
+
+q 1"+"
+
+       Ø "+" vs. """:"
+
+       Ø "+" vs. """:"
+
+       Ø "+" vs. """:1"  (cno,tno)(s_date, e_date)
+
+q 
+
+,
+
+ch06__                                                                       7
+                          ch06--5 - 6
+
+                     R(cno, cname, tno, tname, in_no, s_date, e_date, room)
+
+ 
+ 
+ 
+
+      
+ 
+ 
+
+      ;
+ 
+
+     F = { tnotname, cno(cname, s_date, e_date) }
+
+q 2"+"
+
+     Ø "+" vs. """:"
+
+     Ø "+" vs. """:1"(cno, in_no)  room
+          
+
+     Ø "+" vs. """:1"
+         
+
+ch06__                                                                       8
+                          ch06--5 - 7
+
+                     R(cno, cname, tno, tname, in_no, s_date, e_date, room)
+
+ 
+ 
+ 
+
+      
+ 
+ 
+
+      ;
+ 
+
+     F = { tnotname, cno(cname, s_date, e_date), (cno, in_no)room }
+
+q 3"+"
+
+     Ø "+" vs. """:"
+
+     Ø "+" vs. """:"
+
+     Ø "+" vs. """:1"
+
+ch06__                                                                       9
+                          ch06--5 - 8
+
+                     R(cno, cname, tno, tname, in_no, s_date, e_date, room)
+
+ 
+ 
+ 
+
+      
+ 
+ 
+
+      ;
+ 
+
+     F = { tnotname, cno(cname, s_date, e_date), (cno, in_no)room }
+
+q 4"+"
+
+     Ø WHY?
+
+     "+"
+""
+
+ch06__                                                                       10
+                          ch06--5 - 9
+
+                     R(cno, cname, tno, tname, in_no, s_date, e_date, room)
+
+ 
+ 
+ 
+
+      
+ 
+ 
+
+      ;
+ 
+
+     F = { tnotname, cno(cname, s_date, e_date), (cno, in_no)room }
+
+q 5"+"
+     Ø "+" vs. """:"
+     Ø "+" vs. """:"
+     Ø "+" vs. """:"
+
+ch06__                                                                       11
+                         ch06--5 - 10
+
+                     R(cno, cname, tno, tname, in_no, s_date, e_date, room)
+
+ 
+ 
+ 
+
+      
+ 
+ 
+
+      ;
+ 
+
+     F = { tnotname, cno(cname, s_date, e_date), (cno, in_no)room }
+
+q 6"+"
+     Ø "+" vs. """:"
+     Ø "+" vs. """:"
+     Ø "+" vs. """:"
+
+ch06__                                                                       12
+                         ch06--5 - 11
+
+                     R(cno, cname, tno, tname, in_no, s_date, e_date, room)
+
+ 
+ 
+ 
+
+      
+ 
+ 
+
+      ;
+ 
+
+     F = { tnotname, cno(cname, s_date, e_date), (cno, in_no)room }
+
+q 7"+"
+
+     Ø "+" vs. """:"
+
+     Ø "+" vs. """:"
+
+     Ø "+" vs. """:1"
+
+(tno, s_date)  cno  (tno, e_date)  cno
+
+
+
+ch06__                                                                       13
+        ch06--5 - 12
+
+                     R(cno, cname, tno, tname, in_no, s_date, e_date, room)
+
+ 
+ 
+ 
+
+      
+ 
+ 
+
+      ;
+ 
+
+F = { tnotname, cno(cname, s_date, e_date), (cno, in_no)  room,
+
+(tno, s_date)  cno, (tno, e_date)  cno  }
+
+q 8"+"
+     Ø "+" vs. """:"
+     Ø "+" vs. """:"
+     Ø "+" vs. """:"
+
+ch06__                                                                       14
+        ch06--5 - 13
+
+                     R(cno, cname, tno, tname, in_no, s_date, e_date, room)
+
+ 
+ 
+ 
+
+      
+ 
+ 
+
+      ;
+ 
+
+F = { tnotname, cno(cname, s_date, e_date), (cno, in_no)  room,
+
+(tno, s_date)  cno, (tno, e_date)  cno  }
+
+q 9"+"
+
+Ø "+" vs. """:"
+
+Ø "+" vs. """:1"
+
+        (in_no,s_date)  cno   (in_no,e_date)  cno
+
+
+
+Ø "+" vs. """:1"
+
+        (in_no,s_date)  room  (in_no,e_date)  room
+
+ch06__                                                                       15
+        ch06--5 - 14
+
+                     R(cno, cname, tno, tname, in_no, s_date, e_date, room)
+
+ 
+ 
+ 
+
+      
+ 
+ 
+
+      ;
+ 
+
+F = { tnotname, cno(cname, s_date, e_date), (cno, in_no)  room,
+
+(tno, s_date)  cno,         (tno, e_date)  cno,
+
+(in_no,s_date)  room, (in_no,e_date)  room       }
+
+q 10"+"
+
+Ø "+" vs. """:"
+
+Ø "+" vs. """:"
+
+Ø "+" vs. """:1"
+
+        (room,s_date)  cno  (room,e_date)  cno
+
+
+
+ch06__                                                                       16
+                 ch06--5 - 15
+
+                     R(cno, cname, tno, tname, in_no, s_date, e_date, room)
+
+ 
+ 
+ 
+
+      
+ 
+ 
+
+      ;
+ 
+
+q 
+
+F = { tnotname,      cno(cname, s_date, e_date),
+
+(cno, in_no)  room,
+
+(tno, s_date)  cno, (tno, e_date)  cno,
+
+(in_no, s_date)  cno, (in_no, e_date)  cno,
+
+(in_no, s_date)  room, (in_no, e_date)  room,
+
+(room, s_date)  cno, (room, e_date)  cno          }
+
+ch06__                                                                       17
+        ch06--5 - 16
+
+        R(cno, cname, tno, tname, in_no, s_date, e_date, room)
+
+q                              (in_no, s_date)  cno
+                               (in_no, e_date)  cno
+ tno  tname                    (in_no, s_date)  room
+ cno  (cname, s_date, e_date)  (in_no, e_date)  room
+ (cno, in_no)  room            (room, s_date)  cno
+ (tno, s_date)  cno            (room, e_date)  cno
+ (tno, e_date)  cno
+
+q () 
+     
+
+     Ø 10
+
+     Ø  (cno, s_date)(cno, in_no, room)... 
+         5
+          · (cno, s_date)  _
+                {, _}  ( - {_})  
+                
+
+     Ø 5 ()
+
+ch06__                                                          18
+        ch06--5 - 17
+
+                     R(cno, cname, tno, tname, in_no, s_date, e_date, room)
+
+q 
+
+ tno  tname             q cnametnames_date
+ cno  cname                  e_date`'
+ cno  s_date                 10
+ cno  e_date
+ (cno, in_no)  room                      
+ (tno, s_date)  cno             
+ (tno, e_date)  cno            
+ (in_no, s_date)  cno           
+ (in_no, e_date)  cno        
+ (in_no, s_date)  room       
+ (in_no, e_date)  room       
+ (room, s_date)  cno         
+ (room, e_date)  cno         
+                             
+                           
+
+ch06__                                                                       19
+        ch06--5 - 18
+
+                     R(cno, cname, tno, tname, in_no, s_date, e_date, room)
+
+q 
+
+ tno  tname                                                                  
+ cno  cname
+ cno  s_date                                                                 
+ cno  e_date
+ (cno, in_no)  room         :                                                
+ (tno, s_date)  cno
+ (tno, e_date)  cno                                                          
+ (in_no, s_date)  cno
+ (in_no, e_date)  cno                                                        
+ (in_no, s_date)  room
+ (in_no, e_date)  room                                                       
+ (room, s_date)  cno
+ (room, e_date)  cno        :                                                
+
+                            
+
+                                                                             
+
+                            :                                                
+
+                            :                                                
+
+ch06__                                                                         20
+ch06--5 - 19
+
+                     R(cno, cname, tno, tname, in_no, s_date, e_date, room)
+
+() 
+      
+
+     tno  tname                                 
+     cno  cname                     :           
+     cno  s_date                  
+     cno  e_date                  
+     (cno, in_no)  room
+     (tno, s_date)  cno                     :   
+     (tno, e_date)  cno                         
+     (in_no, s_date)  cno                       
+     (in_no, e_date)  cno               (  )
+     (in_no, s_date)  room                       
+     (in_no, e_date)  room             
+     (room, s_date)  cno                   ( )
+     (room, e_date)  cno          
+                                       
+ch06__                              ()
+                                  
+
+                                                                             21
+            ch06--5 - 20
+        R(cno, cname, tno, tname, in_no, s_date, e_date, room)
+
+q 13
+
+ tno  tname           (in_no, s_date)  cno
+ cno  cname           (in_no, e_date)  cno
+ cno  s_date          (in_no, s_date)  room
+ cno  e_date          (in_no, e_date)  room
+ (cno, in_no)  room   (room, s_date)  cno
+ (tno, s_date)  cno   (room, e_date)  cno
+ (tno, e_date)  cno
+
+q 
+     Ø 
+     Ø 
+
+ch06__                                                          22
+
+        ch06--5 - 1
+
+        R(cno, cname, tno, tname, in_no, s_date, e_date, room)
+
+q  F
+
+ tno  tname           (tno, s_date)  cno     (in_no, s_date)  room
+ cno  cname           (tno, e_date)  cno     (in_no, e_date)  room
+ cno  s_date          (in_no, s_date)  cno   (room, s_date)  cno
+ cno  e_date          (in_no, e_date)  cno   (room, e_date)  cno
+ (cno, in_no)  room
+
+q step 3
+     Ø 
+     Ø 
+     Ø 
+
+q 
+    
+
+ch06__                                                              24
+        ch06--5 - 2
+
+        R(cno, cname, tno, tname, in_no, s_date, e_date, room)
+
+q  F
+
+ tno  tname           (tno, s_date)  cno     (in_no, s_date)  room
+ cno  cname           (tno, e_date)  cno     (in_no, e_date)  room
+ cno  s_date          (in_no, s_date)  cno   (room, s_date)  cno
+ cno  e_date          (in_no, e_date)  cno   (room, e_date)  cno
+ (cno, in_no)  room
+
+q step 3cont.
+
+Ø  (cno, in_no)  room12M
+
+     ·  {, _}+ = {, _, , _, _, }
+     ·  `room'M
+     · F  (cno, in_no)  room 
+     · F  M
+
+        F
+
+ch06__                                                              25
+        ch06--5 - 3
+
+              R(cno, cname, tno, tname, in_no, s_date, e_date, room)
+
+q  F
+
+ tno  tname    (tno, s_date)  cno     (in_no, s_date)  room
+ cno  cname    (tno, e_date)  cno     (in_no, e_date)  room
+ cno  s_date   (in_no, s_date)  cno   (room, s_date)  cno
+ cno  e_date   (in_no, e_date)  cno   (room, e_date)  cno
+
+q step 3cont.
+
+     Ø  (in_no, s_date)  room11M
+          ·  {_, _}+ = {_, _, , , _, }
+          ·  `room'M
+          · F  (in_no, s_date)  room 
+          · F 
+
+ch06__                                                                26
+        ch06--5 - 4
+
+              R(cno, cname, tno, tname, in_no, s_date, e_date, room)
+
+q  F
+
+ tno  tname    (tno, s_date)  cno     (in_no, e_date)  room
+ cno  cname    (tno, e_date)  cno     (room, s_date)  cno
+ cno  s_date   (in_no, s_date)  cno   (room, e_date)  cno
+ cno  e_date   (in_no, e_date)  cno
+
+q step 3cont.
+
+     Ø  (in_no, e_date)  room
+          ·  F room 
+          · F
+
+q 
+     Ø 
+     Ø 
+
+ch06__                                                                27
+        ch06--5 - 5
+
+              R(cno, cname, tno, tname, in_no, s_date, e_date, room)
+
+q  F
+
+ tno  tname    (tno, s_date)  cno     (in_no, e_date)  room
+ cno  cname    (tno, e_date)  cno     (room, s_date)  cno
+ cno  s_date   (in_no, s_date)  cno   (room, e_date)  cno
+ cno  e_date   (in_no, e_date)  cno
+
+q step 3cont.
+
+Ø   (tno, s_date)  cno10M
+     ·  {, _}+ = {, _, }
+     ·  `cno'M 
+     · F  (tno, s_date)  cno 
+
+ch06__                                                                28
+        ch06--5 - 6
+
+              R(cno, cname, tno, tname, in_no, s_date, e_date, room)
+
+q  F
+
+ tno  tname    (tno, s_date)  cno     (in_no, e_date)  room
+ cno  cname    (tno, e_date)  cno     (room, s_date)  cno
+ cno  s_date   (in_no, s_date)  cno   (room, e_date)  cno
+ cno  e_date   (in_no, e_date)  cno
+
+q step 3cont.
+
+Ø   (tno, e_date)  cno10M
+     ·  {, _}+ = {, _, }
+     ·  `cno'M 
+     · F  (tno, e_date)  cno 
+
+ch06__                                                                29
+        ch06--5 - 7
+
+              R(cno, cname, tno, tname, in_no, s_date, e_date, room)
+
+q  F
+
+ tno  tname    (tno, s_date)  cno     (in_no, e_date)  room
+ cno  cname    (tno, e_date)  cno     (room, s_date)  cno
+ cno  s_date   (in_no, s_date)  cno   (room, e_date)  cno
+ cno  e_date   (in_no, e_date)  cno
+
+q step 3cont.
+
+Ø   (in_no, s_date)  cno10M
+     ·  {_, _}+ = {_, _}
+     ·  `cno'M 
+     · F  (in_no, s_date)  cno 
+
+ch06__                                                                30
+        ch06--5 - 8
+
+              R(cno, cname, tno, tname, in_no, s_date, e_date, room)
+
+q  F
+
+ tno  tname    (tno, s_date)  cno     (in_no, e_date)  room
+ cno  cname    (tno, e_date)  cno     (room, s_date)  cno
+ cno  s_date   (in_no, s_date)  cno   (room, e_date)  cno
+ cno  e_date   (in_no, e_date)  cno
+
+q step 3cont.
+
+Ø   (in_no, e_date)  cno10M
+     ·  {_, _}+ = {_, _, , }
+     ·  `cno'M 
+     · F  (in_no, e_date)  cno 
+     · F 
+
+ch06__                                                                31
+        ch06--5 - 9
+
+              R(cno, cname, tno, tname, in_no, s_date, e_date, room)
+
+q  F
+
+ tno  tname    (tno, s_date)  cno     (in_no, e_date)  room
+ cno  cname    (tno, e_date)  cno     (room, s_date)  cno
+ cno  s_date   (in_no, s_date)  cno   (room, e_date)  cno
+ cno  e_date
+
+q step 3cont.
+
+Ø   (room, s_date)  cno9M
+
+     ·  {, _}+ = { , _ }
+     ·  `cno'M 
+     · F  (room, s_date)  cno 
+
+ch06__                                                                32
+        ch06--5 - 10
+
+              R(cno, cname, tno, tname, in_no, s_date, e_date, room)
+
+q  F
+
+ tno  tname    (tno, s_date)  cno     (in_no, e_date)  room
+ cno  cname    (tno, e_date)  cno     (room, s_date)  cno
+ cno  s_date   (in_no, s_date)  cno   (room, e_date)  cno
+ cno  e_date
+
+q step 3cont.
+
+Ø   (room, e_date)  cno9M
+
+     ·  {, _}+ = { , _ }
+     ·  `cno'M 
+     · F  (room, e_date)  cno 
+
+ch06__                                                                33
+ch06--5 - 11
+
+                              R(cno, cname, tno, tname, in_no, s_date, e_date, room)
+q step 3 
+
+ tno  tname    (tno, s_date)  cno      (in_no, e_date)  room
+ cno  cname    (tno, e_date)  cno      (room, s_date)  cno
+ cno  s_date   (in_no, s_date)  cno    (room, e_date)  cno
+ cno  e_date
+
+q step 4 
+
+        tno  tname                    q .
+        cno  (cname, s_date, e_date)
+        (tno, s_date)  cno                                                                                                                         34
+        (tno, e_date)  cno
+        (in_no, s_date)  cno
+        (in_no, e_date)  room
+        (room, s_date)  cno
+        (room, e_date)  cno
+
+ch06__
+
+             ch06--5 - 1
+
+             R(cno, cname, tno, tname, in_no, s_date, e_date, room)
+
+q  F
+
+ tno  tname           cno  (cname, s_date, e_date)
+
+ (tno, s_date)  cno   (in_no, s_date)  cno    (room, s_date)  cno
+ (tno, e_date)  cno   (in_no, e_date)  room   (room, e_date)  cno
+
+q 
+
+     Ø tname, cname
+     Ø cno, s_date, e_date, room
+     Ø tno, in_no
+
+q 
+
+     Ø 'tno''in_no'(tno, in_no)R?
+     Ø  {, _}+ = {, _, }R
+     Ø (tno, in_no)R
+
+          
+
+q 'tno+in_no'
+
+R
+
+ch06__                                                               36
+        ch06--5 - 2
+
+        R(cno, cname, tno, tname, in_no, s_date, e_date, room)
+
+q  F
+
+ tno  tname           cno  (cname, s_date, e_date)
+ (tno, s_date)  cno
+ (tno, e_date)  cno   (in_no, s_date)  cno    (room, s_date)  cno
+                      (in_no, e_date)  room   (room, e_date)  cno
+
+q 2
+
+q  = () - { ,  } = { , _, , _, _,  }
+
+q for each attribute in { , _, _,  }
+   Ø ( - {})+ = {, _, _, _, , , , } = ()
+        ·  =  - {} = { , _, _, _,  }
+
+Ø ( - {_})+ = {, _, _, , , , , _} = ()
+     ·  =  - {_} = { , _, _,  }
+
+Ø ( - {_})+ = {, _, , }  ()
+
+Ø ( - {})+ = {, _, _, , , , , _} = ()
+     ·  =  - {} = { , _, _ }
+
+//    (, _, _)
+
+ch06__                                                             37
+      ch06--5 - 3
+
+      R(cno, cname, tno, tname, in_no, s_date, e_date, room)
+
+q  F
+
+ tno  tname           cno  (cname, s_date, e_date)
+ (tno, s_date)  cno
+ (tno, e_date)  cno   (in_no, s_date)  cno    (room, s_date)  cno
+                      (in_no, e_date)  room   (room, e_date)  cno
+
+q 2
+     Ø (, _, _)R_
+     Ø 2K, 
+
+         _, _, for
+         , _, _
+
+q  = () - { ,  } - { _ } = { , _, , _,  }
+
+q for each attribute in { , _,  }
+   Ø ( - {})+ = {, _, _, , , , , _} = ()
+        ·  =  - {} = { , _, _,  }
+
+Ø ( - {_})+ = {, _, , }  ()
+
+Ø ( - {})+ = {, _, _, , , , _, } = ()
+
+             ·  =  - {} = { , _, _ }  //  (, _, _) 38
+
+ch06__
+             ch06--5 - 4
+
+             R(cno, cname, tno, tname, in_no, s_date, e_date, room)
+
+q  F
+
+ tno  tname           cno  (cname, s_date, e_date)
+
+ (tno, s_date)  cno   (in_no, s_date)  cno    (room, s_date)  cno
+ (tno, e_date)  cno   (in_no, e_date)  room   (room, e_date)  cno
+
+q 2
+     Ø (, _, _)(, _, _)R
+         _
+     Ø 2K, 
+
+         _, _, for
+         , _, _, _, _
+
+q  = () - { ,  } - { _, _ } = { , _, ,  }
+
+q for each attribute in { ,  }
+   Ø ( - {})+ = {, _, , }  ()
+
+   Ø ( - {})+ = {, _, , , , _, _, } = ()
+        ·  =  - {} = { , _,  }
+
+//  (, _, )
+
+ch06__                                                               39
+        ch06--5 - 5
+
+        R(cno, cname, tno, tname, in_no, s_date, e_date, room)
+
+q  F
+
+ tno  tname           cno  (cname, s_date, e_date)
+ (tno, s_date)  cno
+ (tno, e_date)  cno   (in_no, s_date)  cno    (room, s_date)  cno
+                      (in_no, e_date)  room   (room, e_date)  cno
+
+q 2
+     Ø (, _, _)(, _, _)(, _, )R
+         _
+     Ø 2K, 
+
+         _, _, for
+         , _, _, _, _, _, 
+
+q  = () - { ,  } - { _, _,  } = { , _,  }
+
+q for 
+   Ø ()+ = (, _, )+ = {, _, , }  ()
+        · (, _, ) R
+
+q 
+
+        (, _, _)(, _, _)  (, _, )                                  40
+
+ch06__
+ & 
+        ch06--5 - &1
+
+             R(cno, cname, tno, tname, in_no, s_date, e_date, room)
+
+q  F
+
+ tno  tname           cno  (cname, s_date, e_date)
+
+ (tno, s_date)  cno   (in_no, s_date)  cno    (room, s_date)  cno
+ (tno, e_date)  cno   (in_no, e_date)  room   (room, e_date)  cno
+
+q 3
+                          (, _, _) (, _, _)  (, _, )
+
+q 
+     Ø R{ , _, , _, _ }
+     Ø R{ , ,  }
+
+q 
+     Ø R (, _, )  
+            
+
+Ø R 2NF 3NF  BCNF
+
+ch06__                                                               42
+                     ch06--5 - 3NF2
+
+      R(cno, cname, tno, tname, in_no, s_date, e_date, room)
+
+q  F
+
+ tno  tname                             cno  (cname, s_date, e_date)
+ (tno, s_date)  cno
+ (tno, e_date)  cno                     (in_no, s_date)  cno               (room, s_date)  cno
+                                        (in_no, e_date)  room              (room, e_date)  cno
+
+q 3(, _, _) (, _, _)  (, _, )
+
+q 3NF
+
+                                                                          
+
+     T ( tno, tname )                  tno  tname                                         tno
+     C ( cno, cname, s_date, e_date )  cno  (cname, s_date, e_date)                       cno
+     R6 ( cno, tno, s_date )           (tno, s_date)  cno  cno  s_date      (tno, s_date)  (tno, cno)
+     R7 ( cno, tno, e_date )           (tno, e_date)  cno  cno  e_date      (tno, e_date)  (tno, cno)
+     R8 ( cno, in_no, s_date )         (in_no, s_date)  cno  cno  s_date  (in_no, s_date)  (in_no, cno)
+     R11 ( in_no, e_date, room )       (in_no, e_date)  room                       (in_no, e_date)
+     R12 ( cno, s_date, room )         (room, s_date)  cno  cno  s_date   (room, s_date)  (room, cno)
+     R13 ( cno, e_date, room )         (room, e_date)  cno  cno  e_date   (room, e_date)  (room, cno)
+     K ( cno, tno, in_no )                                                        (cno, tno, in_no)
+
+ch06__                                                                                                                                  43
+          ch06--5 - BCNF3
+
+                                                                                   
+
+T ( tno, tname )                  tno  tname                                         tno
+C ( cno, cname, s_date, e_date )  cno  (cname, s_date, e_date)                       cno
+R6 ( cno, tno, s_date )           (tno, s_date)  cno  cno  s_date      (tno, s_date)  (tno, cno)
+R7 ( cno, tno, e_date )           (tno, e_date)  cno  cno  e_date      (tno, e_date)  (tno, cno)
+R8 ( cno, in_no, s_date )         (in_no, s_date)  cno  cno  s_date  (in_no, s_date)  (in_no, cno)
+R11 ( in_no, e_date, room )       (in_no, e_date)  room                       (in_no, e_date)
+R12 ( cno, s_date, room )         (room, s_date)  cno  cno  s_date   (room, s_date)  (room, cno)
+R13 ( cno, e_date, room )         (room, e_date)  cno  cno  e_date   (room, e_date)  (room, cno)
+K ( cno, tno, in_no )                                                        (cno, tno, in_no)
+
+q 
+     Ø  T, C, R11  K BCNF
+     Ø  R6, R7, R8, R12, R13 BCNF
+
+q  BCNF`
+    '`'
+
+ch06__                                                                                              44
+          ch06--5 - BCNF4
+
+                                                                
+
+T ( tno, tname )                  tno  tname                            tno
+C ( cno, cname, s_date, e_date )  cno  (cname, s_date, e_date)          cno
+R6 ( cno, tno )                                                     (tno, cno)
+S6 ( cno, s_date)                 cno  s_date                           cno
+R7 ( cno, tno )                                                     (tno, cno)
+S7 ( cno, e_date )                cno  e_date                           cno
+R8 ( cno, in_no )                                                 (in_no, cno)
+S8 ( cno, s_date )                cno  s_date                           cno
+R11 ( in_no, e_date, room )       (in_no, e_date)  room         (in_no, e_date)
+R12 ( cno, room )                                                  (room, cno)
+S12 ( cno, s_date )               cno  s_date                           cno
+R13 ( cno, room )                                                  (room, cno)
+S13 ( cno, e_date )               cno  e_date                           cno
+K ( cno, tno, in_no )                                           (cno, tno, in_no)
+
+q  R12R13 R6R7R8
+
+K S6S7S8S12S13 C
+
+
+
+ch06__                                                                             45
+          ch06--5 - BCNF5
+
+q BCNF
+
+                                                                     
+
+T ( tno, tname )                  tno  tname                            tno
+C ( cno, cname, s_date, e_date )  cno  (cname, s_date, e_date)          cno
+R11 ( in_no, e_date, room )       (in_no, e_date)  room         (in_no, e_date)
+R12 ( cno, room )                                                  (room, cno)
+K ( cno, tno, in_no )                                           (cno, tno, in_no)
+
+q R
+     Ø BCNF
+     Ø  `' `'
+
+q 
+
+     Ø   K
+     Ø K `'
+     Ø 4NFK{ (, ), (, _) }
+
+         
+
+ch06__                                                                             46
+        End of 5
+
+ch06__            47
+

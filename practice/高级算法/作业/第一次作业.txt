@@ -1,0 +1,13 @@
+1. Karp-Rabin Algorithm 使用一个 equality testing 算法作为黑盒子以达成 O(m + n) 的时间复杂度。分别讨论用本门课中介绍的其他 equality testing 算法替代 Karp-Rabin Algorithm 的 equality testing 算法能否达成 O(m + n) 的时间复杂度，并自己找到一个没有在本门课中出现的 equality testing 算法（你需要使用正规 citation 指出该算法的来源），尝试用它替换 Karp-Rabin Algorithm 的 equality testing 算法，你需要尽可能完备地说明为什么能或者不可能达成 O(m + n) 的时间复杂度。
+
+2. 解释 Morris’ counter 背后的直觉。尝试应用 (1 + α)⁻ˣ 的思路得到更好的结果。
+
+3. 使用 马尔科夫不等式 和 切比雪夫不等式 完成 slides 中 Bottom-k algorithm 中未完成的分析（即 Pr[V ≥ k] 和 Pr[W ≤ k]）。
+
+4. 使用 median trick 来优化 min sketch 和 Flajolet-Martin Algorithm 和 Bottom-k algorithm。
+
+5. 第二章中哪些算法是 linear sketch，哪些不是？为什么？如果由你来改进每个算法以提高它们的并行性，你会怎么做？
+
+6. 完成通过分治思想来借助point query计算Heavy hitter的算法细节（细化到伪代码级别），并说明你的算法的正确性。
+
+7. 设计一个支持删除的 filter （即设计一个可以维护多重集的数据结构），并分析其复杂度和正确性。(复杂度越低，得分越高。提醒：每一个微观结构都是有空间代价的，比如如果你使用了 n 个 int，那么你会使用 4n bytes 的空间)

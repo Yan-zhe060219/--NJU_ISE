@@ -1,0 +1,250 @@
+!"#$%&' ''''''' ()*+' ''' ' ''''''''
+
+    2022  6  24  
+
+                
+
+                
+
+              
+
+   
+
+   42 
+
+1. UNIX 
+
+     8 
+      () 
+      ()  Shell 
+      () 
+      ()  API 
+
+            
+
+ 3 2 
+     Shell 2 
+    Count: 20 2 
+             Count: 20
+             Count: 20
+             count 
+    fork, sleep, printf1  sleep 
+
+ sleep 
+1 
+
+                                                                    1
+2.  100K 2  1 
+     
+     
+      I/O 
+
+                                           
+   1      8:00    25          15K       1        1
+   2      8:20    10          30K       0        1
+   3      8:20    20          60K       1        0
+   4      8:30    20          20K       1        0
+   5      8:35    15          10K       1        1
+
+     6 
+ 
+  2 
+ 
+
+ 44 2 
+
+                                   
+                   8:30                8:00
+1     8:00         9:15                8:20
+                   9:00                8:20
+2     9:00         9:10                8:30
+                   9:30                8:35
+3     8:20
+
+4     8:30
+
+5     9:15
+
+    1 
+             1
+
+
+
+    1 
+1 
+
+                       2
+3.  5  P0P1P2P3P4 AB
+
+CD
+
+    Allocation  Claim     Request  Available
+
+Process A B C D A B C D   ABCD ABCD
+
+P0  0 011 1 011           1 000 1 100
+
+P1  2 000 2 750           0 030
+
+P2  0 222 4 656           0 030
+
+P3  2 111 3 112           0 001
+
+P4  0 322 0 532           0 200
+
+6 
+
+ 
+
+  P3 (0, 0, 0, 1) P3 
+
+  P1 (2, 1, 0, 0)(1, 0, 0, 0)
+
+    
+
+1 P0P3P4P2P11 
+    1 1 
+    1 P1P2P4 1 
+
+                       3
+4.  32  1GB 
+
+ 1KB 4B
+
+ 1649 
+
+       
+
+2  10  60      161  0  1
+
+1  22  120     160  0  0
+
+0  50  26      162  1  0
+
+3  0   20      163  1  1
+
+  0 
+          
+
+ 
+          
+
+  0 1
+          
+
+  JMP 4100
+          
+
+ 
+          
+
+4G/1K = 2^22 1G/1K = 2^20 3 
+    1K^2/(2*4) = 128 (KB) 1 
+     R  164-161
+
+= 3  1 
+    4100  4 4 12 
+
+ 2  1 422164,
+1641, 0 2 
+
+    
+
+ 2 
+
+            4
+5.  UNIX  inode  10 
+      1  1KB 4B 256B
+     inode  inode  128B demo ...
+      test1.txttest2.txt  test3.txt  test1.txt 
+     test2.txt test3.txt  test1.txt test1.txt 
+      11000  A9 
+
+      inode  1000  512B
+               
+
+      demo  inode 
+               
+
+      
+       13  write  open 
+       17  read 
+
+               
+
+512*1000/128 = 4000 1 
+    4 256*5 = 1280 2*1024 = 2048 3 
+    Write Error!
+             AAAAAAAAAA 2 
+     write  fd 
+
+ open 1 
+     10245  10  10245-10254  2 
+
+ 2  1 
+ 3 2 
+
+                                                                    5
+6.  16 ( 0-15) 100 ( 0-99)
+      200 ( 0-199) 5400 4 
+      
+       28 
+               1022202406  38
+               
+               
+      ""
+
+60/(5400*2) = 3/540 0.5 
+    28-10-22-20-2-40-6-381601 
+             28-22-20-10-6-2-38-40641 
+             28-38-40-22-20-10-6-2501 
+    0.5 
+
+                                                                    6
+         8
+
+1 
+      i i<N N
+     
+      PV 
+     
+      a) 
+      b)  Readeri  Writer 
+
+
+Semaphor Mutex = 1; //  count 
+count = 0; // 
+Semaphor WR = 1; // 
+Semaphor ConRead = N; //
+
+Readeri :
+
+P(Mutex);
+count ++;
+if (count == 1)
+
+      P(WR);
+V(Mutex);
+for (int j = 0; j < i; j++)
+
+      P(ConRead);
+
+
+P(Mutex);
+count--;
+if (count == 0)
+
+      V(WR);
+V(Mutex)
+for (int j = 0; j < i; j++)
+
+      V(ConRead);
+
+Writer:
+
+P(WR);
+
+V(WR);
+
+            7
+

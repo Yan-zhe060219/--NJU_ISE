@@ -1,0 +1,143 @@
+ 2016 
+
+
+
+
+
+
+
+
+
+
+
+
+()
+     
+           C (  cid,  cname,  city,  discnt )
+         A (  aid,  aname,  city )
+          P (  pid,  pname,  quantity,  price )
+          O (  ordno,  orddate,  cid,  aid,
+                        pid,  qty,  dols )
+     `'
+     (Relational Algebra)
+
+     1) `'
+             ((C join O join P) where city '') [pid, pname]
+
+     2) 
+            C[cid,cname]- (C join O)[cid, cname]  ((C[cid] - O[cid]) join C)[cid, cname]
+
+     3) 'a001'
+             O[cid] - (O where aid 'a001')[cid]
+
+     4) 
+             O1 := O, O2 := O
+             O[cid,ordno]- ((O1 O2) where O1.cid  O2.cid  O1.orddate  O2.orddate)[O1.cid,O1.ordno]
+(SQL )
+
+     
+           C (  cid,  cname,  city,  discnt )
+          A (  aid,  aname)
+           P (  pid,  pname,  quantity,  price )
+           O (  ordno,  orddate,  cid,  aid,
+                        pid,  qty,  dols )
+
+ SQL  YEAR(orddate) SQL  MONTH(orddate)
+         
+
+1 SQL  2015 
+ CustSum aid cname, 
+total_dols
+
+            Create view CustSum(aid, cname, total_dols)
+            As select cid, cname, sum(dols)
+
+                   From O, C
+                   Where O.cid=C.cid and year(orddate)=2015
+                   Group by cid, cname;
+
+2 SQL 
+
+1)  10000 
+
+
+2) `'
+     Select aid
+     From O, C
+     Where O.cid=C.cid and C.city='' and O.aid not in (
+                           Select O2.aid
+                           From O O2, C C2
+                           Where O2.cid=C2.cid and C2.city<>'' );
+
+3) 
+      
+     Select aid, sum(dols) from O group by aid order by sum(dols) DESC;
+
+4)  2014  1  6  100000 
+     Select cid, cname
+     From C, O
+     Where C.cid=O.cid and year(orddate)=2014 and
+                  month(orddate) between 1 and 6
+     Group by cid, cname
+     Having sum(dols)>100000;
+5) 
+     Select X.cid, X.ordno, X.orddate
+     From O X
+     Where X.orddate >= ALL (select Y.orddate from O Y where Y.cid=X.cid )
+
+6) 
+     Select aid
+     from A
+     Where not exists ( select *
+                                 From C
+                                 Where not exists ( select *
+                                                            From O
+                                                            Where O.aid=A.aid and O.cid=C.cid));
+
+
+
+      R(ABCDEF) F = { ABCBDEBDF
+EFACB }
+1  F  F ,,
+
+     
+     ABCBDEEFACB
+     
+
+2  R 
+      AB  AC
+
+3  R  3NF
+     R1(A, B, C) R2(B, D, E) R3(E, F)
+
+4  BCNF BCNF 
+      BCNF
+
+     
+
+
+
+
+     1
+2
+3
+1.  E-R E-R Model
+
+2.  E-R 
+         
+         
+         
+
+3.  b_no w_no r_no
+      m_date m_res :Rb_no, w_no, r_no, m_date, m_res
+     
+     1)  R 
+         b_no, w_no)(r_no,m_date,m_res)
+         (b_no,m_date)w_no
+         (w_no,m_date)b_no
+     2)  R 
+          BCNF
+         (b_no,w_no) (b_no,m_date) (w_no,m_date)
+         {b_no, w_no, m_date} {r_no, m_res}
+          BCNF 
+

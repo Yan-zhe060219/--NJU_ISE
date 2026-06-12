@@ -1,0 +1,1054 @@
+ 
+
+                                    ch03 -  - 
+
+1. 
+
+qSELECT-FROM`'
+  `'
+  
+
+q`'`
+  '`'
+
+q""
+  ""
+
+2.  `' SQL
+     
+
+q NOT IN  NOT EXISTS 
+  EXCEPTSQL
+
+ch03_SQL_                                       2
+           ch03 -  - 
+
+3. `'SQLSQL
+     ALL`'
+
+q NOT EXISTS NOT
+  EXISTSNOT IN`'
+  SQL
+
+qALL`'
+
+q`'
+
+4. SQL
+
+q
+
+Ø 
+
+Ø INNOT INEXISTSNOT
+  EXISTSSOMEANYALL
+
+ch03_SQL_              3
+                        ch03 -  - 
+
+MyCAP
+
+                                    
+
+             customers(cid, cname, city, discnt)
+
+  agents(aid, aname, city, percent)
+
+  products(pid, pname, city, quantity, price)
+
+             orders(ordno, orddate, cid, aid, pid, qty, dols)
+
+  
+
+
+
+     cid, aid, pid, ordno
+     orddateDATE
+     ordno
+
+ch03_SQL_                                                      4
+                            ch03 -  - 
+
+5. SQLcidcname
+   Q1;
+   Q2(pid);
+   Q3(dols)1000;
+   Q41;
+
+ch03_SQL_                               5
+ customers (cid, cname, city, discnt)   products (pid, pname, city, quantity, price)
+ agents (aid, aname, city, percent)     orders (ordno, orddate, cid, aid, pid, qty, dols)
+
+5-Q1: cidcname;
+
+Q1 (1)                                   Q1 (3)
+                                          ( select cid, cname
+ select cid, cname
+ from customers                            from customers )
+ where cid not in (
+                                               except
+      select o.cid
+      from orders o, agents a             ( select c.cid, c.cname
+      where o.aid=a.aid and a.city='');    from customers c, orders o, agents a
+                                           where o.aid=a.aid and o.cid=c.cid
+Q1 (2)
+                                                     and a.city='' );
+ select cid, cname
+ from customers c                        q 
+ where not exists (                         
+                                               ;
+      select *                              
+      from orders o, agents a                  
+      where o.aid=a.aid and o.cid=c.cid
+
+               and a.city='');
+
+ch03_SQL_                                                                                  6
+ customers (cid, cname, city, discnt)   products (pid, pname, city, quantity, price)
+ agents (aid, aname, city, percent)     orders (ordno, orddate, cid, aid, pid, qty, dols)
+
+5-Q2: cidcname(pid);
+
+Q2 (1)                                              Q2 (3)  group by + having 
+
+select distinct c.cid, c.cname                      select c.cid, c.cname
+from customers c, orders x, orders y                from customers c, orders o
+where x.cid=c.cid and y.cid=c.cid and x.pid<>y.pid  where o.cid=c.cid
+                                                    group by c.cid, c.cname
+     and not exists (                               having count(distinct pid)=2 ;
+          select *
+          from orders z                             /* goup bycidcname
+          where z.cid=c.cid and z.pid<>x.pid            */
+                    and z.pid<>y.pid );
+
+Q2 (2) where                                        q 1distinct
+                                                        
+ select c.cid, c.cname
+ from customers c
+ where 2 in ( select count(distinct pid)
+
+                   from orders o
+                   where o.cid=c.cid );
+
+ch03_SQL_                                                                                  7
+ customers (cid, cname, city, discnt)            products (pid, pname, city, quantity, price)
+ agents (aid, aname, city, percent)              orders (ordno, orddate, cid, aid, pid, qty, dols)
+
+5-Q3: cidcname(dols)1000;
+
+Q3 (1)                                          Q3 (3) 
+
+select distinct c.cid, c.cname                  select c.cid, c.cname
+from customers c, orders x                      from customers c, orders o
+where x.cid = c.cid and not exists (            where o.cid = c.cid
+                                                group by c.cid, c.cname
+     select *                                   having min(o.dols) > 1000 ;
+     from orders y
+     where y.cid = c.cid and y.dols <= 1000 );
+
+Q3 (2)                                          Q3 (4)
+
+ select c.cid, c.cname                           ( select c.cid, c.cname
+ from customers c                                  from customers c, orders o
+ where 1000 < all ( select o.dols                  where o.cid = c.cid )
+                                                      except
+                        from orders o
+                        where o.cid = c.cid );   ( select c.cid, c.cname
+                                                   from customers c, orders o
+                                                   where o.cid=c.cid and o.dols <= 1000 );
+
+ch03_SQL_                                                                                           8
+ customers (cid, cname, city, discnt)   products (pid, pname, city, quantity, price)
+ agents (aid, aname, city, percent)     orders (ordno, orddate, cid, aid, pid, qty, dols)
+
+5-Q4: cidcname1
+        ;
+
+Q4 (1)                                               
+
+ select cid, cname                                       p.price > 1  a.city=`' 
+ from customers c                                          
+ where not exists (
+                                                        Q1-3
+      select *                                             
+      from products p
+      where p.price > 1 and not exists (                
+                                                           1
+            select *                                       
+            from orders o, agents a
+            where o.cid=c.cid and o.pid=p.pid and       "
+                                                           1
+                     o.aid=a.aid and a.city='' ) );        "SQL
+
+                                                        not exists
+                                                           not in
+
+ch03_SQL_                                                                                  9
+ customers (cid, cname, city, discnt)   products (pid, pname, city, quantity, price)
+ agents (aid, aname, city, percent)     orders (ordno, orddate, cid, aid, pid, qty, dols)
+
+5-Q4: cidcname1
+        ;
+
+Q4 (2) not existsnot in
+
+
+select cid, cname
+from customers c
+where not exists (
+
+     select *
+     from products p
+     where p.price > 1 and c.id NOT IN (
+
+          select o.cid
+          from orders o, agents a
+          where o.pid = p.pid and o.aid = a.aid and a.city = '' ) );
+
+ch03_SQL_                                                                                  10
+ customers (cid, cname, city, discnt)         products (pid, pname, city, quantity, price)
+ agents (aid, aname, city, percent)           orders (ordno, orddate, cid, aid, pid, qty, dols)
+
+5-Q4: cidcname1
+        ;
+
+q 
+
+ C1C
+     
+
+ 
+
+q 
+
+select distinct cid                          select cid from customers c
+from customers c, products p                 where exists (
+where p.price > 1 and not exists (
+                                                  select * from products p
+     select *                                     where p.price > 1 and not exists (
+     from orders o, agents a
+     where o.cid=c.cid and o.pid=p.pid and             select *
+                                                       from orders o, agents a
+              o.aid=a.aid and a.city='' ) ;            where o.cid=c.cid and o.pid=p.pid and
+
+                                                                 o.aid=a.aid and a.city='' ) );
+
+ch03_SQL_                                                                                        11
+ customers (cid, cname, city, discnt)   products (pid, pname, city, quantity, price)
+ agents (aid, aname, city, percent)     orders (ordno, orddate, cid, aid, pid, qty, dols)
+
+5-Q4: cidcname1
+        ;
+
+Q4 (3) 
+
+ select cid, cname
+ from customers c
+ where cid NOT IN (
+
+      select distinct cid
+      from customers c, products p
+      where p.price > 1 and not exists (
+
+            select *
+            from orders o, agents a
+            where o.cid=c.cid and o.pid=p.pid and o.aid=a.aid and a.city='' ) );
+
+Q4 (4) cid
+
+ (select cid, cname from customers c) EXCEPT
+ (select distinct c.cid, c.cname from customers c, products p where p.price > 1 and not exists (
+  select * from orders o, agents a where o.cid=c.cid and o.pid=p.pid and o.aid=a.aid and a.city='' ) );
+
+ch03_SQL_                                                                                                12
+ customers (cid, cname, city, discnt)   products (pid, pname, city, quantity, price)
+ agents (aid, aname, city, percent)     orders (ordno, orddate, cid, aid, pid, qty, dols)
+
+5-Q4: cidcname1
+        ;
+
+Q4 (5) 
+
+select c.cid, c.cname
+from customers c, products p, agents a, orders o
+where o.cid = c.cid and o.pid = p.pid and o.aid = a.aid and a.city = '' and p.price > 1
+group by c.cid, c.cname
+having count(distinct o.pid) = (select count(*) from products where price > 1) ;
+
+ch03_SQL_                                                                                  13
+                            ch03 -  - 
+
+6. SQL (cidpid)
+   Q5C
+   Q6CP 1 
+   Q7CP
+
+ch03_SQL_                               14
+ customers (cid, cname, city, discnt)   products (pid, pname, city, quantity, price)
+ agents (aid, aname, city, percent)     orders (ordno, orddate, cid, aid, pid, qty, dols)
+
+6-Q5: SQL (cidpid)C;
+
+Q5 (1)                                          Q5 (3)
+
+select x.cid, x.pid                             select cid, pid
+
+from orders x                                   from orders
+
+where not exists                                where cid IN ( select cid
+
+( select *                                                       from orders
+ from orders y                                                   group by cid
+ where y.cid = x.cid and y.ordno <> x.ordno );                   having count(*)=1 );
+
+Q5 (2)                                           ""
+                                                    
+select x.cid, x.pid
+                                                    Q5Q6Q7
+from orders x                                       
+
+where 1 = ALL ( select count(*)                  3 orders
+                                                    
+               from orders y
+                                                  group
+               where y.cid = x.cid );               by+having 
+
+//**                                             select cid, pid from orders group by cid having count(*)=1 ;
+
+=SO=MSEOMEIN IN=A=LALL*L/              */                                                                                                                                               15
+
+ch03_SQL_
+ customers (cid, cname, city, discnt)            products (pid, pname, city, quantity, price)
+ agents (aid, aname, city, percent)              orders (ordno, orddate, cid, aid, pid, qty, dols)
+
+6-Q6: SQL (cidpid)CP 1 ;
+
+Q6 (1)                                          Q6 (3)
+
+select x.cid, x.pid                             select cid, pid
+from orders x                                   from orders
+where not exists (                              group by cid, pid
+                                                having count(*) = 1 ;
+     select *
+
+      from orders y                              23 '1' 
+      where y.cid = x.cid and y.pid = x.pid         n'='
+                                                     "n""n"......
+               and y.ordno <> x.ordno );            
+
+Q6 (2)                                            (cid, pid) IN ( select cid, pid ...... )
+                                                    
+ select x.cid, x.pid
+ from orders x                                   
+ where 1 = ALL (
+                                                       select cid, pid from orders
+      select count(*)                                  where cid IN ( select cid
+      from orders y
+      where y.cid = x.cid and y.pid = x.pid );                             from orders
+                                                                           group by cid, pid
+                                                                           having count(*)=1 );
+
+ch03_SQL_                                                                                           16
+ customers (cid, cname, city, discnt)                   products (pid, pname, city, quantity, price)
+ agents (aid, aname, city, percent)                     orders (ordno, orddate, cid, aid, pid, qty, dols)
+
+6-Q7: SQL (cidpid)CP;
+
+Q7 (1)                                                 Q7 (3)
+
+select distinct x.cid, x.pid                           select distinct cid, pid
+
+from orders x                                          from orders
+
+where not exists (                                     where cid IN ( select cid
+
+select *                                                            from orders
+from orders y                                                       group by cid
+where y.cid = x.cid and y.pid <> x.pid );                           having count(distinct pid)=1 );
+
+     Q7 (2)                                              distinct 
+      select distinct x.cid, x.pid                          (   )
+      from orders x
+      where 1 = ALL ( select count ( distinct y.pid )   selectdistinct
+                                                           Q5Q6
+                          from orders y
+                          where y.cid = x.cid );        
+
+ch03_SQL_                                                     select cid, pid
+                                                              from orders
+                                                              group by cid
+                                                              having count(distinct pid) = 1 ;
+
+                                                                                                                                                                                               17
+                            ch03 -  - 
+
+7. SQL
+   Q8
+   Q9
+   Q10discnt
+   Q11
+         
+
+   Q12
+
+ch03_SQL_                               18
+ customers (cid, cname, city, discnt)             products (pid, pname, city, quantity, price)
+ agents (aid, aname, city, percent)               orders (ordno, orddate, cid, aid, pid, qty, dols)
+
+7-Q8: ;
+
+Q8 (1)                                           Q8 (2)
+
+ select pid                                       select pid
+ from products p                                  from products p
+ where not exists (                               where not exists (
+
+       select *                                         select *
+       from customers c                                 from customers c
+       where not exists (                               where c.city not in (
+
+              select *                                         select x.city
+              from customers x, orders o                       from customers x, orders o
+              where x.cid=o.cid and o.pid=p.pid                where x.cid=o.cid and o.pid=p.pid ) );
+
+                       and x.city=c.city ) );
+
+Q8 (3) select o.pid
+
+           from customers c, orders o
+
+           where o.cid = c.cid
+
+           group by o.pid
+
+           having count(distinct c.city) = (select count(distinct city) from customers) ;
+
+ch03_SQL_                                                                                              19
+ customers (cid, cname, city, discnt)   products (pid, pname, city, quantity, price)
+
+ agents (aid, aname, city, percent)  orders (ordno, orddate, cid, aid, pid, qty, dols)
+
+7-Q9: ;
+
+Q9 (1)                                              Q9 (2)
+
+ select x.cid, y.orddate as last_ord,                select x.cid, y.orddate as last_ord,
+                    x.orddate as prior_to_last_ord                      x.orddate as prior_to_last_ord
+
+ from orders x, orders y                             from orders x, orders y
+ where x.cid=y.cid and x.ordno < y.ordno             where x.cid=y.cid and
+
+      and not exists (                                         x.ordno < y.ordno and
+            select *                                           x.ordno >= all (
+            from orders z
+            where z.cid=x.cid and                                    select z.ordno
+                      z.ordno > x.ordno and                          from orders z
+                      z.ordno <> y.ordno );                          where z.cid=x.cid and
+
+                                                                               z.ordno <> y.ordno );
+
+
+   ordno
+   
+
+ch03_SQL_                                                                                               20
+ customers (cid, cname, city, discnt)   products (pid, pname, city, quantity, price)
+
+ agents (aid, aname, city, percent)  orders (ordno, orddate, cid, aid, pid, qty, dols)
+
+7-Q10: discnt;
+
+Q10 ()
+
+select aid, aname
+
+from agents a
+
+where not exists (
+
+select *
+
+from customers c
+
+where c.discnt in (select max(distinct) from customers)  /*  */
+
+and not exists (
+
+        select *                                /* ac */
+        from orders o
+
+        where o.aid=a.aid and o.cid=c.cid ) );
+
+ch03_SQL_                                                                               21
+ customers (cid, cname, city, discnt)   products (pid, pname, city, quantity, price)
+
+ agents (aid, aname, city, percent)  orders (ordno, orddate, cid, aid, pid, qty, dols)
+
+7-Q11: ; 
+
+Q11 (1)                                                
+ select o.pid
+ from orders o, customers c, agents a                   
+ where o.cid=c.cid and o.aid=a.aid and c.city=a.city;
+                                                            
+Q11 (2) ...join...on...
+ select pid                                             SQL
+ from (orders o join customers c on o.cid=c.cid)            natural join
+                                                            ( orders natural join customers )
+     join agents a on o.aid=a.aid and c.city=a.city;         agents  aid
+                                                             city natural join
+Q11 (3)                                                     
+ select pid                                                 3
+ from ( orders natural join customers )
+
+                natural join agents ;
+
+ch03_SQL_                                                                                      22
+ customers (cid, cname, city, discnt)   products (pid, pname, city, quantity, price)
+
+ agents (aid, aname, city, percent)  orders (ordno, orddate, cid, aid, pid, qty, dols)
+
+7-Q12: ;
+
+Q12 ()
+
+   select distinct aid
+   from orders o1
+   where not exists (
+
+        select *
+        from customers c
+        where c.city = `' and not exists (
+
+              select *
+              from orders o2
+              where o2.aid=o1.aid and o2.cid=c.cid and o2.pid=o1.pid ) );
+
+Q10
+ agents  orders
+  distinct 
+
+ where
+
+ch03_SQL_                                                                               23
+                                    ch03 -  - 
+
+8. like<>
+   
+
+q<>%
+  0 _
+    Ø a%b"ab"
+    Ø a_b"ab"3
+
+q`'
+    Ø`a\_b%' escape `\' "ab"
+
+Ø MySQL\escape
+   
+
+ch03_SQL_                                       24
+                                    ch03 -  - 
+
+9. 
+      SQL
+      
+      
+      count(*)count(cid)count(distinct cid)
+
+ COUNT, MAX, MIN, SUM, 
+     AVG
+
+ COUNTSUMAVGMAXMIN
+     
+
+ `'
+      
+
+ 
+     Ø COUNT(*)
+     Ø COUNT(cid)cid
+     Ø COUNT(distinct cid)cidcid
+
+ch03_SQL_                                       25
+                                    ch03 -  - 
+10. group bySQL
+
+qselect
+
+    Ø group by
+    Ø 
+
+ch03_SQL_                                       26
+                                    ch03 -  - 
+
+11. view
+       SQL`'`'
+       SQL`'`'
+       WITH CHECK OPTION
+       
+       SQL
+
+ SQL`'`'
+      (primary key)
+      (unique)
+
+ `'`'`'
+      
+
+ WITH CHECK OPTION
+      
+      
+
+ 
+      
+
+ 
+      
+
+ch03_SQL_                                       27
+           ch03 -  12 - 
+
+12. 
+
+             
+
+ , , ,       Student (sno, sname, dept, regyear)
+ , ,         Teacher (tno, tname, dept)
+
+ , , , ,  Course (cno, cname, dept, credit, optional)
+
+  , , , ,    SC (sno, cno, tno, scyear, semester, grade)
+  ,          TC (tno, cno, tcyear, semester, hours)
+
+  , , ,
+  , 
+
+
+
+· 
+
+· 
+
+  
+
+· 60
+
+·  × .  ×  
+
+·  `'  `' 
+
+ch03_SQL_                                                 28
+                            ch03 -  - 
+
+12SQL
+  `'
+ `'
+ 20212023
+ 
+
+ `'`'
+ 2020
+
+     `'
+ 
+
+ 1000
+     
+
+ `'
+     `'`'
+
+ 
+     `'
+
+ch03_SQL_                               29
+           ch03 -  12 - 
+
+                                                      
+                            Student (sno, sname, dept, regyear)
+  , , ,                     Teacher (tno, tname, dept)
+  , ,                       Course (cno, cname, dept, credit, optional)
+  , , , , 
+  , , , ,                   SC (sno, cno, tno, scyear, semester, grade)
+  , 
+  , , ,                     TC (tno, cno, tcyear, semester, hours)
+  , 
+
+12-  `'
+
+select cname, dept from Course where cname like `%%' ;
+
+12- `'
+  select cno, cname from Course where dept IS NULL ;
+
+ch03_SQL_                                                                30
+           ch03 -  12 - 
+
+                                                                         
+                                               Student (sno, sname, dept, regyear)
+  , , ,                                        Teacher (tno, tname, dept)
+  , ,                                          Course (cno, cname, dept, credit, optional)
+  , , , , 
+  , , , ,                                      SC (sno, cno, tno, scyear, semester, grade)
+  , 
+  , , ,                                        TC (tno, cno, tcyear, semester, hours)
+  , 
+
+12- 20212023
+
+q  1                                           q  2
+
+  select tno, tname                              select tno, tname
+  from Teacher                                   from Teacher T
+  where tno not in (                             where not exists (
+
+       select tno                                     select * from TC
+       from TC                                        where TC.tno = T.tno and
+       where tcyear between 2021 and 2023 ) ;
+                                                                 tcyear between 2021 and 2023 ) ;
+
+ch03_SQL_                                                                                          31
+           ch03 -  12 - 
+
+                                                      
+                            Student (sno, sname, dept, regyear)
+  , , ,                     Teacher (tno, tname, dept)
+  , ,                       Course (cno, cname, dept, credit, optional)
+  , , , , 
+  , , , ,                   SC (sno, cno, tno, scyear, semester, grade)
+  , 
+  , , ,                     TC (tno, cno, tcyear, semester, hours)
+  , 
+
+12- 20212023
+q  3tno
+
+( select tno, tname from Teacher ) EXCEPT
+( select T.tno, T.tname
+ from TC, Teacher T
+ where TC.Tno = T.tno and TC.tcyear between 2021 and 2023 ) ;
+
+ch03_SQL_                                                                32
+                          ch03 -  12 - 
+
+12- ;
+q  1
+ select x.tno, x.tname
+ from Teacher x
+ where x.tno IN ( select tno from TC ) and
+
+         not exists ( select *
+                       from TC t, Course c
+                       where t.tno = x.tno and t.cno = c.cno and x.dept <> c.dept ) ;
+
+q  2
+    EXCEPT
+
+      ( select x.tno, x.tname from teach t, Teacher x where t.tno=x.tno )
+            except
+
+      ( select y.tno, y.tname
+        from teach t, course c, Teacher y
+        where t.tno=y.tno and t.cno=c.cno and y.dept<>c.dept ) ;
+
+ch03_SQL_                                                                              33
+                             ch03 -  12 - 
+
+                                                       
+
+ , , ,                                        Student (sno, sname, dept, regyear)
+
+ , ,                                          Teacher (tno, tname, dept)
+
+ , , , ,  Course (cno, cname, dept, credit, optional)
+
+  , , , ,                                     SC (sno, cno, tno, scyear, semester, grade)
+  , 
+
+  , , ,                                       TC (tno, cno, tcyear, semester, hours)
+  , 
+
+12- `'`'
+
+select S.sno, S.sname                                                      1
+
+from Student S
+
+where not exists ( select *
+
+                from Course C
+
+                where C.dept='' and C.optional='' and
+
+                       not exists ( select *
+
+                               from SC
+
+                               where SC.sno=S.sno and SC.cno=C.cno and SC.grade>=60 ) ) ;
+
+ch03_SQL_                                                                                  34
+       ch03 -  12 - 
+
+           
+
+ , , ,     Student (sno, sname, dept, regyear)
+
+ , ,       Teacher (tno, tname, dept)
+
+ , , , ,  Course (cno, cname, dept, credit, optional)
+
+  , , , ,  SC (sno, cno, tno, scyear, semester, grade)
+  , 
+
+  , , ,    TC (tno, cno, tcyear, semester, hours)
+  , 
+
+12- `'`'
+
+      select S1.sno, S1.sname from Student S1 where S1.sno NOT IN (                 2
+           select S2.sno from Student S2 where EXISTS (
+                 select * from Course C                                                                                            35
+                 where C.dept = '' and C.optional = '' and NOT EXISTS (
+                      select * from SC
+                      where SC.sno = S2.sno and SC.cno = C.cno and SC.grade >= 60
+                 )
+           )
+
+      );
+
+ch03_SQL_
+                           ch03 -  12 - 
+
+                                                            
+
+ , , ,                              Student (sno, sname, dept, regyear)
+
+ , ,                                Teacher (tno, tname, dept)
+
+ , , , ,  Course (cno, cname, dept, credit, optional)
+
+    , , , ,                         SC (sno, cno, tno, scyear, semester, grade)
+    , 
+
+    , , ,                           TC (tno, cno, tcyear, semester, hours)
+    , 
+
+12- `'`'
+
+( select sno, sname from Student )                               3
+
+    EXCEPT
+
+(
+
+    select S.sno, S.sname
+
+    from Student S, Course C
+
+    where C.dept = '' and C.optional = '' and NOT EXISTS (
+
+    select * from SC where SC.sno = S.sno and SC.cno = C.cno and SC.grade >= 60 )
+
+);
+
+ch03_SQL_                                                                          36
+           ch03 -  12 - 
+
+             
+
+ , , ,       Student (sno, sname, dept, regyear)
+
+ , ,         Teacher (tno, tname, dept)
+
+ , , , ,  Course (cno, cname, dept, credit, optional)
+
+  , , , ,    SC (sno, cno, tno, scyear, semester, grade)
+  , 
+
+  , , ,      TC (tno, cno, tcyear, semester, hours)
+  , 
+
+12- `'`'
+
+select S.sno, S.sname                                                             4
+from Student S, Course C, SC
+where SC.sno = S.sno and SC.cno = C.cno and
+
+          C.dept = '' and C.optional = '' and SC.grade >= 60
+group by S.sno, S.sname
+having COUNT(distinct SC.cno) = ( select COUNT(*)
+
+                                           from Course
+                                           where dept = '' and optional = '' );
+
+ch03_SQL_                                                                            37
+           ch03 -  12 - 
+
+             
+
+ , , ,       Student (sno, sname, dept, regyear)
+
+ , ,         Teacher (tno, tname, dept)
+
+ , , , ,  Course (cno, cname, dept, credit, optional)
+
+  , , , ,    SC (sno, cno, tno, scyear, semester, grade)
+  , 
+
+  , , ,      TC (tno, cno, tcyear, semester, hours)
+  , 
+
+12- 2020
+    `'
+
+select S.sno, S.sname, S.dept
+from Student S
+where S.regyear < 2020 and exists (
+
+     select * from Course C where C.dept=S.dept and C.optional='' and
+          not exists (select * from SC where C.cno=SC.cno and SC.sno=S.sno and SC.grade>=60 ) ) ;
+
+ch03_SQL_                                                                                          38
+                       ch03 -  12 - 
+
+                                                      
+                            Student (sno, sname, dept, regyear)
+  , , ,                     Teacher (tno, tname, dept)
+  , ,                       Course (cno, cname, dept, credit, optional)
+  , , , , 
+  , , , ,                   SC (sno, cno, tno, scyear, semester, grade)
+  , 
+  , , ,                     TC (tno, cno, tcyear, semester, hours)
+  , 
+
+12- 
+
+select distinct x.tno, x.tcyear FIRST_YEAR, y.tcyear LAST_YEAR                      1
+
+from TC x, TC y
+
+where x.tno=y.tno and
+
+not exists ( select * from TC where TC.tno = x.tno and TC.tcyear < x.tcyear ) and
+
+not exists ( select * from TC where TC.tno = y.tno and TC.tcyear > y.tcyear ) ;
+
+Ø 
+   
+
+ch03_SQL_                                                                              39
+           ch03 -  12 - 
+
+                                                      
+                            Student (sno, sname, dept, regyear)
+  , , ,                     Teacher (tno, tname, dept)
+  , ,                       Course (cno, cname, dept, credit, optional)
+  , , , , 
+  , , , ,                   SC (sno, cno, tno, scyear, semester, grade)
+  , 
+  , , ,                     TC (tno, cno, tcyear, semester, hours)
+  , 
+
+12- 
+
+select distinct x.tno, x.tcyear FIRST_YEAR, y.tcyear LAST_YEAR               2
+from TC x, TC y
+where x.tno=y.tno and
+
+     x.tcyear <= ALL ( select TC.tcyear from TC where TC.tno = x.tno ) and
+     y.tcyear >= ALL ( select TC.tcyear from TC where TC.tno = x.tno ) ;
+
+Ø 12select distinct
+
+ch03_SQL_                                                                       40
+           ch03 -  12 - 
+
+                                                      
+                            Student (sno, sname, dept, regyear)
+  , , ,                     Teacher (tno, tname, dept)
+  , ,                       Course (cno, cname, dept, credit, optional)
+  , , , , 
+  , , , ,                   SC (sno, cno, tno, scyear, semester, grade)
+  , 
+  , , ,                     TC (tno, cno, tcyear, semester, hours)
+  , 
+
+12- 
+
+select tno, MIN(tcyear) FIRST_YEAR, MAX(tcyear) LAST_YEAR   3
+from TC
+group by tno ;
+
+ch03_SQL_                                                                41
+           ch03 -  12 - 
+
+                                                            
+                                  Student (sno, sname, dept, regyear)
+  , , ,                           Teacher (tno, tname, dept)
+  , ,                             Course (cno, cname, dept, credit, optional)
+  , , , , 
+  , , , ,                         SC (sno, cno, tno, scyear, semester, grade)
+  , 
+  , , ,                           TC (tno, cno, tcyear, semester, hours)
+  , 
+
+12- 1000
+         
+
+select tno, count(*), sum(hours)
+from TC
+group by tno
+having sum(hours) > 1000
+order by sum(hours) DESC ;
+
+ch03_SQL_                                                                      42
+                          ch03 -  12 - 
+
+12- `'
+        `'`'
+
+ select S.sno, S.dept, AVG(R.grade*0.05*C.credit) as avgofcred
+ from Student S, SC R, Course C
+ where S.sno=R.sno and R.cno=C.cno and
+
+         S.sno not in ( select x.sno
+                        from SC x, Course y
+                        where x.cno=y.cno and y.optional='' and x.grade < 60 )
+
+ group by S.sno, S.dept
+ order by S.dept ASC, avgofcred DESC ;
+
+Ø 
+      """"
+          ""
+      
+
+ch03_SQL_                                                                       43
+           ch03 -  12 - 
+
+12- 
+        `'
+
+create view stud_view as
+     select S.sno, S.sname, S.dept, Y.sumofcred, Z.avgofcred
+     from Student S,
+           ( select R.sno, sum(C.credit)
+             from SC R, Course C
+             where R.cno=C.cno and R.grade>=60
+             group by R.sno ) AS Y(sno, sumofcred) ,
+           ( select R.sno, AVG(R.grade*0.05*C.credit)
+             from SC R, Course C
+             where R.cno=C.cno and C.optional=''
+             group by R.sno ) AS Z(sno, avgofcred)
+     where S.sno=Y.sno and S.sno=Z.sno ;
+
+
+
+ 
+    FROM
+
+ 
+
+ch03_SQL_                                                     44
+

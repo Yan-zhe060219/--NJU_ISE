@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# 课件预处理缓存（自动生成，不需要版本管理）
+inbox/*/.cache/
+
+# 学习进度追踪（自动生成）
+inbox/*/.learned
+
+# 本地配置（含个人偏好，不共享）
+.claude/settings.local.json
+
+# 系统垃圾
+.DS_Store
+Thumbs.db
+*.log
