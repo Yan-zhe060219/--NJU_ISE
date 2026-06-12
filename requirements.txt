@@ -7,3 +7,11 @@ numpy>=1.21
 
 # PPTX 文本提取
 python-pptx>=0.6.21
+
+# 通用文档转换（PDF/Word/PPT/Excel/图片/音视频 → Markdown）
+# 包含所有可选依赖：PDF(Docling)、OCR、Azure AI、音视频等
+markitdown[all]>=0.1.0
+
+# MarkItDown MCP 服务器（Claude Code 直接调用，无需 CLI）
+# 通过 uvx markitdown-mcp 运行，详见 .mcp.json
+# markitdown-mcp  # uvx 自动拉取，无需 pip install

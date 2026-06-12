@@ -110,7 +110,7 @@ claude
 ## 目录结构
 
 ```
-NJU_ISE/
+Personnal/
 ├── inbox/                    # 课件放入这里（按课程分文件夹）
 │   ├── OS/                   # 操作系统课件（PDF/PPTX）
 │   ├── 互联网计算/            # 计算机网络课件
@@ -124,15 +124,21 @@ NJU_ISE/
 │   └── software-eng/         # 软件工程主题
 ├── practice/                 # 练习资料（往年卷、复习思考题）
 ├── tools/                    # 课件预处理脚本
-│   ├── extract_pdfs.py       # PDF → 文本
-│   └── extract_pptx.py       # PPTX → 文本
+│   ├── extract_file.py       # 统一文本提取（MarkItDown 优先，回退 PDF/PPTX）
+│   ├── extract_pdfs.py       # PDF → 文本（回退，EasyOCR 扫描件）
+│   └── extract_pptx.py       # PPTX → 文本（回退，演讲者备注）
 ├── templates/                # Prompt 模板
 ├── .claude/                  # Claude Code 配置
-│   ├── commands/             # 自定义命令定义
-│   └── references/           # 共享原则和映射表
+│   ├── commands/             # 自定义命令（learn, study, review, homework 等）
+│   ├── references/           # 共享原则和映射表
+│   ├── skills/               # 自定义技能（占位）
+│   ├── settings.json         # 项目级权限配置
+│   └── settings.local.json   # 本地覆盖配置（不提交）
 ├── CLAUDE.md                 # 项目说明书（AI 读取）
-├── COMMANDS.md               # 命令速查手册
-├── ARCHITECTURE.md           # 架构决策记录
+├── .claude/commands-speed-dial.md  # 命令速查手册
+├── .claude/adr.md             # 架构决策记录
+├── .claude/summer-refactor-plan.md  # 暑假重构计划
+├── .mcp.json                 # MCP 服务器配置
 ├── REVIEW.md                 # 期末复习总控面板
 └── requirements.txt          # Python 依赖
 ```

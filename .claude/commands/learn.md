@@ -36,27 +36,36 @@ description: 深度分析学习材料（PDF/PPTX/视频/文章），按课程组
 
 ### 2. 文件预处理（自动提取文本）
 
-读取文件之前，先检查待处理列表中是否有 PDF / PPTX 文件没有对应的 `.txt`：
+读取文件之前，先将待处理列表中所有支持的文件提取为 `.txt`：
 
 ```bash
-# 对目标文件夹中所有 PDF 和 PPTX 自动提取文本（跳过已有 .txt 的）
-python tools/extract_pdfs.py <目标文件夹>
-python tools/extract_pptx.py <目标文件夹>
+# 统一提取：MarkItDown 优先处理所有格式，失败自动回退到 extract_pdfs/extract_pptx
+python tools/extract_file.py <目标文件夹>
 ```
 
 - 此步骤**静默执行**，无需用户确认
 - 如果所有文件都已提取，脚本自动跳过
 - 提取的 `.txt` 保存在课程文件夹的 `.cache/` 子目录中，与原始文件隔离
-- **硬性约束：只读 `.cache/<文件名>.txt`**，绝不直接读取原始 PDF/PPTX 文件。原因：
-  - 原始 PDF 需要 `document` 类型的多模态输入，当前 API 不支持
+- **支持的格式**：PDF、PPTX、DOCX、XLSX/XLS、图片（jpg/png/gif/bmp/webp）、HTML、CSV、JSON、XML、IPYNB、EPUB
+- **提取策略**：
+  - 主引擎：MarkItDown（微软开源，支持 12+ 种格式 → Markdown）
+  - 回退：PDF 回退到 `extract_pdfs.py`（EasyOCR 扫描件识别），PPTX 回退到 `extract_pptx.py`（演讲者备注提取）
+  - 无回退的格式（DOCX/XLSX/图片等）：MarkItDown 失败则报告错误
+- **硬性约束：只读 `.cache/<文件名>.txt`**，绝不直接读取原始 PDF/PPTX/DOCX 等二进制文件。原因：
+  - 原始二进制文件需要多模态输入，当前 API 不支持
   - 即使 API 支持，切换回 deepseek 等纯文本模型后也无法工作
-  - 扫描件 PDF 由 `extract_pdfs.py` 自动调用 EasyOCR 处理，`.txt` 一定存在
+  - 扫描件 PDF 由回退脚本自动调用 EasyOCR 处理，`.txt` 一定存在
   - 此约束确保 kimi / deepseek / 任意纯文本模型都能处理
 
 **PPTX 特殊说明：**
 - PPTX 提取内容包括幻灯片正文 + 演讲者备注（备注往往是老师补充的关键信息）
 - 如果某页 PPTX 全是图片/图表，提取结果文本量极少，在笔记中标注 `[此页主要为图片/图表，需手动查看原文件]`，不要尝试直接读原始 PPTX 文件
 - PPTX 内容通常比 PDF 稀疏（提纲式），笔记分析时会自动标注"来源为幻灯片，内容偏提纲，建议结合课堂讲解"
+
+**新增格式说明：**
+- DOCX/XLSX：Word/Excel 文件，MarkItDown 直接提取文本和表格
+- 图片：MarkItDown 提取 EXIF 元数据 + 自动 OCR，适合老师发的截图/板书照片
+- HTML/CSV/JSON/XML：MarkItDown 直接转换结构化数据为 Markdown 表格
 
 ### 3. 读取课程上下文（处理第一个文件之前）
 
@@ -301,7 +310,7 @@ chapter: <序号>
 - **笔记质量 > 处理速度**：宁愿多花时间写透一个概念
 - **标注来源**：source 字段写文件名，方便日后回溯原文
 - **贴合原文，应对考试**：参见 `.claude/references/principles.md` 中的"术语保真"原则
-- **遇到无法读取的文件**（OCR 失败的扫描版 PDF、纯图片 PPTX）：在笔记中标注 `⚠️ 需手动查看原文件`，建议用户用其他方式处理。**绝不尝试直接 Read 原始 PDF/PPTX 文件作为多模态输入**——这会破坏跨模型兼容性
+- **遇到无法读取的文件**（MarkItDown 和回退脚本均失败、或图片 OCR 无文字）：在笔记中标注 `⚠️ 需手动查看原文件`，建议用户用其他方式处理。**绝不尝试直接 Read 原始二进制文件作为多模态输入**——这会破坏跨模型兼容性
 
 ---
 

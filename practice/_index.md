@@ -51,7 +51,7 @@ practice/
 | 数据库 | 🔥🔥🔥 已整理 | [exam-intel.md](数据库/exam-intel.md) | ✅ 已分析 |
 | 互联网计算 | 🔥🔥🔥 已整理 | [exam-intel.md](互联网计算/exam-intel.md) | ✅ 已分析 |
 | OS | 🔥🔥🔥 已整理 | [exam-intel.md](操作系统/exam-intel.md) | ✅ 已分析 |
-| 软件工程 | 🔥 2份 | — | 待分析 |
+| 软件工程 | 🔥 2份 | [exam-intel.md](软件工程/exam-intel.md) | ✅ 已分析 |
 | 高级算法 | ❌ 仅作业 | — | 无资料 |
 | 近代史 | ❌ | — | 等课件 |
 

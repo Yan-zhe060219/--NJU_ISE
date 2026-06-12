@@ -1,6 +1,14 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+---
+
 # Personal AI-Assisted Learning & Coding System
 
 大二软件工程学生的本地 AI 辅助系统。目标是：不依赖网页端 AI，用 Claude Code (DeepSeek V4 Pro) 完成学习和编程。
+
+> **维护状态**：暑假前稳定维护，不做大改。大规模瘦身（~60 行）已规划在 `.claude/summer-refactor-plan.md`，7 月 4 日后执行。
 
 ## 目录结构
 
@@ -17,8 +25,9 @@ Personnal/
 │   └── other/
 ├── practice/                       # 练习资料：往年卷、复习思考题、exam-intel.md
 ├── tools/                          # 课件预处理脚本
-│   ├── extract_pdfs.py             # PDF → 文本提取
-│   └── extract_pptx.py             # PPTX → 文本提取
+│   ├── extract_file.py              # 统一文本提取（MarkItDown 优先，回退 PDF/PPTX）
+│   ├── extract_pdfs.py             # PDF → 文本提取（回退，EasyOCR 扫描件）
+│   └── extract_pptx.py             # PPTX → 文本提取（回退，演讲者备注）
 ├── templates/                      # Prompt 模板
 ├── .claude/                        # Claude Code 配置
 │   ├── commands/                   # 自定义命令（learn, study, review, homework 等）
@@ -27,8 +36,8 @@ Personnal/
 │   ├── settings.json               # 项目级权限配置
 │   ├── settings.local.json         # 本地覆盖配置（不提交）
 │   └── study-session.json          # 当前学习会话状态
-├── ARCHITECTURE.md                 # 架构决策记录（ADR 风格）
-├── COMMANDS.md                     # 命令速查手册（日常参考用）
+├── .claude/adr.md                  # 架构决策记录（ADR 风格）
+├── .claude/commands-speed-dial.md  # 命令速查手册（日常参考用）
 ├── REVIEW.md                       # 期末复习总控面板
 ├── CLAUDE.md                       # 本文件（宪法层）
 └── requirements.txt                # Python 依赖（pdfplumber, python-pptx 等）
@@ -36,9 +45,10 @@ Personnal/
 
 ## 配套文件
 
-- **COMMANDS.md** — 所有命令的速查手册（flags、示例），日常操作先查它
-- **ARCHITECTURE.md** — 架构决策记录，新增/删除架构元素时在这里写条目
+- **.claude/commands-speed-dial.md** — 所有命令的速查手册（flags、示例），日常操作先查它
+- **.claude/adr.md** — 架构决策记录，新增/删除架构元素时在这里写条目
 - **REVIEW.md** — 期末复习的单一真相源（考试日期、进度追踪、阶段计划）
+- **.claude/summer-refactor-plan.md** — 暑假重构计划（考后执行）
 
 ## Python 环境
 
@@ -50,7 +60,15 @@ pip install -r requirements.txt
 
 主要依赖：`pdfplumber`（PDF）、`python-pptx`（PPTX）、`PyMuPDF`（PDF 回退）、`easyocr`（扫描件 OCR）。
 
-`/learn` 命令会**自动**调用 `tools/extract_pdfs.py` 和 `tools/extract_pptx.py`，无需手动运行。只有在预处理失败或需要强制重新提取时才手动调用。
+`/learn` 命令会**自动**调用 `tools/extract_file.py`（MarkItDown 引擎），无需手动运行。只有在预处理失败或需要强制重新提取时才手动调用。
+
+验证工具是否正常：
+
+```bash
+python tools/extract_file.py --help
+python tools/extract_pdfs.py --help
+python tools/extract_pptx.py --help
+```
 
 ## 知识库分层
 
@@ -158,10 +176,11 @@ CLAUDE.md（宪法层 — 很少改）
   │   └── kb-review.md
   │
   ├── REVIEW.md（数据层 — 复习总控，被 review.md 读写）
-  ├── COMMANDS.md（参考层 — 命令速查，被 CLAUDE.md 引用）
-  ├── ARCHITECTURE.md（参考层 — 架构决策记录，被 CLAUDE.md 引用）
+  ├── .claude/commands-speed-dial.md（参考层 — 命令速查，被 CLAUDE.md 引用）
+  ├── .claude/adr.md（参考层 — 架构决策记录，被 CLAUDE.md 引用）
   │
   └── tools/（工具层 — 课件预处理脚本，被 learn.md 调用）
+      ├── extract_file.py
       ├── extract_pdfs.py
       └── extract_pptx.py
 ```
@@ -179,6 +198,7 @@ CLAUDE.md（宪法层 — 很少改）
 | mappings.md schema | study.md、review.md 中 session 读写逻辑 |
 | 新增课程 | REVIEW.md 和 knowledge-base/courses/_index.md 是否同步 |
 | 命令文件中的模板 | 另一命令中是否有相同模板需要同步 |
-| REVIEW.md 考试日期 | COMMANDS.md 第七节的考试时间线是否同步 |
+| REVIEW.md 考试日期 | .claude/commands-speed-dial.md 第七节的考试时间线是否同步 |
 | requirements.txt | tools/ 中的脚本是否能正常工作 |
-| ARCHITECTURE.md | 新条目日期是否在已有条目之后（追加约束） |
+| .claude/adr.md | 新条目日期是否在已有条目之后（追加约束） |
+| README.md 目录结构 | CLAUDE.md 目录结构是否同步 |

@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "markitdown": {
+      "comment": "文件转 Markdown（PDF/Word/PPT/Excel/图片/音视频），为 LLM 准备结构化文本",
+      "command": "uvx",
+      "args": ["markitdown-mcp"],
+      "env": {}
+    },
+    "youtube-transcript": {
+      "comment": "获取 YouTube 视频字幕/脚本，用于视频学习",
+      "command": "npx",
+      "args": ["-y", "@macrat/mcp-youtube-transcript"],
+      "env": {}
+    },
+    "context7": {
+      "comment": "获取最新技术文档和库的 API 参考",
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp@latest"],
+      "env": {}
+    }
+  }
+}

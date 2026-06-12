@@ -9,7 +9,7 @@
 ### 📖 `/learn` — 学习材料 → 知识库笔记
 
 ```
-/learn inbox/OS/                  批量处理课程文件夹（自动预处理 PDF/PPTX）
+/learn inbox/OS/                  批量处理课程文件夹（自动预处理 PDF/PPTX/DOCX 等）
 /learn inbox/OS/ --single         每天学一章（只处理下一篇）
 /learn inbox/OS/ --resume         从中断处继续
 /learn inbox/OS/ --force          重新处理全部（覆盖旧笔记）
@@ -17,7 +17,7 @@
 /learn https://...                 网页/视频 URL，自动分类
 ```
 
-> 课件预处理已自动化：`/learn` 会自动调用 `tools/extract_pdfs.py` 和 `tools/extract_pptx.py` 提取文本，无需手动运行。
+> 课件预处理已自动化：`/learn` 会自动调用 `tools/extract_file.py`（MarkItDown 优先，失败回退到 extract_pdfs/extract_pptx），无需手动运行。
 
 ### 💬 `/study` — 课程深度问答，对话自动沉淀到笔记
 
@@ -74,14 +74,22 @@
 
 ## 三、课件预处理（已自动化） 🆕
 
-`/learn` 命令会**自动**调用 `tools/extract_pdfs.py` 和 `tools/extract_pptx.py` 提取 PDF 和 PPTX 文本，无需手动操作。
+`/learn` 命令会**自动**调用 `tools/extract_file.py` 提取文本，无需手动操作。
+
+**原理**：`extract_file.py` → MarkItDown（主引擎，12+ 种格式）→ 失败则回退 `extract_pdfs.py` / `extract_pptx.py`。
+
+支持的格式：PDF、PPTX、DOCX、XLSX、图片（OCR）、HTML、CSV、JSON、XML 等。
 
 只有在特殊情况下才需要手动运行：
 ```bash
-python tools/extract_pdfs.py --force inbox/<课程名>   # PDF 更新了重新提取
-python tools/extract_pptx.py --force inbox/<课程名>   # PPTX 更新了重新提取
-python tools/extract_pdfs.py --single inbox/<课程名>   # 提取单篇 PDF
-python tools/extract_pptx.py --single inbox/<课程名>   # 提取单篇 PPTX
+python tools/extract_file.py inbox/<课程名>             # 提取该文件夹所有支持的文件
+python tools/extract_file.py inbox/<课程名> --force     # 强制重新提取
+python tools/extract_file.py inbox/<课程名> --single    # 只提取下一个未处理的
+python tools/extract_file.py <具体文件路径> --force      # 单文件强制提取
+
+# 旧脚本仍可用作回退：
+python tools/extract_pdfs.py --force inbox/<课程名>     # PDF 专用（EasyOCR 扫描件）
+python tools/extract_pptx.py --force inbox/<课程名>     # PPTX 专用（演讲者备注）
 ```
 
 ---
@@ -90,15 +98,16 @@ python tools/extract_pptx.py --single inbox/<课程名>   # 提取单篇 PPTX
 
 ```
 Personnal/
-├── inbox/                         # 待处理：按课程放课件（PDF/PPTX）
+├── inbox/                         # 待处理：按课程放课件（PDF/PPTX/DOCX 等）
 ├── knowledge-base/
 │   ├── courses/<课程>/            # 课程笔记（跟教学大纲）
 │   ├── cs/ math/ software-eng/   # 主题笔记（跨课程整合）
 │   └── other/
-├── tools/extract_pdfs.py          # PDF 预处理脚本
-├── tools/extract_pptx.py          # PPTX 预处理脚本
+├── tools/extract_file.py           # 统一提取脚本（MarkItDown 优先，回退 PDF/PPTX）
+├── tools/extract_pdfs.py           # PDF 预处理（回退，EasyOCR 扫描件）
+├── tools/extract_pptx.py           # PPTX 预处理（回退，演讲者备注）
 ├── CLAUDE.md                      # 项目说明书
-└── COMMANDS.md                    # 本文件
+└── .claude/commands-speed-dial.md # 本文件
 ```
 
 ---
@@ -113,7 +122,7 @@ Personnal/
 | 深度问答 | `/study start <课名>` → 随意提问 → `/study done` |
 | 聚焦单章提问 | `/study start <课名> --chapter 3` |
 | 查看问答进度 | `/study status` |
-| 强制重提课件 | `python tools/extract_pdfs.py --force inbox/<课名>/` 或 `extract_pptx.py` |
+| 强制重提课件 | `python tools/extract_file.py --force inbox/<课名>/` |
 | 复习已学 | `/kb-review` |
 | 查漏补缺 | `/kb-review 查漏补缺` |
 | 自测掌握度 | `/kb-review 快速问答` |
@@ -143,7 +152,7 @@ Personnal/
 | `/review done <笔记名>` | 标记该笔记复习完成，更新进度条 |
 | `/review finish` | 勾选今日全部任务，自动预填明天任务 |
 | `/review progress` | 查看五科整体进度、剩余天数、阶段状态 |
-| `/review plan` | 查看六阶段复习计划 + 考试日历 |
+| `/review plan` | 查看三阶段复习计划 + 考试日历 |
 
 ### 复习方式
 
@@ -161,13 +170,14 @@ Claude 会自动在 REVIEW.md 对应课程下新增待复习条目，并调整�
 
 ### 考试时间线
 
-| 日期 | 考试 | 复习截止 | 笔记数 |
-|------|------|---------|--------|
-| 6.24 周二 | 软件工程 | 6.17 | 25 |
-| 6.26 周四 | 操作系统 | 6.19 | 11 |
-| 6.29 周日 | 数据库 | 6.22 | 19 |
-| 6.30 周一 | 高级算法 | 6.23 | 4 |
-| 7.3 周四 | 互联网计算 | 6.26 | 10 |
+| 日期 | 考试 | 笔记数 |
+|------|------|--------|
+| 6.24 周三 | 软件工程 | 28 |
+| 6.26 周五 | 操作系统 | 14 |
+| 6.29 周一 | 数据库 | 22 |
+| 6.30 周二 | 高级算法 | 5 |
+| 7.1 周三 | 中国近代史纲要 | ? |
+| 7.3 周五 | 互联网计算 | 12 |
 
 ### 其他复习工具
 
@@ -180,4 +190,4 @@ Claude 会自动在 REVIEW.md 对应课程下新增待复习条目，并调整�
 
 ---
 
-> 最后更新：2026-05-25
+> 最后更新：2026-06-12
