@@ -176,7 +176,41 @@ description: 进入课程学习问答模式，对话内容自动沉淀到知识�
 - **宁精勿多** — 一个真正理解的概念比三个半懂的好
 - **保持原文风格** — 笔记已有自己的语气和结构，融入时匹配之
 - **不记录"学习过程"** — "我今天学到了"、"经过讨论发现"等元信息不进入笔记
-- 如果对话显示用户对该章理解到位 → `status` 从 `draft` 更新为 `reviewed`
+- 如果对话显示用户对该章理解到位 → `status` 更新为 `reviewed`（无论当前是 `draft` 还是 `learned`）
+- 如果用户已初步通读但深度不够 → `status` 从 `draft` 更新为 `learned`
+
+### 4.5. 同步 REVIEW.md（笔记 status 变更时）
+
+如果前一步骤中笔记的 `status` 从 `draft` 变更为 `learned` / `reviewed` / `mastered`，自动同步 REVIEW.md。
+
+**前置条件**：笔记 status 发生变更，且笔记所属课程在 REVIEW.md 中有追踪。
+
+**同步步骤**：
+
+1. 重新读取 REVIEW.md（获取最新版本，防并发覆盖）
+2. 根据笔记的 `course` 字段和章节号，在 REVIEW.md 对应课程章节中查找匹配条目
+   - 匹配方式：笔记标题关键词 + 课程名映射表（`.claude/references/mappings.md`）
+3. 按状态映射表更新复选框：
+
+| 笔记 status 变更 | REVIEW.md 操作 |
+|-----------------|---------------|
+| `draft` → `learned` | `[ ]学` → `[x]学`，`[ ]会` 不动 |
+| `draft` → `reviewed` | `[ ]学` → `[x]学`，`[ ]会` 不动 |
+| `draft` → `mastered` | `[ ]学` → `[x]学`，`[ ]会` → `[x]会` |
+
+4. 更新 REVIEW.md 顶部进度表：
+   - 重新计算该课程 `[x]学` 条目数 → 更新"已学"列
+   - 重新计算 `[x]会` 条目数 → 更新"已掌握"列
+   - 重新计算"学进度"和"会进度"百分比
+5. 更新 REVIEW.md frontmatter 的 `updated` 为今天
+6. **全自动执行，静默同步。** 在变更摘要中告知即可，不打断用户流程
+
+**不触发同步的情况**：
+- `status` 未变更（仍是 `draft` 或已是目标状态）→ 跳过
+- 笔记课程不在 REVIEW.md 中 → 跳过，在摘要中提示
+- 在 REVIEW.md 中找不到匹配条目 → 跳过，提示用户检查
+
+**完整映射表**：详见 `.claude/references/principles.md` §"笔记 status ↔ REVIEW.md 复选框 双向映射"。
 
 ### 5. 更新课程 _index.md
 

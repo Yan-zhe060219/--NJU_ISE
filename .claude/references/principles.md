@@ -130,3 +130,60 @@
 - [ ] 新条目的 `学` 是否**未勾选**（`[ ]学`）？
 - [ ] 进度表的"已学"数是否只计入已勾选 `[x]学` 的条目？
 - [ ] 学进度百分比是否基于正确的已学数计算？
+
+---
+
+## 笔记 status ↔ REVIEW.md 复选框 双向映射
+
+> **被引用者：** learn.md, study.md, review.md
+> **修改本文件时**，需同步检查上述三个命令文件中引用状态映射的逻辑是否仍然正确。
+
+### 状态定义
+
+Note files (`knowledge-base/courses/<course>/<note>.md`) 的 frontmatter 中 `status` 字段取值：
+
+| status 值 | 含义 | 设置场景 |
+|-----------|------|---------|
+| `draft` | 笔记已生成，未学习 | `/learn` 创建笔记时自动写入 |
+| `learned` | 第一遍学完（已通读、已标注考点、已有 Q&A） | `/review done` Phase A，或 `/study done` 初步通读 |
+| `reviewed` | 深度问答通过（洞察已融入，理解达到一定深度） | `/study done` 对话确认理解到位 |
+| `mastered` | 掌握复习通过（强制主动问答输出合格） | `/review done` Phase B/C 通过 |
+
+### 双向映射
+
+| 笔记 status | REVIEW.md 复选框 | 设置场景 |
+|------------|-----------------|---------|
+| `draft` | `[ ]学 [ ]会` | `/learn` 创建笔记后在 REVIEW.md 新增条目 |
+| `learned` | `[x]学 [ ]会` | `/review done` Phase A 通读完成时同步 |
+| `reviewed` | `[x]学 [ ]会` | `/study done` 深度问答通过时同步（与 learned 同效果） |
+| `mastered` | `[x]学 [x]会` | `/review done` Phase B/C 强制问答通过时同步 |
+
+### 同步规则
+
+1. **前向同步（笔记 status → REVIEW.md 复选框）：**
+   - `/study done`：笔记 status 变更后，按映射表自动更新 REVIEW.md，不询问
+   - `/review done` Phase A：更新笔记 status 为 `learned`，**不**修改 REVIEW.md 复选框
+   - `/review done` Phase B/C：更新笔记 status 为 `mastered`，同时勾选 `[x]会`（若 `[x]学` 未勾则一并勾选）
+
+2. **后向同步（REVIEW.md 新增条目 → 笔记 frontmatter）：**
+   - `/learn` 新增笔记时：笔记 status 已设为 `draft`，REVIEW.md 新增 `[ ]学 [ ]会` 条目
+   - 两者起始状态一致，无需额外同步
+
+3. **永不降级：**
+   - `learned` / `reviewed` / `mastered` 不会自动退回到 `draft`
+   - 如需重置，手动修改笔记 frontmatter 并将 REVIEW.md 中对应复选框改回
+
+4. **`learned` vs `reviewed` 的区别：**
+   - 两者对 REVIEW.md 复选框的同步效果**完全相同**（都是 `[x]学 [ ]会`）
+   - 区别仅用于笔记文件内部追踪理解深度：
+     - `learned` = 第一遍通读完成
+     - `reviewed` = 深度问答产出洞察后，理解超过纯通读水平
+
+### 各命令的同步职责
+
+| 命令 | 修改笔记 status | 修改 REVIEW.md 复选框 |
+|------|----------------|---------------------|
+| `/learn` | 设置为 `draft` | 新增 `[ ]学 [ ]会` 条目 |
+| `/study done` | `draft` → `learned` / `reviewed` | 自动同步 `[x]学` |
+| `/review done` Phase A | `draft` → `learned` | 不修改 |
+| `/review done` Phase B/C | → `mastered` | 同步 `[x]会`（及 `[x]学` 如未勾） |
