@@ -4,7 +4,7 @@ course: "高级算法"
 tags: ["fingerprinting", "PIT", "Schwartz-Zippel", "随机化算法", "Freivald", "Karp-Rabin"]
 created: 2026-05-15
 source: "Fingerprinting.pdf"
-status: draft
+status: reviewed
 related: ["02-Hashing", "04-Dimension"]
 chapter: 1
 ---

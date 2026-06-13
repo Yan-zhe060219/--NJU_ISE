@@ -22,11 +22,11 @@ status: learning
 
 | 序号 | 章节 | 状态 |
 |------|------|------|
-| 01 | [Fingerprinting — 指纹与随机化身份检测](01-Fingerprinting.md) | done |
+| 01 | [Fingerprinting — 指纹与随机化身份检测](01-Fingerprinting.md) | reviewed |
 | 02 | [Hashing — 哈希、负载均衡与字典数据结构](02-Hashing.md) | reviewed |
 | 03 | [Sketching — 数据流草图与近似计数](03-Sketching.md) | reviewed |
 | 04 | [Dimensionality Reduction — 降维、JL 引理与近似最近邻](04-Dimension.md) | reviewed |
-| 05 | [Network Flow & Linear Programming — 网络流与线性规划](05-Flow-LP.md) | draft |
+| 05 | [Network Flow & Linear Programming — 网络流与线性规划](05-Flow-LP.md) | draft ⚠️ 未学 |
 
 ## 重要概念索引
 
@@ -88,4 +88,4 @@ status: learning
 - [x] 02-Hashing
 - [x] 03-Sketching
 - [x] 04-Dimensionality Reduction
-- [x] 05-Flow & LP
+- [ ] 05-Flow & LP
