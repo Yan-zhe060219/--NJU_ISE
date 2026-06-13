@@ -27,7 +27,9 @@ Personnal/
 ├── tools/                          # 课件预处理脚本
 │   ├── extract_file.py              # 统一文本提取（MarkItDown 优先，回退 PDF/PPTX）
 │   ├── extract_pdfs.py             # PDF → 文本提取（回退，EasyOCR 扫描件）
-│   └── extract_pptx.py             # PPTX → 文本提取（回退，演讲者备注）
+│   ├── extract_pptx.py             # PPTX → 文本提取（回退，演讲者备注）
+│   ├── ocr_pdf.py                  # 扫描件 PDF OCR（EasyOCR + 图像预处理）
+│   └── scan_transcripts.py         # 会话记录分析工具（诊断用）
 ├── templates/                      # Prompt 模板
 ├── .claude/                        # Claude Code 配置
 │   ├── commands/                   # 自定义命令（learn, study, review, homework 等）
@@ -92,7 +94,7 @@ python tools/extract_pptx.py --help
 ### 通用规范
 - 每个目录下有 `_index.md` 作为索引
 - 笔记之间通过 `related` 字段和 Markdown 链接互相引用
-- status 三阶段：`draft → reviewed → mastered`
+- status 四阶段：`draft → learned → reviewed → mastered`（详见 `.claude/references/principles.md` §双向映射）
 
 ## 工作流
 
@@ -171,7 +173,7 @@ CLAUDE.md（宪法层 — 很少改）
   ├── .claude/commands/（执行层 — 经常改）
   │   ├── learn.md   → 引用 principles.md, mappings.md
   │   ├── study.md   → 引用 principles.md, mappings.md
-  │   ├── review.md  → 引用 mappings.md
+  │   ├── review.md  → 引用 principles.md, mappings.md
   │   ├── homework.md
   │   └── kb-review.md
   │
@@ -193,7 +195,7 @@ CLAUDE.md（宪法层 — 很少改）
 
 | 改了 | 需检查 |
 |------|--------|
-| principles.md | learn.md、study.md 中的原则引用是否过时 |
+| principles.md | learn.md、study.md、review.md 中的原则引用是否过时 |
 | mappings.md 映射表 | learn.md 第七节、review.md 第二节约课程匹配是否正确 |
 | mappings.md schema | study.md、review.md 中 session 读写逻辑 |
 | 新增课程 | REVIEW.md 和 knowledge-base/courses/_index.md 是否同步 |

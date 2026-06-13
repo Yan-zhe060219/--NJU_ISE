@@ -310,6 +310,7 @@ chapter: <序号>
 - **笔记质量 > 处理速度**：宁愿多花时间写透一个概念
 - **标注来源**：source 字段写文件名，方便日后回溯原文
 - **贴合原文，应对考试**：参见 `.claude/references/principles.md` 中的"术语保真"原则
+- **笔记状态管理**：模板默认 `status: draft`。完整状态生命周期（draft → learned → reviewed → mastered）及与 REVIEW.md 复选框的映射，参见 `.claude/references/principles.md` §"笔记 status ↔ REVIEW.md 复选框 双向映射"
 - **遇到无法读取的文件**（MarkItDown 和回退脚本均失败、或图片 OCR 无文字）：在笔记中标注 `⚠️ 需手动查看原文件`，建议用户用其他方式处理。**绝不尝试直接 Read 原始二进制文件作为多模态输入**——这会破坏跨模型兼容性
 
 ---

@@ -61,7 +61,10 @@ description: 进入课程学习问答模式，对话内容自动沉淀到知识�
   "course": "操作系统",
   "courseDir": "knowledge-base/courses/OS",
   "startedAt": "YYYY-MM-DDTHH:MM:SS",
-  "focusChapter": null
+  "focusChapter": null,
+  "chapterFile": null,
+  "source": "study",
+  "phase": null
 }
 ```
 

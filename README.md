@@ -148,7 +148,9 @@ Personnal/
 ├── tools/                    # 课件预处理脚本
 │   ├── extract_file.py       # 统一文本提取（MarkItDown 优先，回退 PDF/PPTX）
 │   ├── extract_pdfs.py       # PDF → 文本（回退，EasyOCR 扫描件）
-│   └── extract_pptx.py       # PPTX → 文本（回退，演讲者备注）
+│   ├── extract_pptx.py       # PPTX → 文本（回退，演讲者备注）
+│   ├── ocr_pdf.py            # 扫描件 OCR（EasyOCR + 图像预处理）
+│   └── scan_transcripts.py   # 会话记录分析（诊断用）
 ├── templates/                # Prompt 模板
 ├── .claude/                  # Claude Code 配置
 │   ├── commands/             # 自定义命令（learn, study, review, homework 等）

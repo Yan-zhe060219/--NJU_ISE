@@ -4,6 +4,7 @@ practice_intel: true
 status_system:
   draft: "笔记已生成，未学习"
   learned: "第一遍学完（已通读、已标注考点、已有Q&A）"
+  reviewed: "深度问答通过（洞察已融入，理解达到一定深度）"
   mastered: "掌握复习通过（主动问答输出合格）"
 exams:
   软件工程: 2026-06-24 10:30
