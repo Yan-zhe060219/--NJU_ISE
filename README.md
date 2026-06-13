@@ -2,7 +2,25 @@
 
 大二软件工程学生的本地 AI 辅助系统。用 Claude Code (DeepSeek V4 Pro) 完成学习和编程，不依赖网页端 AI。
 
-## 克隆回来（尤其换电脑/丢失本地后）
+> 📖 **使用手册**：`commands.md` — 所有命令、工作流、常见场景
+> ⚡ **命令速查**：`.claude/commands-speed-dial.md` — 最简短的命令参考
+> 📋 **复习总控**：`REVIEW.md` — 考试日期、进度追踪、每日任务
+
+## 核心工作流
+
+```
+课件拖入 inbox/ → /learn → 笔记(draft) → 自动更新 REVIEW.md
+                      ↓
+                 /study → 深度问答 → /study done → 洞察融入笔记
+                      ↓
+                 /review → 卡片自测/强制问答 → [x]会
+                      ↓
+                 /kb-review → 查漏补缺 → mastered
+```
+
+你只做三件事：**拖文件 → 说命令 → 回答问题**，其余全自动。
+
+## 克隆回来（换电脑/丢失本地后）
 
 ### 1. 装 Git
 
@@ -66,6 +84,8 @@ claude
 
 ## 日常使用
 
+> 完整手册见 `commands.md`，下面是快速概览。
+
 ### 学习课程课件
 
 ```
@@ -73,6 +93,8 @@ claude
 /learn inbox/<课程名>/ --single     每天学一章
 /learn <文件或URL>                  单文件自动分类
 ```
+
+> `/learn` 处理完课件后**自动更新 REVIEW.md**（新增条目、重算进度、调整计划）。笔记初始状态为 `draft`，不会自动标记为"已学"——你需要通过 `/review` 来勾选。
 
 ### 深度问答
 
@@ -135,6 +157,7 @@ Personnal/
 │   ├── settings.json         # 项目级权限配置
 │   └── settings.local.json   # 本地覆盖配置（不提交）
 ├── CLAUDE.md                 # 项目说明书（AI 读取）
+├── commands.md                # 使用手册（你读的）
 ├── .claude/commands-speed-dial.md  # 命令速查手册
 ├── .claude/adr.md             # 架构决策记录
 ├── .claude/summer-refactor-plan.md  # 暑假重构计划
@@ -152,3 +175,15 @@ git push
 ```
 
 每次学完一章、改完笔记后提交一次，相当于实时备份到 GitHub。
+
+---
+
+## 文档导航
+
+| 你要做什么 | 看哪个文件 |
+|-----------|-----------|
+| 快速查命令怎么用 | `.claude/commands-speed-dial.md` |
+| 了解完整工作流、常见场景 | `commands.md` |
+| 看考试日期、复习进度 | `REVIEW.md` |
+| 了解项目架构和规范 | `CLAUDE.md` |
+| 设置新电脑环境 | 本文件（README.md） |

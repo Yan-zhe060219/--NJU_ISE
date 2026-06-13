@@ -16,6 +16,7 @@
 | 数据库 | 数据库 | knowledge-base/courses/数据库 |
 | 高级算法 / 算法 | 高级算法 | knowledge-base/courses/高级算法 |
 | 互联网计算 / 网络 | 互联网计算 | knowledge-base/courses/互联网计算 |
+| 中国近代史纲要 / 近代史 | 中国近代史纲要 | knowledge-base/courses/中国近代史纲要 |
 
 **模糊匹配规则**：如果笔记 course 值在 REVIEW.md 的课程列表中没有精确匹配，尝试含有关键词（如 course="数据结构与算法" 匹配 REVIEW.md 中的 "数据结构"）。匹配不到则跳过。
 
