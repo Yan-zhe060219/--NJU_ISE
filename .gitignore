@@ -13,6 +13,10 @@ inbox/*/.learned
 # 本地配置（含个人偏好，不共享）
 .claude/settings.local.json
 
+# 大型PDF（源文件，超过GitHub限制）
+inbox/中国近代史纲要/中国近现代史纲要(2023年版).pdf
+inbox/互联网计算/计算机网络（原书第7版） 自顶向下方法 (James F. Kurose Keith W. Ross) (z-library.sk, 1lib.sk, z-lib.sk).pdf
+
 # 系统垃圾
 .DS_Store
 Thumbs.db

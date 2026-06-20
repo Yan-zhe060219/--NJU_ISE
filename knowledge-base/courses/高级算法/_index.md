@@ -22,11 +22,11 @@ status: learning
 
 | 序号 | 章节 | 状态 |
 |------|------|------|
-| 01 | [Fingerprinting — 指纹与随机化身份检测](01-Fingerprinting.md) | reviewed |
-| 02 | [Hashing — 哈希、负载均衡与字典数据结构](02-Hashing.md) | reviewed |
-| 03 | [Sketching — 数据流草图与近似计数](03-Sketching.md) | reviewed |
-| 04 | [Dimensionality Reduction — 降维、JL 引理与近似最近邻](04-Dimension.md) | reviewed |
-| 05 | [Network Flow & Linear Programming — 网络流与线性规划](05-Flow-LP.md) | draft ⚠️ 未学 |
+| 01 | [Fingerprinting — 指纹与随机化身份检测](01-Fingerprinting.md) | reviewed 🚫 非考点 |
+| 02 | [Hashing — 哈希、负载均衡与字典数据结构](02-Hashing.md) | reviewed 🚫 非考点 |
+| 03 | [Sketching — 数据流草图与近似计数](03-Sketching.md) | reviewed 🚫 非考点 |
+| 04 | [Dimensionality Reduction — 降维、JL 引理与近似最近邻](04-Dimension.md) | reviewed 🔥 考点 |
+| 05 | [Network Flow & Linear Programming — 网络流与线性规划](05-Flow-LP.md) | learned 🔥 考点 |
 
 ## 重要概念索引
 
@@ -67,20 +67,21 @@ status: learning
 
 ## 本课程学习路线图
 
+> 🔑 **2026.06.14 老师确认：期末只考两题——降维 + 网络流/线性规划。** 01-03 不在考试范围。
+
 ```
-第1章 Fingerprinting → 第2章 Hashing → 第3章 Sketching → 第4章 Dimension Reduction → 第5章 Flow & LP
-(随机化指纹范式)    (概率工具+字典)   (数据流+空间压缩)   (降维+近似搜索,集大成)   (优化:流+LP+对偶)
-                         ↓                   ↓                              ↓
-                  重点复习顺序：
-                  1. Chernoff Bound (02) — 所有概率分析的基础，JL 证明的核心
-                  2. Max-Flow Min-Cut + Duality (05) — 优化理论基石，对偶思想贯穿整章
-                  3. Johnson-Lindenstrauss (04) — 降维的理论基石
-                  4. LP Relaxation & Rounding (05) — 近似算法的标准套路
-                  5. LSH 框架 (04) — 近似最近邻搜索的标准工具箱
-                  6. Schwartz-Zippel (01) — 多项式方法的根基
-                  7. Count-Min Sketch (03) — 工业界最常用的 sketch
-                  8. γ-net argument (04) — 理解"有限覆盖无限"的关键技巧
-```
+第4章 Dimension Reduction → 第5章 Flow & LP
+(降维+近似搜索,集大成)       (优化:流+LP+对偶)
+     ↓                              ↓
+🔥 考点复习顺序：
+1. Johnson-Lindenstrauss (04) — 降维的理论基石，完整推导四步
+2. Max-Flow Min-Cut + Duality (05) — 优化理论基石，对偶思想贯穿整章
+3. LP Relaxation & Rounding (05) — 近似算法的标准套路
+4. LSH 框架 (04) — 近似最近邻搜索的标准工具箱
+5. 第三次作业题 → 逐题映射到两章考点
+
+🚫 非考点（已学，保留理解）：
+01-Fingerprinting / 02-Hashing / 03-Sketching
 
 ## 学习进度
 
@@ -88,4 +89,4 @@ status: learning
 - [x] 02-Hashing
 - [x] 03-Sketching
 - [x] 04-Dimensionality Reduction
-- [ ] 05-Flow & LP
+- [x] 05-Flow & LP
