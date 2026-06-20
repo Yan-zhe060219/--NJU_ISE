@@ -43,10 +43,10 @@
 ### 📋 `/review` — 期末复习总控 🆕
 
 ```
-/review                       展示今日任务 + 五科倒计时
+/review                       展示今日任务 + 各科倒计时
 /review start                 同上，进入复习模式
 /review done <笔记名>          标记该笔记复习完成，更新进度
-/review progress               查看五科整体进度和剩余天数
+/review progress               查看各科整体进度和剩余天数
 /review finish                 勾选今日全部任务，预填明天任务
 /review plan                   查看三阶段复习计划
 ```
@@ -148,10 +148,10 @@ Personnal/
 
 | 命令 | 作用 |
 |------|------|
-| `/review` 或 `/review start` | 展示今日任务 + 五科倒计时，进入复习模式 |
+| `/review` 或 `/review start` | 展示今日任务 + 各科倒计时，进入复习模式 |
 | `/review done <笔记名>` | 标记该笔记复习完成，更新进度条 |
 | `/review finish` | 勾选今日全部任务，自动预填明天任务 |
-| `/review progress` | 查看五科整体进度、剩余天数、阶段状态 |
+| `/review progress` | 查看各科整体进度、剩余天数、阶段状态 |
 | `/review plan` | 查看三阶段复习计划 + 考试日历 |
 
 ### 复习方式
@@ -190,4 +190,4 @@ Claude 会自动在 REVIEW.md 对应课程下新增待复习条目，并调整�
 
 ---
 
-> 最后更新：2026-06-16
+> 最后更新：2026-06-20 · Phase C 冲刺中 · 六科重点全部到位

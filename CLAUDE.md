@@ -149,7 +149,7 @@ python tools/extract_pptx.py --help
 
 总控文件：`REVIEW.md`，核心命令：`/review`（详见 `.claude/commands/review.md`）。
 
-1. 运行 **`/review`** → 展示今日任务和五科倒计时
+1. 运行 **`/review`** → 展示今日任务和各科倒计时
 2. 复习方式：直接对话问答（如"考我软工模块二的记忆卡片"）或 `/study start <课程名>`
 3. 完成一篇笔记后运行 **`/review done <笔记名>`** → 自动勾选并更新进度
 4. 今日复习完成后运行 **`/review finish`** → 全部勾选，预填明天任务

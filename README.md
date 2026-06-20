@@ -2,7 +2,7 @@
 
 大二软件工程学生的本地 AI 辅助系统。用 Claude Code (DeepSeek V4 Pro) 完成学习和编程，不依赖网页端 AI。
 
-> 📖 **使用手册**：`commands.md` — 所有命令、工作流、常见场景
+> 📖 **使用手册**：`.claude/commands-speed-dial.md` — 所有命令、工作流、常见场景
 > ⚡ **命令速查**：`.claude/commands-speed-dial.md` — 最简短的命令参考
 > 📋 **复习总控**：`REVIEW.md` — 考试日期、进度追踪、每日任务
 
