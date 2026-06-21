@@ -34,7 +34,6 @@ Personnal/
 ├── .claude/                        # Claude Code 配置
 │   ├── commands/                   # 自定义命令（learn, study, review, homework 等）
 │   ├── references/                 # 共享原则和映射表（法律层）
-│   ├── skills/                     # Claude Code 技能
 │   ├── settings.json               # 项目级权限配置
 │   ├── settings.local.json         # 本地覆盖配置（不提交）
 │   └── study-session.json          # 当前学习会话状态

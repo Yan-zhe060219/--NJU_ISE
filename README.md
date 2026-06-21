@@ -84,7 +84,7 @@ claude
 
 ## 日常使用
 
-> 完整手册见 `commands.md`，下面是快速概览。
+> 完整手册见 `.claude/commands-speed-dial.md`，下面是快速概览。
 
 ### 学习课程课件
 
@@ -155,11 +155,9 @@ Personnal/
 ├── .claude/                  # Claude Code 配置
 │   ├── commands/             # 自定义命令（learn, study, review, homework 等）
 │   ├── references/           # 共享原则和映射表
-│   ├── skills/               # 自定义技能（占位）
 │   ├── settings.json         # 项目级权限配置
 │   └── settings.local.json   # 本地覆盖配置（不提交）
 ├── CLAUDE.md                 # 项目说明书（AI 读取）
-├── commands.md                # 使用手册（你读的）
 ├── .claude/commands-speed-dial.md  # 命令速查手册
 ├── .claude/adr.md             # 架构决策记录
 ├── .claude/summer-refactor-plan.md  # 暑假重构计划
@@ -185,7 +183,7 @@ git push
 | 你要做什么 | 看哪个文件 |
 |-----------|-----------|
 | 快速查命令怎么用 | `.claude/commands-speed-dial.md` |
-| 了解完整工作流、常见场景 | `commands.md` |
+| 了解完整工作流、常见场景 | `.claude/commands-speed-dial.md` |
 | 看考试日期、复习进度 | `REVIEW.md` |
 | 了解项目架构和规范 | `CLAUDE.md` |
 | 设置新电脑环境 | 本文件（README.md） |
