@@ -1,10 +1,10 @@
 {
-  "active": false,
-  "course": "数据库",
-  "courseDir": "knowledge-base/courses/数据库",
-  "startedAt": "2026-06-09T13:30:00",
-  "focusChapter": "06-函数依赖与码",
-  "chapterFile": "knowledge-base/courses/数据库/06-函数依赖与码.md",
+  "active": true,
+  "course": "软件工程",
+  "courseDir": "knowledge-base/courses/软件工程",
+  "startedAt": "2026-06-22T00:00:00",
+  "focusChapter": "补充-设计模式",
+  "chapterFile": "knowledge-base/courses/软件工程/补充-设计模式.md",
   "source": "review",
-  "phase": "Phase A"
+  "phase": "Phase C"
 }
