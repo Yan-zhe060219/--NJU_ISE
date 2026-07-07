@@ -26,7 +26,7 @@ description: 进入课程学习问答模式，对话内容自动沉淀到知识�
 ### 1. 定位课程
 
 搜索顺序：
-1. `knowledge-base/courses/<课程名>/` — 已有笔记的课程
+1. `courses/2026-spring/<课程名>/notes/` — 已有笔记的课程
 2. 模糊匹配 — 课程名包含关键词即可（如"OS"匹配"操作系统"）
 3. `inbox/<课程名>/` — 有课件但还没生成笔记的课程
 
@@ -36,12 +36,12 @@ description: 进入课程学习问答模式，对话内容自动沉淀到知识�
 未找到课程"<课程名>"。
 
 已有课程：
-- 操作系统 (knowledge-base/courses/OS/)
+- 操作系统 (courses/2026-spring/操作系统/notes/)
 
 选项：
 1. 输入正确课程名重试
 2. 如果这是新课程，先运行 /learn inbox/<课程名>/ 从课件生成笔记
-3. 手动创建 knowledge-base/courses/<课程名>/ 目录和 _index.md
+3. 手动创建 courses/2026-spring/<课程名>/notes/ 目录和 _index.md
 ```
 
 ### 3. 课程存在时 —— 加载上下文
@@ -59,7 +59,7 @@ description: 进入课程学习问答模式，对话内容自动沉淀到知识�
 {
   "active": true,
   "course": "操作系统",
-  "courseDir": "knowledge-base/courses/OS",
+  "courseDir": "courses/2026-spring/操作系统/notes",
   "startedAt": "YYYY-MM-DDTHH:MM:SS",
   "focusChapter": null,
   "chapterFile": null,
@@ -288,7 +288,7 @@ description: 进入课程学习问答模式，对话内容自动沉淀到知识�
 
 ## 六、`/study list`
 
-扫描 `knowledge-base/courses/` 和 `inbox/`，列出：
+扫描 `courses/2026-spring/` 和 `inbox/`，列出：
 
 ```
 📚 可学习的课程：

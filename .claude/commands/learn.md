@@ -89,7 +89,7 @@ python tools/extract_file.py <目标文件夹> --backend auto
 
 ### 4. 创建知识库课程目录
 
-在 `knowledge-base/courses/<课程名>/` 下创建：
+在 `courses/2026-spring/<课程名>/notes/` 下创建：
 - `_index.md` — 课程总索引（随着处理逐步更新）
 - 每处理完一个文件，生成对应的笔记文件
 
@@ -152,7 +152,7 @@ g) **暂停询问**：每处理完 3 个文件，问用户"继续处理还是先
 
 所有文件处理完成后：
 - 完善课程 `_index.md` 的"课程概述"和"重要概念索引"
-- 在 `knowledge-base/courses/_index.md` 中添加课程链接
+- 在 `courses/2026-spring/README.md` 中添加课程链接
 - 尝试将课程中的重要概念与 `knowledge-base/cs/`、`math/` 等主题目录建立双向链接
 - 输出一份"本课程学习路线图"：建议的复习顺序和重点关注章节
 - **若项目根目录存在 REVIEW.md，执行"七、自动更新复习计划"的完整流程**（包括批量新增条目、重算百分比、必要时调整阶段时间表）
