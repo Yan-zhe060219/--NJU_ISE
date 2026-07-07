@@ -2,7 +2,7 @@
 
 大二软件工程学生的本地 AI 辅助系统。不依赖网页端 AI，用 Codex (DeepSeek V4 Pro) 完成学习和编程。
 
-> **维护状态**：暑假重构中（2026-07-06 起），参考 `.Codex/summer-refactor-plan.md`。
+> **维护状态**：暑假重构中（2026-07-06 起），参考 `.claude/summer-refactor-plan.md`。
 
 ## 目录结构
 
@@ -97,6 +97,6 @@ Personnal/
 
 详见 `.claude/rules/architecture.md`。
 
-**依赖拓扑**：上层不引用下层；同级不互相引用；共享定义只有法律层（`.Codex/references/`）一份。
+**依赖拓扑**：上层不引用下层；同级不互相引用；共享定义只有法律层（`.claude/references/`）一份。
 
-修改配置后的检查清单见 `.Codex/rules/architecture.md#检查清单`。
+修改配置后的检查清单见 `.claude/rules/architecture.md#检查清单`。
