@@ -51,6 +51,23 @@ Personnal/
 └── .agents/                        # Skills 目录
 ```
 
+## 学期管理
+
+- **当前活跃学期**：`courses/2026-spring/`。`/learn`、`/study`、`/review` 默认只操作当前活跃学期下的课程。
+- **新学期切换**：新建 `courses/<year>-<spring|fall>/`，旧学期保留不动作为历史学期。
+- **不使用 `courses/current` 软链接**：避免 Windows 和 Git 兼容问题。命令和配置文件直接引用学期目录路径。
+- **REVIEW.md**：只代表当前学期复习状态。旧学期 REVIEW 应归档到 `archive/reviews/REVIEW-<semester>.md`。
+- **不确定归属的资料**：进入 `staging/`，不直接进入课程正式目录。等确认课程匹配后再移入。
+
+切换学期清单：
+1. `git status` 确认工作区干净
+2. 给旧学期打 tag（如 `archive/2026-spring`）或提交备份
+3. 创建 `courses/<新学期>/` 及课程骨架
+4. 归档旧 `REVIEW.md` → `archive/reviews/REVIEW-<旧学期>.md`
+5. 初始化新 `REVIEW.md`
+6. 更新 `AGENTS.md`、`CLAUDE.md`、`.claude/commands/*.md` 中的学期路径
+7. `git commit` + `git push`
+
 ## 配套文件
 
 - **`.claude/commands-speed-dial.md`** — 所有命令的速查手册（日常操作先查它）

@@ -133,38 +133,42 @@ claude
 
 ```
 Personnal/
-├── inbox/                    # 课件放入这里（按课程分文件夹）
-│   ├── OS/                   # 操作系统课件（PDF/PPTX）
-│   ├── 互联网计算/            # 计算机网络课件
-│   ├── 数据库/                # 数据库课件
-│   ├── 软件工程/              # 软工课件
-│   └── 高级算法/              # 算法课件
-├── knowledge-base/           # 个人知识库（笔记即资产）
-│   ├── courses/              # 按课程组织的笔记
-│   ├── cs/                   # 计算机科学主题整合
-│   ├── math/                 # 数学
-│   └── software-eng/         # 软件工程主题
-├── practice/                 # 练习资料（往年卷、复习思考题）
-├── tools/                    # 课件预处理脚本
-│   ├── extract_file.py       # 统一文本提取（MarkItDown 优先，回退 PDF/PPTX）
-│   ├── extract_pdfs.py       # PDF → 文本（回退，EasyOCR 扫描件）
-│   ├── extract_pptx.py       # PPTX → 文本（回退，演讲者备注）
-│   ├── ocr_pdf.py            # 扫描件 OCR（EasyOCR + 图像预处理）
-│   └── scan_transcripts.py   # 会话记录分析（诊断用）
-├── templates/                # Prompt 模板
-├── .claude/                  # Claude Code 配置
-│   ├── commands/             # 自定义命令（learn, study, review, homework 等）
-│   ├── references/           # 共享原则和映射表
-│   ├── settings.json         # 项目级权限配置
-│   └── settings.local.json   # 本地覆盖配置（不提交）
-├── CLAUDE.md                 # 项目说明书（AI 读取）
-├── .claude/commands-speed-dial.md  # 命令速查手册
-├── .claude/adr.md             # 架构决策记录
-├── .claude/summer-refactor-plan.md  # 暑假重构计划
-├── .mcp.json                 # MCP 服务器配置
-├── REVIEW.md                 # 期末复习总控面板
-└── requirements.txt          # Python 依赖
+├── courses/                    # 📚 课程学习主目录
+│   └── 2026-spring/            # 按学期组织（当前活跃）
+│       ├── 操作系统/            # 每门课含 README.md、syllabus/、lectures/、
+│       ├── 互联网计算/          #   notes/、assignments/、exams/、review/、assets/
+│       ├── 数据库/
+│       ├── 软件工程/
+│       ├── 高级算法/
+│       └── 中国近代史纲要/
+├── inbox/                      # 课件拖入此处（按课程分文件夹）
+├── staging/                    # 暂存区（AI生成/外部未匹配/来源不明）
+├── archive/                    # 历史归档（旧索引/废弃配置/旧REVIEW）
+├── practice/                   # ⚠️ 历史遗留目录（资料已迁至 courses/，仅剩 cache/zip 待清理）
+├── tools/                      # 课件预处理脚本
+│   └── extract_file.py         # 统一文本提取（MarkItDown 优先 → 三级回退）
+├── .claude/                    # Claude Code 配置（执行引擎）
+├── .codex/                     # Codex 配置（总控/审计引擎）
+├── .agents/                    # Skills 目录
+├── AGENTS.md                   # 项目宪法（架构真相源）
+├── CLAUDE.md                   # Claude Code 执行适配层
+├── REVIEW.md                   # 当前学期复习总控
+└── requirements.txt            # Python 依赖
 ```
+
+## 切换学期
+
+新学期开始时执行以下步骤：
+
+1. `git status` — 确认工作区干净
+2. `git tag archive/<旧学期>` — 给旧学期打标签
+3. 创建 `courses/<新年份>-<spring|fall>/` 及课程子目录
+4. `mv REVIEW.md archive/reviews/REVIEW-<旧学期>.md` — 归档旧复习总控
+5. 初始化新 `REVIEW.md`
+6. 更新 `AGENTS.md`、`CLAUDE.md`、`.claude/commands/*.md` 中的当前学期路径
+7. `git commit -m "chore: switch to <新学期>"` + `git push`
+
+> 详细规则见 `AGENTS.md` § 学期管理。旧学期保留不动，不使用软链接。
 
 ## 远程同步
 

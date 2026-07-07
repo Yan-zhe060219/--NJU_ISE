@@ -98,15 +98,15 @@ python tools/extract_pptx.py --force inbox/<课程名>     # PPTX 专用（演�
 
 ```
 Personnal/
-├── inbox/                         # 待处理：按课程放课件（PDF/PPTX/DOCX 等）
-├── knowledge-base/
-│   ├── courses/<课程>/            # 课程笔记（跟教学大纲）
-│   ├── cs/ math/ software-eng/   # 主题笔记（跨课程整合）
-│   └── other/
-├── tools/extract_file.py           # 统一提取脚本（MarkItDown 优先，回退 PDF/PPTX）
-├── tools/extract_pdfs.py           # PDF 预处理（回退，EasyOCR 扫描件）
-├── tools/extract_pptx.py           # PPTX 预处理（回退，演讲者备注）
-├── CLAUDE.md                      # 项目说明书
+├── inbox/                         # 待处理课件（PDF/PPTX/DOCX）
+├── courses/2026-spring/           # 当前学期课程（笔记 + 练习 + 考卷）
+│   └── <课程>/notes/ assignments/ exams/ review/
+├── staging/                       # 暂存区（AI生成/外部未匹配/来源不明）
+├── archive/                       # 历史归档
+├── practice/                      # ⚠️ 历史遗留（仅剩 cache/zip 待清理）
+├── tools/extract_file.py          # 统一提取脚本
+├── AGENTS.md                      # 项目宪法
+├── CLAUDE.md                      # 执行适配层
 └── .claude/commands-speed-dial.md # 本文件
 ```
 

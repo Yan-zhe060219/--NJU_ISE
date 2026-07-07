@@ -29,6 +29,14 @@ Personnal/
 └── .agents/                        # Skills 目录
 ```
 
+## 学期管理
+
+- **当前活跃学期**：`courses/2026-spring/`。所有命令默认操作此学期。
+- **新学期**：创建 `courses/<year>-<spring|fall>/`，旧学期保留不动。
+- **不使用软链接**。命令路径直接指向具体学期目录。
+- **REVIEW.md** 仅代表当前学期；旧 REVIEW → `archive/reviews/`。
+- 切换学期详见 `AGENTS.md` § 学期管理。
+
 ## 配套文件
 
 - **`.claude/commands-speed-dial.md`** — 所有命令的速查手册（日常操作先查它）
