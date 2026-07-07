@@ -2,7 +2,7 @@
 course: "高级算法"
 tags: ["随机化算法", "大数据", "哈希", "sketching", "网络流", "线性规划", "对偶"]
 created: 2026-05-15
-status: learning
+status: learned
 ---
 
 # 高级算法
@@ -68,6 +68,7 @@ status: learning
 ## 本课程学习路线图
 
 > 🔑 **2026.06.14 老师确认：期末只考两题——降维 + 网络流/线性规划。** 01-03 不在考试范围。
+> 🆕 **2026.06.27 题库到手**：共 18 道题（Ch4 降维 9 题 + Ch5 流/LP 9 题），考试从中抽 2 题。完整答案见 `practice/高级算法/期末考试题库-答案.md`。
 
 ```
 第4章 Dimension Reduction → 第5章 Flow & LP

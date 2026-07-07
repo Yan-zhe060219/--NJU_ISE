@@ -1,0 +1,1442 @@
+{
+    "pdf_info": [
+        {
+            "preproc_blocks": [
+                {
+                    "score": 0.7821,
+                    "bbox": [
+                        219,
+                        75,
+                        375,
+                        91
+                    ],
+                    "index": 1,
+                    "type": "title",
+                    "lines": [
+                        {
+                            "bbox": [
+                                221,
+                                76,
+                                373,
+                                90
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        221,
+                                        76,
+                                        373,
+                                        90
+                                    ],
+                                    "type": "text",
+                                    "content": "2014-15学年计算机网络试题",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "level": 1
+                },
+                {
+                    "score": 0.59,
+                    "bbox": [
+                        258,
+                        100,
+                        336,
+                        113
+                    ],
+                    "index": 2,
+                    "type": "text",
+                    "lines": [
+                        {
+                            "bbox": [
+                                261,
+                                102,
+                                334,
+                                113
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        261,
+                                        102,
+                                        334,
+                                        113
+                                    ],
+                                    "type": "text",
+                                    "content": "(非选择题部分)",
+                                    "score": 0.965
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "score": 0.6691,
+                    "bbox": [
+                        88,
+                        124,
+                        175,
+                        136
+                    ],
+                    "index": 3,
+                    "type": "title",
+                    "lines": [
+                        {
+                            "bbox": [
+                                89,
+                                124,
+                                174,
+                                136
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        89,
+                                        124,
+                                        174,
+                                        136
+                                    ],
+                                    "type": "text",
+                                    "content": "3.名词解释（3'*8）",
+                                    "score": 0.964
+                                }
+                            ]
+                        }
+                    ],
+                    "level": 2
+                },
+                {
+                    "score": 0.6442,
+                    "bbox": [
+                        107,
+                        145,
+                        225,
+                        324
+                    ],
+                    "index": 4,
+                    "type": "text",
+                    "lines": [
+                        {
+                            "bbox": [
+                                109,
+                                148,
+                                128,
+                                160
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        109,
+                                        148,
+                                        128,
+                                        160
+                                    ],
+                                    "type": "text",
+                                    "content": "PPP",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                109,
+                                172,
+                                130,
+                                184
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        109,
+                                        172,
+                                        130,
+                                        184
+                                    ],
+                                    "type": "text",
+                                    "content": "UDP",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                109,
+                                195,
+                                164,
+                                208
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        109,
+                                        195,
+                                        164,
+                                        208
+                                    ],
+                                    "type": "text",
+                                    "content": "Split horizon",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                110,
+                                218,
+                                153,
+                                231
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        110,
+                                        218,
+                                        153,
+                                        231
+                                    ],
+                                    "type": "text",
+                                    "content": "CSMA/CD",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                109,
+                                242,
+                                134,
+                                254
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        109,
+                                        242,
+                                        134,
+                                        254
+                                    ],
+                                    "type": "text",
+                                    "content": "HTTP",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                110,
+                                265,
+                                222,
+                                277
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        110,
+                                        265,
+                                        222,
+                                        277
+                                    ],
+                                    "type": "text",
+                                    "content": "Time division multiplexing",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                109,
+                                288,
+                                131,
+                                302
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        109,
+                                        288,
+                                        131,
+                                        302
+                                    ],
+                                    "type": "text",
+                                    "content": "DNS",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                109,
+                                312,
+                                135,
+                                324
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        109,
+                                        312,
+                                        135,
+                                        324
+                                    ],
+                                    "type": "text",
+                                    "content": "RARP",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "score": 0.8054,
+                    "bbox": [
+                        87,
+                        334,
+                        285,
+                        347
+                    ],
+                    "index": 5,
+                    "type": "title",
+                    "lines": [
+                        {
+                            "bbox": [
+                                89,
+                                335,
+                                284,
+                                346
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        89,
+                                        335,
+                                        284,
+                                        346
+                                    ],
+                                    "type": "text",
+                                    "content": "4.（一道路由表更新的题目，没有记）（6'）",
+                                    "score": 0.981
+                                }
+                            ]
+                        }
+                    ],
+                    "level": 2
+                },
+                {
+                    "score": 0.7393,
+                    "bbox": [
+                        87,
+                        358,
+                        215,
+                        370
+                    ],
+                    "index": 6,
+                    "type": "title",
+                    "lines": [
+                        {
+                            "bbox": [
+                                89,
+                                358,
+                                213,
+                                370
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        89,
+                                        358,
+                                        213,
+                                        370
+                                    ],
+                                    "type": "text",
+                                    "content": "5.同2013年第4题（8'+4′）",
+                                    "score": 0.939
+                                }
+                            ]
+                        }
+                    ],
+                    "level": 2
+                },
+                {
+                    "score": 0.9374,
+                    "bbox": [
+                        87,
+                        382,
+                        507,
+                        465
+                    ],
+                    "index": 7,
+                    "type": "text",
+                    "lines": [
+                        {
+                            "bbox": [
+                                89,
+                                382,
+                                494,
+                                393
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        89,
+                                        382,
+                                        494,
+                                        393
+                                    ],
+                                    "type": "text",
+                                    "content": "7.Tell the similarities and differences between the OSI reference model and TCP/IP model. (8')",
+                                    "score": 0.988
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                88,
+                                407,
+                                505,
+                                418
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        88,
+                                        407,
+                                        505,
+                                        418
+                                    ],
+                                    "type": "text",
+                                    "content": "9.For convenient management,a company plans to divide the 195.3.1.0 into five sub,and the",
+                                    "score": 0.993
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                89,
+                                430,
+                                506,
+                                441
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        89,
+                                        430,
+                                        506,
+                                        441
+                                    ],
+                                    "type": "text",
+                                    "content": "number of computers does not exceed 15.Calculate the subnet ip address.Write the ip address of",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                88,
+                                453,
+                                258,
+                                464
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        88,
+                                        453,
+                                        258,
+                                        464
+                                    ],
+                                    "type": "text",
+                                    "content": "each subset and the subnet mask. (6')",
+                                    "score": 0.99
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "score": 0.7184,
+                    "bbox": [
+                        87,
+                        475,
+                        202,
+                        487
+                    ],
+                    "index": 8,
+                    "type": "title",
+                    "lines": [
+                        {
+                            "bbox": [
+                                89,
+                                476,
+                                200,
+                                486
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        89,
+                                        476,
+                                        200,
+                                        486
+                                    ],
+                                    "type": "text",
+                                    "content": "8.（曼彻斯特编码）（4'）",
+                                    "score": 0.958
+                                }
+                            ]
+                        }
+                    ],
+                    "level": 2
+                },
+                {
+                    "score": 0.9237,
+                    "bbox": [
+                        87,
+                        499,
+                        506,
+                        534
+                    ],
+                    "index": 9,
+                    "type": "text",
+                    "lines": [
+                        {
+                            "bbox": [
+                                89,
+                                500,
+                                505,
+                                510
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        89,
+                                        500,
+                                        505,
+                                        510
+                                    ],
+                                    "type": "text",
+                                    "content": "6.Host A send two continuous TCP packet to host B,and their sequence number are 70 and",
+                                    "score": 0.996
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                89,
+                                523,
+                                180,
+                                534
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        89,
+                                        523,
+                                        180,
+                                        534
+                                    ],
+                                    "type": "text",
+                                    "content": "100.Questions：(9')",
+                                    "score": 0.943
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "score": 0.7949,
+                    "bbox": [
+                        108,
+                        546,
+                        345,
+                        559
+                    ],
+                    "index": 10,
+                    "type": "text",
+                    "lines": [
+                        {
+                            "bbox": [
+                                110,
+                                547,
+                                343,
+                                557
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        110,
+                                        547,
+                                        343,
+                                        557
+                                    ],
+                                    "type": "text",
+                                    "content": "(1)How many bytes of data does the first packet carry?",
+                                    "score": 0.996
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "score": 0.8927,
+                    "bbox": [
+                        108,
+                        569,
+                        507,
+                        605
+                    ],
+                    "index": 11,
+                    "type": "text",
+                    "lines": [
+                        {
+                            "bbox": [
+                                110,
+                                570,
+                                506,
+                                581
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        110,
+                                        570,
+                                        506,
+                                        581
+                                    ],
+                                    "type": "text",
+                                    "content": "(2)What is the acknowledgement number of the packet that host B send back to host A ?",
+                                    "score": 0.983
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                110,
+                                594,
+                                216,
+                                604
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        110,
+                                        594,
+                                        216,
+                                        604
+                                    ],
+                                    "type": "text",
+                                    "content": "receives the first packet?",
+                                    "score": 0.994
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "score": 0.9185,
+                    "bbox": [
+                        108,
+                        616,
+                        506,
+                        653
+                    ],
+                    "index": 12,
+                    "type": "text",
+                    "lines": [
+                        {
+                            "bbox": [
+                                111,
+                                618,
+                                505,
+                                627
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        111,
+                                        618,
+                                        505,
+                                        627
+                                    ],
+                                    "type": "text",
+                                    "content": "(3)if the acknowledgement number of the packet that host B send back after receiving the",
+                                    "score": 0.996
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                111,
+                                641,
+                                333,
+                                650
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        111,
+                                        641,
+                                        333,
+                                        650
+                                    ],
+                                    "type": "text",
+                                    "content": "packet is 180,how many bytes of the second packet?",
+                                    "score": 0.994
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "page_idx": 0,
+            "page_size": [
+                595,
+                841
+            ],
+            "discarded_blocks": [],
+            "para_blocks": [
+                {
+                    "score": 0.7821,
+                    "bbox": [
+                        219,
+                        75,
+                        375,
+                        91
+                    ],
+                    "index": 1,
+                    "type": "title",
+                    "lines": [
+                        {
+                            "bbox": [
+                                221,
+                                76,
+                                373,
+                                90
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        221,
+                                        76,
+                                        373,
+                                        90
+                                    ],
+                                    "type": "text",
+                                    "content": "2014-15学年计算机网络试题",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "level": 1
+                },
+                {
+                    "score": 0.59,
+                    "bbox": [
+                        258,
+                        100,
+                        336,
+                        113
+                    ],
+                    "index": 2,
+                    "type": "text",
+                    "lines": [
+                        {
+                            "bbox": [
+                                261,
+                                102,
+                                334,
+                                113
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        261,
+                                        102,
+                                        334,
+                                        113
+                                    ],
+                                    "type": "text",
+                                    "content": "(非选择题部分)",
+                                    "score": 0.965
+                                }
+                            ]
+                        }
+                    ],
+                    "bbox_fs": [
+                        261,
+                        102,
+                        334,
+                        113
+                    ]
+                },
+                {
+                    "score": 0.6691,
+                    "bbox": [
+                        88,
+                        124,
+                        175,
+                        136
+                    ],
+                    "index": 3,
+                    "type": "title",
+                    "lines": [
+                        {
+                            "bbox": [
+                                89,
+                                124,
+                                174,
+                                136
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        89,
+                                        124,
+                                        174,
+                                        136
+                                    ],
+                                    "type": "text",
+                                    "content": "3.名词解释（3'*8）",
+                                    "score": 0.964
+                                }
+                            ]
+                        }
+                    ],
+                    "level": 2
+                },
+                {
+                    "score": 0.6442,
+                    "bbox": [
+                        107,
+                        145,
+                        225,
+                        324
+                    ],
+                    "index": 4,
+                    "type": "list",
+                    "lines": [
+                        {
+                            "bbox": [
+                                109,
+                                148,
+                                128,
+                                160
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        109,
+                                        148,
+                                        128,
+                                        160
+                                    ],
+                                    "type": "text",
+                                    "content": "PPP",
+                                    "score": 1.0
+                                }
+                            ],
+                            "is_list_start_line": true
+                        },
+                        {
+                            "bbox": [
+                                109,
+                                172,
+                                130,
+                                184
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        109,
+                                        172,
+                                        130,
+                                        184
+                                    ],
+                                    "type": "text",
+                                    "content": "UDP",
+                                    "score": 1.0
+                                }
+                            ],
+                            "is_list_start_line": true
+                        },
+                        {
+                            "bbox": [
+                                109,
+                                195,
+                                164,
+                                208
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        109,
+                                        195,
+                                        164,
+                                        208
+                                    ],
+                                    "type": "text",
+                                    "content": "Split horizon",
+                                    "score": 1.0
+                                }
+                            ],
+                            "is_list_start_line": true
+                        },
+                        {
+                            "bbox": [
+                                110,
+                                218,
+                                153,
+                                231
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        110,
+                                        218,
+                                        153,
+                                        231
+                                    ],
+                                    "type": "text",
+                                    "content": "CSMA/CD",
+                                    "score": 1.0
+                                }
+                            ],
+                            "is_list_start_line": true
+                        },
+                        {
+                            "bbox": [
+                                109,
+                                242,
+                                134,
+                                254
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        109,
+                                        242,
+                                        134,
+                                        254
+                                    ],
+                                    "type": "text",
+                                    "content": "HTTP",
+                                    "score": 1.0
+                                }
+                            ],
+                            "is_list_start_line": true
+                        },
+                        {
+                            "bbox": [
+                                110,
+                                265,
+                                222,
+                                277
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        110,
+                                        265,
+                                        222,
+                                        277
+                                    ],
+                                    "type": "text",
+                                    "content": "Time division multiplexing",
+                                    "score": 1.0
+                                }
+                            ],
+                            "is_list_start_line": true
+                        },
+                        {
+                            "bbox": [
+                                109,
+                                288,
+                                131,
+                                302
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        109,
+                                        288,
+                                        131,
+                                        302
+                                    ],
+                                    "type": "text",
+                                    "content": "DNS",
+                                    "score": 1.0
+                                }
+                            ],
+                            "is_list_start_line": true
+                        },
+                        {
+                            "bbox": [
+                                109,
+                                312,
+                                135,
+                                324
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        109,
+                                        312,
+                                        135,
+                                        324
+                                    ],
+                                    "type": "text",
+                                    "content": "RARP",
+                                    "score": 1.0
+                                }
+                            ],
+                            "is_list_start_line": true
+                        }
+                    ],
+                    "bbox_fs": [
+                        109,
+                        148,
+                        222,
+                        324
+                    ]
+                },
+                {
+                    "score": 0.8054,
+                    "bbox": [
+                        87,
+                        334,
+                        285,
+                        347
+                    ],
+                    "index": 5,
+                    "type": "title",
+                    "lines": [
+                        {
+                            "bbox": [
+                                89,
+                                335,
+                                284,
+                                346
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        89,
+                                        335,
+                                        284,
+                                        346
+                                    ],
+                                    "type": "text",
+                                    "content": "4.（一道路由表更新的题目，没有记）（6'）",
+                                    "score": 0.981
+                                }
+                            ]
+                        }
+                    ],
+                    "level": 2
+                },
+                {
+                    "score": 0.7393,
+                    "bbox": [
+                        87,
+                        358,
+                        215,
+                        370
+                    ],
+                    "index": 6,
+                    "type": "title",
+                    "lines": [
+                        {
+                            "bbox": [
+                                89,
+                                358,
+                                213,
+                                370
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        89,
+                                        358,
+                                        213,
+                                        370
+                                    ],
+                                    "type": "text",
+                                    "content": "5.同2013年第4题（8'+4′）",
+                                    "score": 0.939
+                                }
+                            ]
+                        }
+                    ],
+                    "level": 2
+                },
+                {
+                    "score": 0.9374,
+                    "bbox": [
+                        87,
+                        382,
+                        507,
+                        465
+                    ],
+                    "index": 7,
+                    "type": "text",
+                    "lines": [
+                        {
+                            "bbox": [
+                                89,
+                                382,
+                                494,
+                                393
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        89,
+                                        382,
+                                        494,
+                                        393
+                                    ],
+                                    "type": "text",
+                                    "content": "7.Tell the similarities and differences between the OSI reference model and TCP/IP model. (8')",
+                                    "score": 0.988
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                88,
+                                407,
+                                505,
+                                418
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        88,
+                                        407,
+                                        505,
+                                        418
+                                    ],
+                                    "type": "text",
+                                    "content": "9.For convenient management,a company plans to divide the 195.3.1.0 into five sub,and the",
+                                    "score": 0.993
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                89,
+                                430,
+                                506,
+                                441
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        89,
+                                        430,
+                                        506,
+                                        441
+                                    ],
+                                    "type": "text",
+                                    "content": "number of computers does not exceed 15.Calculate the subnet ip address.Write the ip address of",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                88,
+                                453,
+                                258,
+                                464
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        88,
+                                        453,
+                                        258,
+                                        464
+                                    ],
+                                    "type": "text",
+                                    "content": "each subset and the subnet mask. (6')",
+                                    "score": 0.99
+                                }
+                            ]
+                        }
+                    ],
+                    "bbox_fs": [
+                        88,
+                        382,
+                        506,
+                        464
+                    ]
+                },
+                {
+                    "score": 0.7184,
+                    "bbox": [
+                        87,
+                        475,
+                        202,
+                        487
+                    ],
+                    "index": 8,
+                    "type": "title",
+                    "lines": [
+                        {
+                            "bbox": [
+                                89,
+                                476,
+                                200,
+                                486
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        89,
+                                        476,
+                                        200,
+                                        486
+                                    ],
+                                    "type": "text",
+                                    "content": "8.（曼彻斯特编码）（4'）",
+                                    "score": 0.958
+                                }
+                            ]
+                        }
+                    ],
+                    "level": 2
+                },
+                {
+                    "score": 0.9237,
+                    "bbox": [
+                        87,
+                        499,
+                        506,
+                        534
+                    ],
+                    "index": 9,
+                    "type": "index",
+                    "lines": [
+                        {
+                            "bbox": [
+                                89,
+                                500,
+                                505,
+                                510
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        89,
+                                        500,
+                                        505,
+                                        510
+                                    ],
+                                    "type": "text",
+                                    "content": "6.Host A send two continuous TCP packet to host B,and their sequence number are 70 and",
+                                    "score": 0.996
+                                }
+                            ],
+                            "is_list_start_line": true
+                        },
+                        {
+                            "bbox": [
+                                89,
+                                523,
+                                180,
+                                534
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        89,
+                                        523,
+                                        180,
+                                        534
+                                    ],
+                                    "type": "text",
+                                    "content": "100.Questions：(9')",
+                                    "score": 0.943
+                                }
+                            ],
+                            "is_list_start_line": true
+                        }
+                    ],
+                    "bbox_fs": [
+                        89,
+                        500,
+                        505,
+                        534
+                    ]
+                },
+                {
+                    "score": 0.7949,
+                    "bbox": [
+                        108,
+                        546,
+                        345,
+                        559
+                    ],
+                    "index": 10,
+                    "type": "text",
+                    "lines": [
+                        {
+                            "bbox": [
+                                110,
+                                547,
+                                343,
+                                557
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        110,
+                                        547,
+                                        343,
+                                        557
+                                    ],
+                                    "type": "text",
+                                    "content": "(1)How many bytes of data does the first packet carry?",
+                                    "score": 0.996
+                                }
+                            ]
+                        }
+                    ],
+                    "bbox_fs": [
+                        110,
+                        547,
+                        343,
+                        557
+                    ]
+                },
+                {
+                    "score": 0.8927,
+                    "bbox": [
+                        108,
+                        569,
+                        507,
+                        605
+                    ],
+                    "index": 11,
+                    "type": "text",
+                    "lines": [
+                        {
+                            "bbox": [
+                                110,
+                                570,
+                                506,
+                                581
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        110,
+                                        570,
+                                        506,
+                                        581
+                                    ],
+                                    "type": "text",
+                                    "content": "(2)What is the acknowledgement number of the packet that host B send back to host A ?",
+                                    "score": 0.983
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                110,
+                                594,
+                                216,
+                                604
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        110,
+                                        594,
+                                        216,
+                                        604
+                                    ],
+                                    "type": "text",
+                                    "content": "receives the first packet?",
+                                    "score": 0.994
+                                }
+                            ]
+                        }
+                    ],
+                    "bbox_fs": [
+                        110,
+                        570,
+                        506,
+                        604
+                    ]
+                },
+                {
+                    "score": 0.9185,
+                    "bbox": [
+                        108,
+                        616,
+                        506,
+                        653
+                    ],
+                    "index": 12,
+                    "type": "text",
+                    "lines": [
+                        {
+                            "bbox": [
+                                111,
+                                618,
+                                505,
+                                627
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        111,
+                                        618,
+                                        505,
+                                        627
+                                    ],
+                                    "type": "text",
+                                    "content": "(3)if the acknowledgement number of the packet that host B send back after receiving the",
+                                    "score": 0.996
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                111,
+                                641,
+                                333,
+                                650
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        111,
+                                        641,
+                                        333,
+                                        650
+                                    ],
+                                    "type": "text",
+                                    "content": "packet is 180,how many bytes of the second packet?",
+                                    "score": 0.994
+                                }
+                            ]
+                        }
+                    ],
+                    "bbox_fs": [
+                        111,
+                        618,
+                        505,
+                        650
+                    ]
+                }
+            ]
+        }
+    ],
+    "_backend": "pipeline",
+    "_version_name": "3.4.0"
+}

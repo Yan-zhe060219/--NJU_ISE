@@ -1,0 +1,139 @@
+[
+    {
+        "type": "text",
+        "text": "2014-15学年计算机网络试题",
+        "text_level": 1,
+        "bbox": [
+            368,
+            89,
+            630,
+            108
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "(非选择题部分)",
+        "bbox": [
+            433,
+            118,
+            564,
+            134
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "3.名词解释（3'\\*8）",
+        "text_level": 2,
+        "bbox": [
+            147,
+            147,
+            294,
+            161
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "PPP   \nUDP   \nSplit horizon   \nCSMA/CD   \nHTTP   \nTime division multiplexing   \nDNS   \nRARP",
+        "bbox": [
+            179,
+            172,
+            378,
+            385
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "4.（一道路由表更新的题目，没有记）（6'）",
+        "text_level": 2,
+        "bbox": [
+            146,
+            397,
+            478,
+            412
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "5.同2013年第4题（8'+4′）",
+        "text_level": 2,
+        "bbox": [
+            146,
+            425,
+            361,
+            439
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "7.Tell the similarities and differences between the OSI reference model and TCP/IP model. (8') 9.For convenient management,a company plans to divide the 195.3.1.0 into five sub,and the number of computers does not exceed 15.Calculate the subnet ip address.Write the ip address of each subset and the subnet mask. (6')",
+        "bbox": [
+            146,
+            454,
+            852,
+            552
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "8.（曼彻斯特编码）（4'）",
+        "text_level": 2,
+        "bbox": [
+            146,
+            564,
+            339,
+            579
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "6.Host A send two continuous TCP packet to host B,and their sequence number are 70 and   \n100.Questions：(9')",
+        "bbox": [
+            146,
+            593,
+            850,
+            634
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "(1)How many bytes of data does the first packet carry?",
+        "bbox": [
+            181,
+            649,
+            579,
+            664
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "(2)What is the acknowledgement number of the packet that host B send back to host A ? receives the first packet?",
+        "bbox": [
+            181,
+            676,
+            852,
+            719
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "(3)if the acknowledgement number of the packet that host B send back after receiving the packet is 180,how many bytes of the second packet?",
+        "bbox": [
+            181,
+            732,
+            850,
+            776
+        ],
+        "page_idx": 0
+    }
+]

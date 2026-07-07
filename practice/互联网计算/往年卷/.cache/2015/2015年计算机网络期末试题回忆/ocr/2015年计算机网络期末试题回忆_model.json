@@ -1,0 +1,430 @@
+[
+    {
+        "layout_dets": [
+            {
+                "cls_id": 6,
+                "label": "doc_title",
+                "score": 0.7821,
+                "bbox": [
+                    611,
+                    211,
+                    1042,
+                    253
+                ],
+                "index": 1
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.59,
+                "bbox": [
+                    719,
+                    279,
+                    934,
+                    315
+                ],
+                "index": 2
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.6691,
+                "bbox": [
+                    245,
+                    345,
+                    487,
+                    379
+                ],
+                "index": 3
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.6442,
+                "bbox": [
+                    298,
+                    405,
+                    626,
+                    901
+                ],
+                "index": 4
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8054,
+                "bbox": [
+                    243,
+                    930,
+                    794,
+                    965
+                ],
+                "index": 5
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7393,
+                "bbox": [
+                    243,
+                    995,
+                    599,
+                    1030
+                ],
+                "index": 6
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9374,
+                "bbox": [
+                    242,
+                    1063,
+                    1409,
+                    1294
+                ],
+                "index": 7
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7184,
+                "bbox": [
+                    243,
+                    1320,
+                    562,
+                    1355
+                ],
+                "index": 8
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9237,
+                "bbox": [
+                    243,
+                    1387,
+                    1407,
+                    1486
+                ],
+                "index": 9
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7949,
+                "bbox": [
+                    301,
+                    1517,
+                    960,
+                    1553
+                ],
+                "index": 10
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8927,
+                "bbox": [
+                    300,
+                    1581,
+                    1409,
+                    1682
+                ],
+                "index": 11
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9185,
+                "bbox": [
+                    301,
+                    1712,
+                    1407,
+                    1814
+                ],
+                "index": 12
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    616,
+                    213,
+                    1037,
+                    251
+                ],
+                "score": 1.0,
+                "text": "2014-15学年计算机网络试题"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    725,
+                    284,
+                    929,
+                    314
+                ],
+                "score": 0.965,
+                "text": "(非选择题部分)"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    248,
+                    347,
+                    486,
+                    380
+                ],
+                "score": 0.964,
+                "text": "3.名词解释（3'*8）"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    303,
+                    412,
+                    357,
+                    447
+                ],
+                "score": 1.0,
+                "text": "PPP"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    305,
+                    478,
+                    363,
+                    513
+                ],
+                "score": 1.0,
+                "text": "UDP"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    304,
+                    542,
+                    458,
+                    579
+                ],
+                "score": 1.0,
+                "text": "Split horizon"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    306,
+                    607,
+                    426,
+                    642
+                ],
+                "score": 1.0,
+                "text": "CSMA/CD"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    305,
+                    673,
+                    374,
+                    706
+                ],
+                "score": 1.0,
+                "text": "HTTP"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    306,
+                    737,
+                    618,
+                    771
+                ],
+                "score": 1.0,
+                "text": "Time division multiplexing"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    304,
+                    802,
+                    364,
+                    840
+                ],
+                "score": 1.0,
+                "text": "DNS"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    304,
+                    869,
+                    376,
+                    902
+                ],
+                "score": 1.0,
+                "text": "RARP"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    249,
+                    932,
+                    789,
+                    962
+                ],
+                "score": 0.981,
+                "text": "4.（一道路由表更新的题目，没有记）（6'）"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    249,
+                    996,
+                    594,
+                    1028
+                ],
+                "score": 0.939,
+                "text": "5.同2013年第4题（8'+4′）"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    249,
+                    1063,
+                    1373,
+                    1093
+                ],
+                "score": 0.988,
+                "text": "7.Tell the similarities and differences between the OSI reference model and TCP/IP model. (8')"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    247,
+                    1132,
+                    1405,
+                    1162
+                ],
+                "score": 0.993,
+                "text": "9.For convenient management,a company plans to divide the 195.3.1.0 into five sub,and the"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    249,
+                    1197,
+                    1406,
+                    1226
+                ],
+                "score": 1.0,
+                "text": "number of computers does not exceed 15.Calculate the subnet ip address.Write the ip address of"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    247,
+                    1260,
+                    717,
+                    1290
+                ],
+                "score": 0.99,
+                "text": "each subset and the subnet mask. (6')"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    248,
+                    1324,
+                    556,
+                    1352
+                ],
+                "score": 0.958,
+                "text": "8.（曼彻斯特编码）（4'）"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    248,
+                    1390,
+                    1404,
+                    1419
+                ],
+                "score": 0.996,
+                "text": "6.Host A send two continuous TCP packet to host B,and their sequence number are 70 and"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    248,
+                    1454,
+                    502,
+                    1484
+                ],
+                "score": 0.943,
+                "text": "100.Questions：(9')"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    308,
+                    1522,
+                    953,
+                    1548
+                ],
+                "score": 0.996,
+                "text": "(1)How many bytes of data does the first packet carry?"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    308,
+                    1585,
+                    1406,
+                    1614
+                ],
+                "score": 0.983,
+                "text": "(2)What is the acknowledgement number of the packet that host B send back to host A ?"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    308,
+                    1652,
+                    601,
+                    1678
+                ],
+                "score": 0.994,
+                "text": "receives the first packet?"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    309,
+                    1718,
+                    1403,
+                    1743
+                ],
+                "score": 0.996,
+                "text": "(3)if the acknowledgement number of the packet that host B send back after receiving the"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    309,
+                    1783,
+                    927,
+                    1808
+                ],
+                "score": 0.994,
+                "text": "packet is 180,how many bytes of the second packet?"
+            }
+        ],
+        "page_info": {
+            "page_no": 0,
+            "width": 1654,
+            "height": 2339
+        }
+    }
+]

@@ -1,0 +1,2489 @@
+[
+    {
+        "layout_dets": [
+            {
+                "cls_id": 6,
+                "label": "doc_title",
+                "score": 0.962,
+                "bbox": [
+                    456,
+                    188,
+                    1209,
+                    238
+                ],
+                "index": 1
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7344,
+                "bbox": [
+                    246,
+                    258,
+                    1247,
+                    298
+                ],
+                "index": 2
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.6651,
+                "bbox": [
+                    246,
+                    303,
+                    1239,
+                    343
+                ],
+                "index": 3
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.6781,
+                "bbox": [
+                    245,
+                    348,
+                    1286,
+                    387
+                ],
+                "index": 4
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9772,
+                "bbox": [
+                    234,
+                    429,
+                    1431,
+                    523
+                ],
+                "index": 5,
+                "html": "<table><tr><td rowspan=1 colspan=1>1</td><td rowspan=1 colspan=1>2</td><td rowspan=1 colspan=1>3</td><td rowspan=1 colspan=1>4</td><td rowspan=1 colspan=1>5</td><td rowspan=1 colspan=1>6</td><td rowspan=1 colspan=1>7</td><td rowspan=1 colspan=1>SUM</td></tr><tr><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td></tr></table>"
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.903,
+                "bbox": [
+                    244,
+                    529,
+                    1419,
+                    610
+                ],
+                "index": 6
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8691,
+                "bbox": [
+                    248,
+                    618,
+                    630,
+                    653
+                ],
+                "index": 7
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9622,
+                "bbox": [
+                    302,
+                    661,
+                    1189,
+                    739
+                ],
+                "index": 8
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9696,
+                "bbox": [
+                    304,
+                    748,
+                    1298,
+                    827
+                ],
+                "index": 9
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.972,
+                "bbox": [
+                    304,
+                    836,
+                    1173,
+                    915
+                ],
+                "index": 10
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.979,
+                "bbox": [
+                    304,
+                    923,
+                    840,
+                    1133
+                ],
+                "index": 11
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9869,
+                "bbox": [
+                    304,
+                    1140,
+                    1420,
+                    1393
+                ],
+                "index": 12
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9733,
+                "bbox": [
+                    308,
+                    1402,
+                    998,
+                    1478
+                ],
+                "index": 13
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9854,
+                "bbox": [
+                    306,
+                    1487,
+                    1399,
+                    1696
+                ],
+                "index": 14
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9743,
+                "bbox": [
+                    309,
+                    1707,
+                    1216,
+                    1785
+                ],
+                "index": 15
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9816,
+                "bbox": [
+                    309,
+                    1792,
+                    1421,
+                    1915
+                ],
+                "index": 16
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9739,
+                "bbox": [
+                    309,
+                    1924,
+                    1132,
+                    2003
+                ],
+                "index": 17
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9703,
+                "bbox": [
+                    309,
+                    2012,
+                    1015,
+                    2090
+                ],
+                "index": 18
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.8616,
+                "bbox": [
+                    1382,
+                    2152,
+                    1420,
+                    2180
+                ],
+                "index": 19
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    463,
+                    192,
+                    1203,
+                    237
+                ],
+                "score": 1.0,
+                "text": "2013年软件学院计算机网络期末试题(A)"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    250,
+                    259,
+                    492,
+                    298
+                ],
+                "score": 0.958,
+                "text": "考试方式：闭卷"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    603,
+                    262,
+                    1237,
+                    293
+                ],
+                "score": 0.999,
+                "text": "考试日期2013年7月1日教师赵志宏、刘峰"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    254,
+                    307,
+                    665,
+                    336
+                ],
+                "score": 0.991,
+                "text": "系（专业）软件学院软件工程"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    746,
+                    303,
+                    942,
+                    341
+                ],
+                "score": 1.0,
+                "text": "年级2011级"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1043,
+                    299,
+                    1126,
+                    346
+                ],
+                "score": 1.0,
+                "text": "班级"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    243,
+                    345,
+                    323,
+                    391
+                ],
+                "score": 1.0,
+                "text": "学号"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    683,
+                    346,
+                    767,
+                    392
+                ],
+                "score": 1.0,
+                "text": "姓名"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1067,
+                    341,
+                    1155,
+                    395
+                ],
+                "score": 1.0,
+                "text": "成绩"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    250,
+                    533,
+                    1416,
+                    567
+                ],
+                "score": 0.99,
+                "text": "Note: Answers to Question one and two MUST be written DIRECTLY ON THE"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    248,
+                    575,
+                    1275,
+                    608
+                ],
+                "score": 0.989,
+                "text": "PAGES. Answers in other places are INVALID and will NOT be scored."
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    252,
+                    621,
+                    625,
+                    652
+                ],
+                "score": 0.982,
+                "text": "1. Single selection (15 marks)"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    309,
+                    664,
+                    948,
+                    694
+                ],
+                "score": 0.991,
+                "text": "(1) Which protocol is NOT a network layer protocol?"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    355,
+                    706,
+                    419,
+                    738
+                ],
+                "score": 1.0,
+                "text": "A.IP"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    601,
+                    706,
+                    702,
+                    737
+                ],
+                "score": 0.998,
+                "text": "B.OSPF"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    838,
+                    707,
+                    943,
+                    734
+                ],
+                "score": 1.0,
+                "text": "C.IGRP"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1016,
+                    709,
+                    1181,
+                    732
+                ],
+                "score": 0.986,
+                "text": "D.IEEE 802.3"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    307,
+                    751,
+                    558,
+                    780
+                ],
+                "score": 0.994,
+                "text": "(2)132.101.9.3 is a:"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    358,
+                    794,
+                    1294,
+                    821
+                ],
+                "score": 0.986,
+                "text": "A. class A address B. class B address C. class C address D. class D address"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    306,
+                    837,
+                    904,
+                    870
+                ],
+                "score": 0.996,
+                "text": "(3) PDUs at the Data Link layer are named what?"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    364,
+                    880,
+                    473,
+                    913
+                ],
+                "score": 0.999,
+                "text": "A. Bits"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    541,
+                    882,
+                    670,
+                    911
+                ],
+                "score": 0.964,
+                "text": "B. Frames"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    777,
+                    881,
+                    907,
+                    911
+                ],
+                "score": 0.998,
+                "text": "C. Packets"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1015,
+                    882,
+                    1170,
+                    911
+                ],
+                "score": 0.993,
+                "text": "D. Segments"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    308,
+                    926,
+                    721,
+                    955
+                ],
+                "score": 0.983,
+                "text": "(4) Which statement is NOT true?"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    367,
+                    972,
+                    720,
+                    998
+                ],
+                "score": 0.977,
+                "text": "A. Router is a layer 3 device"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    365,
+                    1012,
+                    779,
+                    1042
+                ],
+                "score": 0.996,
+                "text": "B. Transceiver is a layer 1 device"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    367,
+                    1058,
+                    834,
+                    1087
+                ],
+                "score": 0.993,
+                "text": "C. Layer 2 switch can provide routing"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    367,
+                    1102,
+                    826,
+                    1131
+                ],
+                "score": 0.996,
+                "text": "D. Hub can not support segmentation"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    308,
+                    1143,
+                    1418,
+                    1170
+                ],
+                "score": 0.981,
+                "text": "(5)When a switch receives a frame whose MAC address is not in the switching table, what"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    360,
+                    1187,
+                    592,
+                    1216
+                ],
+                "score": 0.995,
+                "text": "is going to happen?"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    363,
+                    1232,
+                    644,
+                    1258
+                ],
+                "score": 0.99,
+                "text": "A. Frame is discarded"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    368,
+                    1274,
+                    801,
+                    1302
+                ],
+                "score": 0.999,
+                "text": "B. Frame is sent back to the sender"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    369,
+                    1318,
+                    882,
+                    1346
+                ],
+                "score": 0.988,
+                "text": "C. Frame is flooded to all connected ports"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    369,
+                    1361,
+                    799,
+                    1389
+                ],
+                "score": 0.999,
+                "text": "D. Frame is held in switching table"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    310,
+                    1404,
+                    991,
+                    1434
+                ],
+                "score": 0.993,
+                "text": "(6) Which protocol is a distance vector routing protocol?"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    358,
+                    1446,
+                    445,
+                    1478
+                ],
+                "score": 0.999,
+                "text": "A.PPP"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    543,
+                    1446,
+                    632,
+                    1477
+                ],
+                "score": 0.953,
+                "text": "B. RIP"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    718,
+                    1446,
+                    837,
+                    1478
+                ],
+                "score": 1.0,
+                "text": "C.OSPF"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    893,
+                    1444,
+                    997,
+                    1476
+                ],
+                "score": 1.0,
+                "text": "D.TCP"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    311,
+                    1491,
+                    1397,
+                    1517
+                ],
+                "score": 0.987,
+                "text": "(7) Assuming no subnet, what information can be derived from the IPaddress 182.12.5.11?"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    370,
+                    1536,
+                    675,
+                    1561
+                ],
+                "score": 0.99,
+                "text": "A. It is a classC address"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    370,
+                    1577,
+                    770,
+                    1606
+                ],
+                "score": 0.984,
+                "text": "B. The network ID is 182.12.5.0"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    370,
+                    1622,
+                    674,
+                    1651
+                ],
+                "score": 0.995,
+                "text": "C. It is a private address"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    372,
+                    1666,
+                    645,
+                    1692
+                ],
+                "score": 0.987,
+                "text": "D. The host ID is 5.11"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    314,
+                    1709,
+                    978,
+                    1736
+                ],
+                "score": 0.982,
+                "text": "(8) What is the bandwidth of an ISDN BRI-B Channel?"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    371,
+                    1752,
+                    675,
+                    1782
+                ],
+                "score": 0.979,
+                "text": "A. 16Kbps B.64Kbps"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    718,
+                    1749,
+                    1210,
+                    1782
+                ],
+                "score": 0.979,
+                "text": "C.128Kbps D.144Kbps E.256Kbps"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    313,
+                    1795,
+                    1418,
+                    1822
+                ],
+                "score": 0.991,
+                "text": "(9) In what kind of mode switches read first part of frame with destination address and send"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    363,
+                    1841,
+                    644,
+                    1869
+                ],
+                "score": 1.0,
+                "text": "the frame immediately?"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    361,
+                    1884,
+                    1288,
+                    1909
+                ],
+                "score": 0.979,
+                "text": "A. Cut-through B. Store and forwardC. Fragment-free D. None of above"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    313,
+                    1926,
+                    1103,
+                    1957
+                ],
+                "score": 0.989,
+                "text": "(10) Which of following protocol is a protocol of application layer?"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    360,
+                    1969,
+                    485,
+                    2002
+                ],
+                "score": 0.993,
+                "text": "A. ICMP"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    545,
+                    1970,
+                    666,
+                    2000
+                ],
+                "score": 0.931,
+                "text": "B. SMTP"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    719,
+                    1968,
+                    1051,
+                    1997
+                ],
+                "score": 0.968,
+                "text": "C. TCP D.ARP E.PPP"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1062,
+                    1966,
+                    1128,
+                    1998
+                ],
+                "score": 0.996,
+                "text": "F.IP"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    313,
+                    2015,
+                    934,
+                    2044
+                ],
+                "score": 0.993,
+                "text": "(11) Which protocol is the core protocol of Ethernet?"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    360,
+                    2057,
+                    471,
+                    2089
+                ],
+                "score": 1.0,
+                "text": "A.802.3"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    544,
+                    2056,
+                    647,
+                    2088
+                ],
+                "score": 1.0,
+                "text": "B.802.4"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    721,
+                    2055,
+                    823,
+                    2088
+                ],
+                "score": 1.0,
+                "text": "C.802.5"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    898,
+                    2056,
+                    1012,
+                    2085
+                ],
+                "score": 1.0,
+                "text": "D.802.11"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1382,
+                    2153,
+                    1419,
+                    2185
+                ],
+                "score": 0.801,
+                "text": "A1"
+            }
+        ],
+        "page_info": {
+            "page_no": 0,
+            "width": 1654,
+            "height": 2323
+        }
+    },
+    {
+        "layout_dets": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9679,
+                "bbox": [
+                    260,
+                    171,
+                    721,
+                    383
+                ],
+                "index": 1
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9552,
+                "bbox": [
+                    260,
+                    391,
+                    1314,
+                    471
+                ],
+                "index": 2
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9707,
+                "bbox": [
+                    260,
+                    478,
+                    1378,
+                    601
+                ],
+                "index": 3
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9778,
+                "bbox": [
+                    259,
+                    609,
+                    1380,
+                    863
+                ],
+                "index": 4
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.5677,
+                "bbox": [
+                    201,
+                    872,
+                    578,
+                    906
+                ],
+                "index": 5
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9215,
+                "bbox": [
+                    248,
+                    903,
+                    1379,
+                    1210
+                ],
+                "index": 6
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9847,
+                "bbox": [
+                    260,
+                    1219,
+                    1383,
+                    1645
+                ],
+                "index": 7
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.5054,
+                "bbox": [
+                    261,
+                    1653,
+                    881,
+                    1732
+                ],
+                "index": 8
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7149,
+                "bbox": [
+                    317,
+                    1739,
+                    1379,
+                    1863
+                ],
+                "index": 9
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8228,
+                "bbox": [
+                    316,
+                    1868,
+                    1380,
+                    2084
+                ],
+                "index": 10
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.8834,
+                "bbox": [
+                    1334,
+                    2153,
+                    1374,
+                    2180
+                ],
+                "index": 11
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    264,
+                    172,
+                    641,
+                    205
+                ],
+                "score": 0.97,
+                "text": "(12) What is a feature of CIDR?"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    322,
+                    215,
+                    568,
+                    251
+                ],
+                "score": 0.992,
+                "text": "A. No supernetting"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    321,
+                    259,
+                    568,
+                    295
+                ],
+                "score": 0.982,
+                "text": "B. Classful routing"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    323,
+                    305,
+                    715,
+                    335
+                ],
+                "score": 0.999,
+                "text": "C. More entries in routingtable"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    321,
+                    347,
+                    595,
+                    383
+                ],
+                "score": 0.98,
+                "text": "D. Route aggregation"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    266,
+                    393,
+                    655,
+                    423
+                ],
+                "score": 0.979,
+                "text": "(13)On root bridge, all ports are:"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    312,
+                    433,
+                    1305,
+                    467
+                ],
+                "score": 0.989,
+                "text": "A. Root ports B. Blocked portsC. Designated portsD.Nondesignated ports"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    265,
+                    478,
+                    1373,
+                    509
+                ],
+                "score": 0.989,
+                "text": "(14)If an increasing number of broadcast are causing network congestion, which of the"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    315,
+                    521,
+                    676,
+                    553
+                ],
+                "score": 0.983,
+                "text": "following could be a solution?"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    315,
+                    567,
+                    454,
+                    597
+                ],
+                "score": 0.985,
+                "text": "A. A router"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    494,
+                    565,
+                    610,
+                    598
+                ],
+                "score": 0.954,
+                "text": "B. A hub"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    676,
+                    566,
+                    841,
+                    599
+                ],
+                "score": 0.954,
+                "text": "C. A gateway"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    910,
+                    563,
+                    1058,
+                    597
+                ],
+                "score": 0.953,
+                "text": "D. A switch"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    266,
+                    612,
+                    625,
+                    641
+                ],
+                "score": 0.984,
+                "text": "(15) Which statement is true?"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    325,
+                    655,
+                    692,
+                    683
+                ],
+                "score": 0.978,
+                "text": "A. 802.11a works on2.4GHz."
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    322,
+                    698,
+                    737,
+                    726
+                ],
+                "score": 0.994,
+                "text": "B. 802.11b is faster than 802.11a."
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    323,
+                    741,
+                    1374,
+                    770
+                ],
+                "score": 0.982,
+                "text": "C. Wireless LAN can works on a cabling LAN, for example, Ethernet, which acts as its"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    371,
+                    782,
+                    498,
+                    816
+                ],
+                "score": 1.0,
+                "text": "backbone."
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    322,
+                    827,
+                    1186,
+                    856
+                ],
+                "score": 0.999,
+                "text": "D. The basic media access control mechanism of 802.11b is CSMA/CD"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    206,
+                    874,
+                    571,
+                    905
+                ],
+                "score": 0.999,
+                "text": "2. Multi-selections(16marks)"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    266,
+                    915,
+                    960,
+                    945
+                ],
+                "score": 0.992,
+                "text": "(1) Which statements about switches and routers are true?"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    322,
+                    959,
+                    1144,
+                    988
+                ],
+                "score": 0.997,
+                "text": "A. Routers can prevent the broadcasts from one interface to another."
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    321,
+                    1001,
+                    1374,
+                    1034
+                ],
+                "score": 0.999,
+                "text": "B. Switches can prevent the broadcasts from one interface to another without using"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    374,
+                    1044,
+                    469,
+                    1076
+                ],
+                "score": 1.0,
+                "text": "VLAN."
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    324,
+                    1090,
+                    761,
+                    1119
+                ],
+                "score": 0.98,
+                "text": "C. Routers can isolate the collision."
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    324,
+                    1133,
+                    1034,
+                    1162
+                ],
+                "score": 0.994,
+                "text": "D. Switches can isolate the collision without using VLAN."
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    324,
+                    1176,
+                    1040,
+                    1205
+                ],
+                "score": 0.983,
+                "text": "E. Routers can't provide routing between different VLANs"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    266,
+                    1217,
+                    1377,
+                    1252
+                ],
+                "score": 0.991,
+                "text": "(2) Which two of the following are true regarding the distance-vector and link-state routing"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    314,
+                    1261,
+                    434,
+                    1297
+                ],
+                "score": 1.0,
+                "text": "protocol?"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    323,
+                    1307,
+                    1376,
+                    1337
+                ],
+                "score": 0.994,
+                "text": "A. Link state sends its complete routing table out all active interfaces on periodic time"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    373,
+                    1347,
+                    484,
+                    1383
+                ],
+                "score": 1.0,
+                "text": "intervals"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    323,
+                    1394,
+                    1376,
+                    1424
+                ],
+                "score": 0.993,
+                "text": "B. Distance vector sends its complete routing table out all active interfaces on periodic"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    374,
+                    1437,
+                    541,
+                    1467
+                ],
+                "score": 1.0,
+                "text": "time intervals"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    323,
+                    1479,
+                    1376,
+                    1512
+                ],
+                "score": 0.992,
+                "text": "C. Link state sends updates containing the state of its own links to all routers in the"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    374,
+                    1524,
+                    530,
+                    1551
+                ],
+                "score": 1.0,
+                "text": "internetwork"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    323,
+                    1566,
+                    1374,
+                    1596
+                ],
+                "score": 0.989,
+                "text": "D. Distance vector sends updates containing the state of its own links to all routers in"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    372,
+                    1609,
+                    572,
+                    1639
+                ],
+                "score": 1.0,
+                "text": "the internetwork"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    266,
+                    1657,
+                    776,
+                    1683
+                ],
+                "score": 0.997,
+                "text": "(3) Which statements about ACL are true?"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    325,
+                    1700,
+                    873,
+                    1728
+                ],
+                "score": 0.991,
+                "text": "A. If no ACL found, all traffics are permitted"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    324,
+                    1744,
+                    1375,
+                    1772
+                ],
+                "score": 0.96,
+                "text": "B. If we apply “access-list 1 deny host 192.168.10.1\"at“in\"direction of the interface"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    376,
+                    1787,
+                    1376,
+                    1815
+                ],
+                "score": 0.994,
+                "text": "S1(configured with the subnet mask 255.255.255.0), then all traffics from the subnet"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    376,
+                    1829,
+                    1025,
+                    1859
+                ],
+                "score": 0.97,
+                "text": "192.168.10.0/24 at “in\"direction will not be permitted."
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    324,
+                    1872,
+                    1373,
+                    1902
+                ],
+                "score": 0.968,
+                "text": "C. If we apply “access-list 1 deny host 192.168.10.1\"at “in\" direction of the interface"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    374,
+                    1917,
+                    1374,
+                    1946
+                ],
+                "score": 0.997,
+                "text": "S1(configured with the subnet mask 255.255.255.0), then all traffics from the subnet"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    374,
+                    1959,
+                    1372,
+                    1992
+                ],
+                "score": 0.985,
+                "text": "192.168.10.0/24 at “in\" direction will be permitted, except traffics from"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    375,
+                    2006,
+                    538,
+                    2032
+                ],
+                "score": 1.0,
+                "text": "192.168.10.1."
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    321,
+                    2046,
+                    1188,
+                    2077
+                ],
+                "score": 0.986,
+                "text": "D. If ACL list number is 50, then it should be put near to the destination"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1334,
+                    2153,
+                    1374,
+                    2184
+                ],
+                "score": 1.0,
+                "text": "A2"
+            }
+        ],
+        "page_info": {
+            "page_no": 1,
+            "width": 1654,
+            "height": 2323
+        }
+    },
+    {
+        "layout_dets": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.88,
+                "bbox": [
+                    375,
+                    201,
+                    1186,
+                    243
+                ],
+                "index": 1
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9724,
+                "bbox": [
+                    318,
+                    251,
+                    1395,
+                    462
+                ],
+                "index": 2
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9733,
+                "bbox": [
+                    321,
+                    471,
+                    1366,
+                    680
+                ],
+                "index": 3
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9708,
+                "bbox": [
+                    317,
+                    690,
+                    1139,
+                    899
+                ],
+                "index": 4
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9796,
+                "bbox": [
+                    320,
+                    908,
+                    1447,
+                    1162
+                ],
+                "index": 5
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9631,
+                "bbox": [
+                    303,
+                    1172,
+                    1454,
+                    1600
+                ],
+                "index": 6
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8804,
+                "bbox": [
+                    282,
+                    1609,
+                    889,
+                    1692
+                ],
+                "index": 7
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.5599,
+                "bbox": [
+                    347,
+                    1872,
+                    654,
+                    1909
+                ],
+                "index": 8
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.8546,
+                "bbox": [
+                    1426,
+                    2175,
+                    1465,
+                    2204
+                ],
+                "index": 9
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    381,
+                    202,
+                    1180,
+                    236
+                ],
+                "score": 0.997,
+                "text": "E. If ACL list number is 1, then it should be put near to the source"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    323,
+                    253,
+                    818,
+                    280
+                ],
+                "score": 0.986,
+                "text": "(4) Which following statements are true?"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    381,
+                    297,
+                    788,
+                    321
+                ],
+                "score": 0.98,
+                "text": "A MAC address is a 48 bit digit."
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    381,
+                    335,
+                    1107,
+                    365
+                ],
+                "score": 0.983,
+                "text": "B. Ethernet Switches use MAC addresses to filter the traffic"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    382,
+                    378,
+                    1153,
+                    410
+                ],
+                "score": 0.998,
+                "text": "C. IP addresses can be found in the header of an Ethernet frame"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    381,
+                    420,
+                    1389,
+                    452
+                ],
+                "score": 0.994,
+                "text": "D. Port numbers can be found in both headers of TCP segments and UDP segments."
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    324,
+                    468,
+                    864,
+                    502
+                ],
+                "score": 0.988,
+                "text": "(5) Which statements about routers are true?"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    385,
+                    512,
+                    950,
+                    544
+                ],
+                "score": 0.989,
+                "text": "A. A simplified copy of IOS is stored in ROM"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    384,
+                    554,
+                    1073,
+                    587
+                ],
+                "score": 0.999,
+                "text": "B. As default, startup configurations is stored in FLASH"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    387,
+                    601,
+                    862,
+                    630
+                ],
+                "score": 0.997,
+                "text": "C. NVRAM is a kind of volatile RAM"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    386,
+                    640,
+                    1352,
+                    673
+                ],
+                "score": 0.999,
+                "text": "D. Setup mode will work if startup configuration can not be found at any places."
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    388,
+                    736,
+                    875,
+                    760
+                ],
+                "score": 0.978,
+                "text": "A. In common. FTP needs to use port 20."
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    322,
+                    689,
+                    755,
+                    722
+                ],
+                "score": 0.996,
+                "text": "(6) Which statements are NOT true?"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    389,
+                    776,
+                    911,
+                    807
+                ],
+                "score": 0.988,
+                "text": "B. TCP can provide connectionless services"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    390,
+                    819,
+                    1133,
+                    848
+                ],
+                "score": 0.993,
+                "text": "C. Three handshakes are used in UDP to set up the connection."
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    391,
+                    862,
+                    1105,
+                    893
+                ],
+                "score": 0.997,
+                "text": "D. Flow control is one of the functions of the data link layer."
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    444,
+                    1087,
+                    622,
+                    1114
+                ],
+                "score": 1.0,
+                "text": "authentication."
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    326,
+                    907,
+                    1017,
+                    937
+                ],
+                "score": 0.99,
+                "text": "(7) Which statements about PPP, PAP and CHAP are true?"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    392,
+                    947,
+                    1326,
+                    977
+                ],
+                "score": 0.998,
+                "text": "A. In PAP mode, the central router asks the remote router about the password."
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    392,
+                    991,
+                    1328,
+                    1021
+                ],
+                "score": 0.992,
+                "text": "B. In PAP mode, the remote router asks the central router about the password."
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    391,
+                    1032,
+                    1444,
+                    1066
+                ],
+                "score": 0.989,
+                "text": "C. In CHAP mode, each router must know the password in order to successful"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    392,
+                    1121,
+                    1256,
+                    1155
+                ],
+                "score": 0.991,
+                "text": "D. In CHAP mode, only three chances are allowed to test the password."
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    451,
+                    1391,
+                    684,
+                    1419
+                ],
+                "score": 1.0,
+                "text": "172.16.3.0 network"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    324,
+                    1170,
+                    914,
+                    1201
+                ],
+                "score": 0.998,
+                "text": "(8) Choose the true statement about the command"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    383,
+                    1210,
+                    960,
+                    1244
+                ],
+                "score": 0.994,
+                "text": "“ip route 172.16.3.0 255.255.255.0 192.168.2.4”"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    396,
+                    1255,
+                    1072,
+                    1285
+                ],
+                "score": 0.988,
+                "text": "A. It establishes a static route to the 172.16.3.0 network"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    396,
+                    1299,
+                    985,
+                    1330
+                ],
+                "score": 0.985,
+                "text": "B. It establishes a static route to the 192.168.2.0"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    397,
+                    1337,
+                    1447,
+                    1371
+                ],
+                "score": 0.99,
+                "text": "C. It configures the router to send any traffic for an unknown destination to the"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    399,
+                    1425,
+                    1448,
+                    1460
+                ],
+                "score": 0.999,
+                "text": "D. It configures the router to send any traffic for an unknown destination out the"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    450,
+                    1475,
+                    927,
+                    1505
+                ],
+                "score": 0.992,
+                "text": "interface with the address 192.168.2.4"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    401,
+                    1520,
+                    946,
+                    1549
+                ],
+                "score": 0.994,
+                "text": "E. It uses the default administrative distance"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    403,
+                    1558,
+                    1380,
+                    1591
+                ],
+                "score": 0.995,
+                "text": "F. It is a route that would be used last if other routes to the same destination exist"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    344,
+                    1656,
+                    539,
+                    1688
+                ],
+                "score": 0.983,
+                "text": "(1) Full duplex"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    285,
+                    1609,
+                    885,
+                    1645
+                ],
+                "score": 0.989,
+                "text": "3. Interpret these terms IN DETAIL: (24marks)"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    351,
+                    1873,
+                    650,
+                    1907
+                ],
+                "score": 0.985,
+                "text": "(2) OSI reference model"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1426,
+                    2175,
+                    1464,
+                    2207
+                ],
+                "score": 1.0,
+                "text": "A3"
+            }
+        ],
+        "page_info": {
+            "page_no": 2,
+            "width": 1654,
+            "height": 2323
+        }
+    },
+    {
+        "layout_dets": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8732,
+                "bbox": [
+                    262,
+                    180,
+                    486,
+                    230
+                ],
+                "index": 1
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8763,
+                "bbox": [
+                    263,
+                    354,
+                    468,
+                    403
+                ],
+                "index": 2
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8601,
+                "bbox": [
+                    267,
+                    530,
+                    396,
+                    579
+                ],
+                "index": 3
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8908,
+                "bbox": [
+                    268,
+                    705,
+                    660,
+                    752
+                ],
+                "index": 4
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8429,
+                "bbox": [
+                    270,
+                    880,
+                    392,
+                    929
+                ],
+                "index": 5
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8654,
+                "bbox": [
+                    272,
+                    1055,
+                    420,
+                    1102
+                ],
+                "index": 6
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.961,
+                "bbox": [
+                    212,
+                    1223,
+                    1394,
+                    1316
+                ],
+                "index": 7
+            },
+            {
+                "cls_id": 14,
+                "label": "image",
+                "score": 0.9517,
+                "bbox": [
+                    277,
+                    1326,
+                    1154,
+                    1830
+                ],
+                "index": 8
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.8802,
+                "bbox": [
+                    1361,
+                    2155,
+                    1401,
+                    2186
+                ],
+                "index": 9
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    268,
+                    187,
+                    479,
+                    221
+                ],
+                "score": 0.971,
+                "text": "(3) Split horizon"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    266,
+                    364,
+                    458,
+                    395
+                ],
+                "score": 0.968,
+                "text": "(4) CSMA/CD"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    266,
+                    537,
+                    389,
+                    575
+                ],
+                "score": 0.996,
+                "text": "(5) DNS"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    274,
+                    712,
+                    650,
+                    746
+                ],
+                "score": 0.969,
+                "text": "(6) Time division multiplexing"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    270,
+                    889,
+                    386,
+                    933
+                ],
+                "score": 0.949,
+                "text": "(7) STP"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    274,
+                    1062,
+                    410,
+                    1098
+                ],
+                "score": 0.988,
+                "text": "(8) RARP"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    218,
+                    1229,
+                    1388,
+                    1265
+                ],
+                "score": 0.992,
+                "text": "4. Please give the order of links the packets passed when ping 192.168.100.3 from"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    273,
+                    1274,
+                    1371,
+                    1306
+                ],
+                "score": 0.972,
+                "text": "192.168.110.2 (10 marks), and why? (4 marks). These links are labeled as A’,B’, and so on"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1359,
+                    2156,
+                    1402,
+                    2191
+                ],
+                "score": 1.0,
+                "text": "A4"
+            }
+        ],
+        "page_info": {
+            "page_no": 3,
+            "width": 1654,
+            "height": 2323
+        }
+    },
+    {
+        "layout_dets": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.6984,
+                "bbox": [
+                    198,
+                    175,
+                    1223,
+                    221
+                ],
+                "index": 1
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9792,
+                "bbox": [
+                    200,
+                    656,
+                    1393,
+                    781
+                ],
+                "index": 2
+            },
+            {
+                "cls_id": 14,
+                "label": "image",
+                "score": 0.975,
+                "bbox": [
+                    331,
+                    783,
+                    1344,
+                    1189
+                ],
+                "index": 3
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9774,
+                "bbox": [
+                    197,
+                    1652,
+                    1386,
+                    1781
+                ],
+                "index": 4
+            },
+            {
+                "cls_id": 14,
+                "label": "image",
+                "score": 0.9562,
+                "bbox": [
+                    214,
+                    1822,
+                    1400,
+                    2134
+                ],
+                "index": 5
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.8752,
+                "bbox": [
+                    1336,
+                    2148,
+                    1379,
+                    2178
+                ],
+                "index": 6
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    205,
+                    180,
+                    1216,
+                    214
+                ],
+                "score": 0.977,
+                "text": "5. Please give the encoding result of 0101100011' by using Manchester. (8 marks)"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    205,
+                    657,
+                    1386,
+                    692
+                ],
+                "score": 0.994,
+                "text": "6. In the topology of a corporation (Illustrated in figure). If you want to distribute"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    261,
+                    699,
+                    1385,
+                    735
+                ],
+                "score": 0.991,
+                "text": "192.168.20.0/24 to these hosts and routers, and divide the network into subnets, please give"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    259,
+                    744,
+                    793,
+                    776
+                ],
+                "score": 0.994,
+                "text": "the result(zero subnet permitted). (14 marks)"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    206,
+                    1656,
+                    1378,
+                    1689
+                ],
+                "score": 0.992,
+                "text": "7. As we known, routing protocols supporting CIDR can aggregate the routes and send the"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    257,
+                    1701,
+                    1376,
+                    1729
+                ],
+                "score": 0.992,
+                "text": "optimized route to the next hop. What are the best aggregated routes sent on the link A, B, C,"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    256,
+                    1744,
+                    567,
+                    1772
+                ],
+                "score": 0.989,
+                "text": "D, E? And why?(9 marks)"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1337,
+                    2149,
+                    1378,
+                    2181
+                ],
+                "score": 1.0,
+                "text": "A5"
+            }
+        ],
+        "page_info": {
+            "page_no": 4,
+            "width": 1654,
+            "height": 2323
+        }
+    }
+]

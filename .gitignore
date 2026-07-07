@@ -12,6 +12,7 @@ inbox/*/.learned
 
 # 本地配置（含个人偏好，不共享）
 .claude/settings.local.json
+CLAUDE.local.md
 
 # 大型PDF（源文件，超过GitHub限制）
 inbox/中国近代史纲要/中国近现代史纲要(2023年版).pdf

@@ -41,20 +41,31 @@ description: 深度分析学习材料（PDF/PPTX/视频/文章），按课程组
 ```bash
 # 统一提取：MarkItDown 优先处理所有格式，失败自动回退到 extract_pdfs/extract_pptx
 python tools/extract_file.py <目标文件夹>
+
+# 含公式/表格的复杂 PDF：使用 MinerU 引擎
+python tools/extract_file.py <目标文件夹> --backend mineru
+
+# 最全面的三级回退：MarkItDown → 传统 → MinerU
+python tools/extract_file.py <目标文件夹> --backend auto
 ```
 
 - 此步骤**静默执行**，无需用户确认
 - 如果所有文件都已提取，脚本自动跳过
-- 提取的 `.txt` 保存在课程文件夹的 `.cache/` 子目录中，与原始文件隔离
+- 提取的 `.txt` / `.md` 保存在课程文件夹的 `.cache/` 子目录中，与原始文件隔离
 - **支持的格式**：PDF、PPTX、DOCX、XLSX/XLS、图片（jpg/png/gif/bmp/webp）、HTML、CSV、JSON、XML、IPYNB、EPUB
-- **提取策略**：
-  - 主引擎：MarkItDown（微软开源，支持 12+ 种格式 → Markdown）
-  - 回退：PDF 回退到 `extract_pdfs.py`（EasyOCR 扫描件识别），PPTX 回退到 `extract_pptx.py`（演讲者备注提取）
-  - 无回退的格式（DOCX/XLSX/图片等）：MarkItDown 失败则报告错误
-- **硬性约束：只读 `.cache/<文件名>.txt`**，绝不直接读取原始 PDF/PPTX/DOCX 等二进制文件。原因：
+- **提取策略（三级回退）**：
+  - 第一级：MarkItDown（微软开源，支持 12+ 种格式 → Markdown/Text）
+  - 第二级：传统回退（PDF → `extract_pdfs.py` EasyOCR 扫描件；PPTX → `extract_pptx.py` 演讲者备注）
+  - 第三级：**MinerU** — 仅在 `--backend auto` 模式下生效，当 MarkItDown 和传统回退均失败时调用。适合公式密集、表格复杂、扫描版 PDF。输出格式为 `.md`
+- **引擎选择指南**：
+  - 默认（`--backend markitdown`）：适合大多数课件，速度快
+  - MinerU（`--backend mineru`）：适合**数学/物理/工程**类含 LaTeX 公式的 PDF，或含大量表格的文献
+  - 自动（`--backend auto`）：不确定时使用，MarkItDown→传统→MinerU 三级保障
+- **硬性约束：只读 `.cache/<文件名>.txt`（或 .md）**，绝不直接读取原始 PDF/PPTX/DOCX 等二进制文件。原因：
   - 原始二进制文件需要多模态输入，当前 API 不支持
   - 即使 API 支持，切换回 deepseek 等纯文本模型后也无法工作
   - 扫描件 PDF 由回退脚本自动调用 EasyOCR 处理，`.txt` 一定存在
+  - MinerU 输出 `.md` 格式，Claude 可直接 Read
   - 此约束确保 kimi / deepseek / 任意纯文本模型都能处理
 
 **PPTX 特殊说明：**
@@ -311,7 +322,7 @@ chapter: <序号>
 - **标注来源**：source 字段写文件名，方便日后回溯原文
 - **贴合原文，应对考试**：参见 `.claude/references/principles.md` 中的"术语保真"原则
 - **笔记状态管理**：模板默认 `status: draft`。完整状态生命周期（draft → learned → reviewed → mastered）及与 REVIEW.md 复选框的映射，参见 `.claude/references/principles.md` §"笔记 status ↔ REVIEW.md 复选框 双向映射"
-- **遇到无法读取的文件**（MarkItDown 和回退脚本均失败、或图片 OCR 无文字）：在笔记中标注 `⚠️ 需手动查看原文件`，建议用户用其他方式处理。**绝不尝试直接 Read 原始二进制文件作为多模态输入**——这会破坏跨模型兼容性
+- **遇到无法读取的文件**（MarkItDown、回退脚本、MinerU 三级均失败、或图片 OCR 无文字）：在笔记中标注 `⚠️ 需手动查看原文件`，建议用户用其他方式处理。**绝不尝试直接 Read 原始二进制文件作为多模态输入**——这会破坏跨模型兼容性
 
 ---
 

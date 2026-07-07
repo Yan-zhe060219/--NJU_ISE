@@ -1,0 +1,607 @@
+[
+    {
+        "type": "text",
+        "text": "2013年软件学院计算机网络期末试题(A)",
+        "text_level": 1,
+        "bbox": [
+            275,
+            80,
+            731,
+            101
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "考试方式：闭卷 考试日期2013年7月1日教师赵志宏、刘峰",
+        "bbox": [
+            147,
+            110,
+            752,
+            127
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "系（专业）软件学院软件工程 年级2011级 班级",
+        "bbox": [
+            147,
+            130,
+            749,
+            147
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "学号 姓名 成绩",
+        "bbox": [
+            147,
+            149,
+            776,
+            166
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "table",
+        "img_path": "images/58d150810944c0a2c89bfdba11bce6f4d444a75aea87dfbb522f181a5a2dc3e6.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td rowspan=1 colspan=1>1</td><td rowspan=1 colspan=1>2</td><td rowspan=1 colspan=1>3</td><td rowspan=1 colspan=1>4</td><td rowspan=1 colspan=1>5</td><td rowspan=1 colspan=1>6</td><td rowspan=1 colspan=1>7</td><td rowspan=1 colspan=1>SUM</td></tr><tr><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td></tr></table>",
+        "bbox": [
+            141,
+            184,
+            865,
+            224
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Note: Answers to Question one and two MUST be written DIRECTLY ON THE PAGES. Answers in other places are INVALID and will NOT be scored.",
+        "text_level": 2,
+        "bbox": [
+            146,
+            227,
+            857,
+            261
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "1. Single selection (15 marks)",
+        "bbox": [
+            149,
+            265,
+            379,
+            281
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "(1) Which protocol is NOT a network layer protocol? A.IP B.OSPF C.IGRP D.IEEE 802.3",
+        "bbox": [
+            181,
+            283,
+            719,
+            318
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "(2)132.101.9.3 is a: A. class A address B. class B address C. class C address D. class D address",
+        "bbox": [
+            183,
+            321,
+            784,
+            355
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "(3) PDUs at the Data Link layer are named what? A. Bits B. Frames C. Packets D. Segments",
+        "bbox": [
+            183,
+            358,
+            709,
+            393
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "(4) Which statement is NOT true? A. Router is a layer 3 device B. Transceiver is a layer 1 device C. Layer 2 switch can provide routing D. Hub can not support segmentation",
+        "bbox": [
+            183,
+            397,
+            507,
+            486
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "(5)When a switch receives a frame whose MAC address is not in the switching table, what is going to happen? A. Frame is discarded B. Frame is sent back to the sender C. Frame is flooded to all connected ports D. Frame is held in switching table",
+        "bbox": [
+            183,
+            490,
+            858,
+            599
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "(6) Which protocol is a distance vector routing protocol? A.PPP B. RIP C.OSPF D.TCP",
+        "bbox": [
+            184,
+            602,
+            603,
+            636
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "(7) Assuming no subnet, what information can be derived from the IPaddress 182.12.5.11? A. It is a classC address B. The network ID is 182.12.5.0 C. It is a private address D. The host ID is 5.11",
+        "bbox": [
+            184,
+            639,
+            845,
+            729
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "(8) What is the bandwidth of an ISDN BRI-B Channel? A. 16Kbps B.64Kbps C.128Kbps D.144Kbps E.256Kbps",
+        "bbox": [
+            186,
+            734,
+            734,
+            767
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "(9) In what kind of mode switches read first part of frame with destination address and send the frame immediately? A. Cut-through B. Store and forwardC. Fragment-free D. None of above",
+        "bbox": [
+            186,
+            771,
+            858,
+            824
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "(10) Which of following protocol is a protocol of application layer? A. ICMP B. SMTP C. TCP D.ARP E.PPP F.IP",
+        "bbox": [
+            186,
+            827,
+            684,
+            862
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "(11) Which protocol is the core protocol of Ethernet? A.802.3 B.802.4 C.802.5 D.802.11 (12) What is a feature of CIDR? A. No supernetting B. Classful routing C. More entries in routingtable D. Route aggregation",
+        "bbox": [
+            186,
+            866,
+            613,
+            899
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "page_number",
+        "text": "A1",
+        "bbox": [
+            835,
+            925,
+            858,
+            937
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            156,
+            72,
+            435,
+            163
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "(13)On root bridge, all ports are: A. Root ports B. Blocked portsC. Designated portsD.Nondesignated ports",
+        "bbox": [
+            156,
+            167,
+            794,
+            202
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "(14)If an increasing number of broadcast are causing network congestion, which of the following could be a solution? A. A router B. A hub C. A gateway D. A switch",
+        "bbox": [
+            156,
+            205,
+            833,
+            258
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "(15) Which statement is true? A. 802.11a works on2.4GHz. B. 802.11b is faster than 802.11a. C. Wireless LAN can works on a cabling LAN, for example, Ethernet, which acts as its backbone. D. The basic media access control mechanism of 802.11b is CSMA/CD",
+        "bbox": [
+            156,
+            261,
+            833,
+            370
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "2. Multi-selections(16marks)",
+        "bbox": [
+            121,
+            374,
+            349,
+            389
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "(1) Which statements about switches and routers are true? A. Routers can prevent the broadcasts from one interface to another. B. Switches can prevent the broadcasts from one interface to another without using VLAN. C. Routers can isolate the collision. D. Switches can isolate the collision without using VLAN. E. Routers can't provide routing between different VLANs",
+        "bbox": [
+            149,
+            388,
+            833,
+            520
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "(2) Which two of the following are true regarding the distance-vector and link-state routing protocol? A. Link state sends its complete routing table out all active interfaces on periodic time intervals B. Distance vector sends its complete routing table out all active interfaces on periodic time intervals C. Link state sends updates containing the state of its own links to all routers in the internetwork D. Distance vector sends updates containing the state of its own links to all routers in the internetwork",
+        "bbox": [
+            156,
+            523,
+            835,
+            708
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "(3) Which statements about ACL are true? A. If no ACL found, all traffics are permitted",
+        "bbox": [
+            156,
+            711,
+            532,
+            745
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "B. If we apply “access-list 1 deny host 192.168.10.1\"at“in\"direction of the interface S1(configured with the subnet mask 255.255.255.0), then all traffics from the subnet 192.168.10.0/24 at “in\"direction will not be permitted.",
+        "bbox": [
+            191,
+            748,
+            833,
+            801
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "C. If we apply “access-list 1 deny host 192.168.10.1\"at “in\" direction of the interface S1(configured with the subnet mask 255.255.255.0), then all traffics from the subnet 192.168.10.0/24 at “in\" direction will be permitted, except traffics from 192.168.10.1.   \nD. If ACL list number is 50, then it should be put near to the destination",
+        "bbox": [
+            189,
+            803,
+            833,
+            897
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "page_number",
+        "text": "A2",
+        "bbox": [
+            806,
+            927,
+            830,
+            937
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "E. If ACL list number is 1, then it should be put near to the source",
+        "bbox": [
+            226,
+            86,
+            715,
+            104
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "(4) Which following statements are true? A MAC address is a 48 bit digit. B. Ethernet Switches use MAC addresses to filter the traffic C. IP addresses can be found in the header of an Ethernet frame D. Port numbers can be found in both headers of TCP segments and UDP segments.",
+        "bbox": [
+            191,
+            107,
+            843,
+            198
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "(5) Which statements about routers are true? A. A simplified copy of IOS is stored in ROM B. As default, startup configurations is stored in FLASH C. NVRAM is a kind of volatile RAM D. Setup mode will work if startup configuration can not be found at any places.",
+        "bbox": [
+            193,
+            202,
+            825,
+            291
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "(6) Which statements are NOT true? A. In common. FTP needs to use port 20. B. TCP can provide connectionless services C. Three handshakes are used in UDP to set up the connection. D. Flow control is one of the functions of the data link layer.",
+        "bbox": [
+            191,
+            296,
+            689,
+            386
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "(7) Which statements about PPP, PAP and CHAP are true? A. In PAP mode, the central router asks the remote router about the password. B. In PAP mode, the remote router asks the central router about the password. C. In CHAP mode, each router must know the password in order to successful authentication. D. In CHAP mode, only three chances are allowed to test the password.",
+        "bbox": [
+            193,
+            389,
+            873,
+            500
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "(8) Choose the true statement about the command “ip route 172.16.3.0 255.255.255.0 192.168.2.4” A. It establishes a static route to the 172.16.3.0 network B. It establishes a static route to the 192.168.2.0 C. It configures the router to send any traffic for an unknown destination to the 172.16.3.0 network D. It configures the router to send any traffic for an unknown destination out the interface with the address 192.168.2.4 E. It uses the default administrative distance F. It is a route that would be used last if other routes to the same destination exist",
+        "bbox": [
+            183,
+            503,
+            878,
+            688
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "3. Interpret these terms IN DETAIL: (24marks) (1) Full duplex",
+        "bbox": [
+            169,
+            692,
+            537,
+            728
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "(2) OSI reference model",
+        "bbox": [
+            208,
+            805,
+            394,
+            821
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "page_number",
+        "text": "A3",
+        "bbox": [
+            862,
+            936,
+            885,
+            948
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "(3) Split horizon",
+        "bbox": [
+            157,
+            76,
+            292,
+            98
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "(4) CSMA/CD",
+        "bbox": [
+            157,
+            151,
+            282,
+            173
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "(5) DNS",
+        "bbox": [
+            161,
+            227,
+            238,
+            248
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "(6) Time division multiplexing",
+        "bbox": [
+            161,
+            302,
+            398,
+            322
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "(7) STP",
+        "bbox": [
+            163,
+            377,
+            236,
+            399
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "(8) RARP",
+        "bbox": [
+            163,
+            453,
+            253,
+            473
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "4. Please give the order of links the packets passed when ping 192.168.100.3 from   \n192.168.110.2 (10 marks), and why? (4 marks). These links are labeled as A’,B’, and so on",
+        "bbox": [
+            127,
+            526,
+            842,
+            565
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "image",
+        "img_path": "images/df58c84c5044f6a1859841b41eb5a1587b5181624a11624cb0df13b83df9399e.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            166,
+            570,
+            697,
+            787
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "page_number",
+        "text": "A4",
+        "bbox": [
+            821,
+            927,
+            847,
+            940
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "5. Please give the encoding result of 0101100011' by using Manchester. (8 marks)",
+        "bbox": [
+            119,
+            75,
+            739,
+            94
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "6. In the topology of a corporation (Illustrated in figure). If you want to distribute 192.168.20.0/24 to these hosts and routers, and divide the network into subnets, please give the result(zero subnet permitted). (14 marks)",
+        "bbox": [
+            121,
+            282,
+            842,
+            336
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "image",
+        "img_path": "images/4136cabc319bfa1a200cdacf3dba84ef9ca323da3ceec93a41e6e9a29fbf4666.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            200,
+            336,
+            811,
+            511
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "7. As we known, routing protocols supporting CIDR can aggregate the routes and send the optimized route to the next hop. What are the best aggregated routes sent on the link A, B, C, D, E? And why?(9 marks)",
+        "bbox": [
+            117,
+            710,
+            836,
+            766
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "image",
+        "img_path": "images/d36ccd26c7815f8d0fab56b2bf3689a26f251c049e49be766ffa0d28928ecd92.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            129,
+            783,
+            847,
+            918
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "page_number",
+        "text": "A5",
+        "bbox": [
+            806,
+            924,
+            833,
+            937
+        ],
+        "page_idx": 4
+    }
+]

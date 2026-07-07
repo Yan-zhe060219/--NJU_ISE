@@ -1,4 +1,4 @@
-低 \ell_\infty-norm 对高斯 JL 变换没有帮助
+一、低 \ell_\infty-norm 对高斯 JL 变换没有帮助
 
 令 \Pi \in \mathbb{R}^{m \times d} 是一个高斯 Johnson-Lindenstrauss 变换，其中每个元素独立服从 \mathcal{N}(0, 1/m)。给定任意固定单位向量 x \in S^{d-1}。
 1. 证明 \Pi x 的每个坐标都独立服从 \mathcal{N}(0, 1/m)。
@@ -6,19 +6,19 @@
 3. 解释为什么如果使用高斯 JL 变换，即使 x 满足很强的平坦性条件，例如 \|x\|_\infty \leq O(1/\sqrt{d})，为了保证 \mathbb{P}[\|\Pi x\|_2^2 - 1| > \epsilon] \leq \delta，所需的目标维数仍然是 m = \Theta(\epsilon^{-2}\log(1/\delta))。
 4. 对比坐标采样型（即 \Pi x 直接随机输出 x 的某几个维度）降维，简要解释为什么低 \ell_\infty-norm 对坐标采样有帮助，但对高斯 JL 变换没有帮助。
 
-torus 上的随机网格 LSH
+二、torus 上的随机网格 LSH
 
 考虑 metric space ([0, n]^d, d_{\text{torus}})，其中距离定义为 d_{\text{torus}}(x, y) = \sqrt{\sum_{i=1}^d \min\{|x_i - y_i|, n - |x_i - y_i|\}^2}。给定网格宽度 w > 0，随机选择平移向量 s \in [0, w)^d，并定义 hash 函数 h_s(x) = (\lfloor (x_1 + s_1)/w \rfloor, \dots, \lfloor (x_d + s_d)/w \rfloor)，其中每个坐标都按照 torus 的方式取模。
 1. 对于两个点 x, y \in [0, n]^d，记 \Delta_i = \min\{|x_i - y_i|, n - |x_i - y_i|\}。证明如果对所有 i 都有 \Delta_i < w，那么 \mathbb{P}[h_s(x) = h_s(y)] = \prod_{i=1}^d (1 - \Delta_i/w)。
 2. 证明如果 d_{\text{torus}}(x, y) \leq r，那么 \mathbb{P}[h_s(x) = h_s(y)] \geq 1 - \sqrt{d} \cdot r/w。提示：可以使用 \sum_i \Delta_i \leq \sqrt{d} \sqrt{\sum_i \Delta_i^2}。
 3. 解释为什么这个 LSH family 的随机桶可以看成随机平移后的 axis-aligned cube。请从“近点容易落在同一个随机集合中，远点不容易落在同一个随机集合中”的角度解释这个构造的直觉。
 4. 讨论这个构造在高维空间中的局限性。特别地，当距离 d_{\text{torus}}(x, y) 分散在很多个坐标上时，为什么随机网格更容易把 x 和 y 切开？
-5. 设 x, y 只在 d 个坐标上相差，其他坐标完全相同。计算 \mathbb{P}[h_s(x) = h_s(y)]。
+5. 设 x, y 只在一个坐标上相差 r，其他坐标完全相同。计算 \mathbb{P}[h_s(x) = h_s(y)]。
 6. 设 x, y 在每个坐标上都相差 r/\sqrt{d}，因此 d_{\text{torus}}(x, y) = r。在 r/\sqrt{d} < w 的条件下，计算 \mathbb{P}[h_s(x) = h_s(y)]，并将其写成 (1 - r/(w\sqrt{d}))^d 的形式。
 7. 比较上述两种情况。说明即使两对点的 torus 距离都等于 r，随机网格 LSH 的碰撞概率仍然可能不同。
 8. 解释这说明了什么：axis-aligned grid LSH 并不是只依赖于欧氏距离的完美 LSH family，而是会受到坐标方向和维数的影响。
 
-球面上的随机超平面 LSH
+三、球面上的随机超平面 LSH
 
 考虑球面空间 (S^{d-1}, d)，其中距离定义为 d(x, y) = \arccos(x, y)。随机选择 g \sim \mathcal{N}(0, I_d)，并定义 hash 函数 h_g(x) = \text{sign}(g \cdot x)。
 1. 对任意 x, y \in S^{d-1}，令 \theta = \arccos(x, y)。证明 \mathbb{P}[h_g(x) = h_g(y)] = 1 - \theta/\pi。
@@ -26,7 +26,7 @@ torus 上的随机网格 LSH
 3. 现在使用 k 个独立随机超平面 g_1, \dots, g_k，并定义组合 hash key 为 H(x) = (h_{g_1}(x), \dots, h_{g_k}(x))。证明 \mathbb{P}[H(x) = H(y)] = (1 - \theta/\pi)^k。
 4. 给定两个角度阈值 0 < \theta_1 < \theta_2 < \pi，令近点满足 d(x, y) \leq \theta_1，远点满足 d(x, y) \geq \theta_2。写出这个 LSH family 的参数 p_1 和 p_2，并推导标准 LSH exponent \rho = \log(p_1)/\log(1/p_2)。
 
-由范数保持推出内积保持
+四、由范数保持推出内积保持
 
 设线性映射 \Pi 对向量集合 x, y, x + y, x - y 都保持平方范数，即对所有 v \in \{x, y, x + y, x - y\} 都有 (1 - \epsilon)\|v\|_2^2 \leq \|\Pi v\|_2^2 \leq (1 + \epsilon)\|v\|_2^2。
 1. 使用恒等式 \langle x, y \rangle = (\|x + y\|_2^2 - \|x - y\|_2^2)/4，证明 |\langle \Pi x, \Pi y \rangle - \langle x, y \rangle| \leq O(\epsilon)(\|x\|_2^2 + \|y\|_2^2)。
@@ -34,7 +34,7 @@ torus 上的随机网格 LSH
 3. 解释为什么如果 JL 变换对 n 个点的所有两两距离都近似保持，那么这些点的两两内积也近似保持。
 4. 进一步讨论：如果这些点都在单位球面上，那么 JL 降维之后，球面角度 \arccos(x, y) 在什么意义下也被近似保持？
 
-从阈值版 Approximate Near Neighbor 到 Approximate Nearest Neighbor
+五、从阈值版 Approximate Near Neighbor 到 Approximate Nearest Neighbor
 
 假设你有一个阈值版 Approximate Near Neighbor 黑盒。给定半径 r 和查询点 q，如果数据集 P 中存在点 p 满足 \|p - q\| \leq r，那么黑盒会返回某个点 p'，并保证 \|p' - q\| \leq ar。
 现在希望用这个黑盒解决普通 Approximate Nearest Neighbor 问题。设真正最近邻距离为 d^* = \min_{p \in P} \|p - q\|。我们建立一组半径 r_0, r_1, r_2, \dots，满足 r_{i+1} = br_i。查询时，从小到大尝试这些半径，并返回第一个成功的黑盒查询结果。
@@ -43,7 +43,7 @@ torus 上的随机网格 LSH
 3. 解释为什么常见做法中，会把阈值版 ANN 黑盒的近似比 a 从 c 设置为 \sqrt{c}。
 4. 如果最近邻距离的可能范围被限制在 [1, \Delta] 中，分析需要建立多少个半径层级。
 
-先用 JL 降维，再做随机超平面 LSH
+六、先用 JL 降维，再做随机超平面 LSH
 
 设 P \subseteq S^{d-1} 是 n 个单位向量。令 \Pi : \mathbb{R}^d \rightarrow \mathbb{R}^m 是一个 JL 变换，并假设对所有 x, y \in P，都有 \|\Pi x - \Pi y\|_2^2 - \|x - y\|_2^2| \leq \epsilon。同时假设对所有 x \in P，都有 \|\Pi x\|_2^2 - 1| \leq \epsilon。
 1. 证明对所有 x, y \in P，都有 |\langle \Pi x, \Pi y \rangle - \langle x, y \rangle| \leq O(\epsilon)。
@@ -51,7 +51,7 @@ torus 上的随机网格 LSH
 3. 解释为什么可以先对数据集 P 做 JL 降维，再在低维空间中使用随机超平面 LSH。
 4. 讨论当两个点的夹角非常小时，为什么需要更小的 JL 误差才能保证角度的相对误差较好。
 
-为什么 CountSketch 需要随机符号
+七、为什么 CountSketch 需要随机符号
 
 考虑一个没有随机符号的 CountSketch。对每个 i \in [n]，随机选择桶 h(i) \in [m]，并令 \Pi_{h(i), i} = 1，其他位置为 0。取向量 x = (1, 1, \dots, 1)/\sqrt{n}。
 1. 证明 \mathbb{E}[\|\Pi x\|_2^2] = 1 + (n - 1)/m。
@@ -59,11 +59,11 @@ torus 上的随机网格 LSH
 3. 现在考虑标准的 CountSketch：对每个 i \in [n]，随机选择桶 h(i) \in [m]，并随机选择符号 \sigma_i \in \{-1, 1\}，令 \Pi_{h(i), i} = \sigma_i，其他位置为 0。解释随机符号 \sigma_i 如何使不同坐标碰撞产生的交叉项在期望中相互抵消。
 4. 总结随机符号在 CountSketch 中的作用：它并不能避免碰撞，但可以让碰撞带来的误差成为均值为零的随机噪声。
 
-CountSketch OSE 的 m = \Omega(d^2) 下界
+八、CountSketch OSE 的 m = \Omega(d^2) 下界
 
 假设 n \gg d（不妨假设 n > 2^d）。考虑使用一个 column sparsity 只有 1（即，每一列只有一个非零元素）的矩阵 \Pi \in \mathbb{R}^{m \times n} 进行 Oblivious Subspace Embedding (OSE)。考虑这样的随机矩阵 A \in \{0, 1\}^{n \times d}：A 的每一列随机选择一个位置为 1，其他位置为 0。尝试证明，任意确定的 \Pi 为 A 的列空间进行子空间嵌入都至少需要 m = \Omega(d^2)，即它作为 OSE 不可能降维到 o(d^2)。提示：尝试观察 \Pi A e_i, \Pi A(e_i + e_j) 的 \ell_2-norm，以及你可能需要应用 birthday paradox（随机地把 d 个球丢入 m 个桶中，那么要满足 m = \Omega(d^2) 才能使得有 \Omega(1) 的概率，这 d 个球中不会有两个球被丢进了同一个桶中）。
 
-CountSketch OSE 的 m = O(d^2/\epsilon^2) 上界
+九、CountSketch OSE 的 m = O(d^2/\epsilon^2) 上界
 
 令 U \in \mathbb{R}^{n \times d} 是一个列正交矩阵，即 U^\top U = I_d。令 \Pi \in \mathbb{R}^{m \times n} 是 CountSketch 矩阵：对每个原始坐标 i \in [n]，随机选择桶 h(i) \in [m]，并随机选择符号 \sigma_i \in \{-1, 1\}；然后令 \Pi_{h(i), i} = \sigma_i，其他位置为 0。记 u_i 为 U 的第 i 行，视为 \mathbb{R}^d 中的列向量。
 1. 证明 \Pi^\top \Pi - I_n 的 (i, j) 个元素在 i \neq j 时等于 \mathbf{1}_{h(i) = h(j)} \sigma_i \sigma_j，在 i = j 时等于 0。
@@ -74,3 +74,49 @@ CountSketch OSE 的 m = O(d^2/\epsilon^2) 上界
 6. 用 Markov 不等式证明，如果 m \geq d^2/(\epsilon^2 \delta)，那么以概率至少 1 - \delta，有 \|U^\top \Pi^\top \Pi U - I_d\|_F \leq \epsilon。
 7. 证明如果 \|U^\top \Pi^\top \Pi U - I_d\|_F \leq \epsilon，那么对所有 x \in \mathbb{R}^d 都有 (1 - \epsilon)\|Ux\|_2^2 \leq \|\Pi Ux\|_2^2 \leq (1 + \epsilon)\|Ux\|_2^2。并解释为什么第 (6) 问中的 Frobenius 范数 bound 足以推出 spectral norm bound。
 8. 总结：说明 CountSketch 虽然每一列只有一个非零元素，但当 m = O(d^2/(\epsilon^2 \delta)) 时，仍然可以作为一个 d 维子空间的 Oblivious Subspace Embedding。
+
+
+
+十、点容量最大流
+在通常的最大流问题中，每条边有容量限制。现在考虑如下变体：图为有向图 \(G = (V, E)\)，源点为 \(s\)，汇点为 \(t\)。每条边的容量均为无穷大，但每个点 \(v \in V\) 有容量限制 \(c_v\)，表示流经该点的总流量不能超过 \(c_v\)。可以假设 \(s\) 和 \(t\) 没有点容量限制，或者它们的点容量为无穷大。
+请设计一个多项式时间算法，求从 \(s\) 到 \(t\) 的最大可行流量。请清楚说明你的建图方式，并证明你的算法是正确的。
+
+十一、二分图最大匹配与最小点覆盖的线性规划
+令 \(G = (L, R, E)\) 是一个二分图。
+请写出最大匹配问题的整数规划，并写出它的线性规划松弛。请进一步写出该线性规划的对偶问题。
+请写出最小点覆盖问题的整数规划，并说明它与上述对偶线性规划之间的关系。
+最后，请利用线性规划对偶性以及二分图匹配问题的整数性，证明二分图中的最大匹配大小等于最小点覆盖大小。也就是说，证明 \(\nu(G) = \tau(G)\)，其中 \(\nu(G)\) 表示最大匹配大小，\(\tau(G)\) 表示最小点覆盖大小。
+
+十二、背包问题的线性规划松弛与取整
+考虑 0-1 背包问题。有 \(n\) 个物品，第 \(i\) 个物品的价值为 \(v_i\)，重量为 \(w_i\)，背包容量为 \(C\)。目标是在总重量不超过 \(C\) 的前提下最大化总价值。
+请写出该问题的整数规划，并写出它的线性规划松弛。
+请设计一个基于线性规划松弛最优解的取整算法，得到一个整数可行解。请证明你的算法的近似比。也就是说，请证明你的算法得到的解的价值至少是最优整数解价值的某个常数比例。
+
+十三、带下界的可行流
+给定一个有向网络 \(G = (V, E)\)。每条边 \(e \in E\) 有流量下界 \(l_e\) 和流量上界 \(u_e\)，其中 \(0 \leq l_e \leq u_e\)。我们希望判断是否存在一个流 \(f\)，使得每条边都满足 \(l_e \leq f_e \leq u_e\)，并且每个点都满足流量守恒。
+请设计一个多项式时间算法判断这样的可行流是否存在。如果存在，请说明如何构造一个可行流。请证明你的算法是正确的。
+
+十四、DAG 最小路径覆盖
+给定一个有向无环图 \(G = (V, E)\)。一个路径覆盖是若干条有向路径的集合，使得每个点 \(v \in V\) 恰好出现在其中一条路径中。路径可以只包含单个点。
+请设计一个多项式时间算法，求 \(G\) 的最小路径覆盖大小。
+请将该问题归约为二分图最大匹配问题。设归约后得到的二分图的最大匹配大小为 \(M\)，请证明原图的最小路径覆盖大小为 \(|V| - M\)。
+
+
+十五、点不相交路径
+给定一个有向图 \(G = (V, E)\) 和两个不同的点 \(s, t \in V\)。我们希望找到尽可能多条从 \(s\) 到 \(t\) 的路径，使得任意两条路径除了端点 \(s\) 和 \(t\) 以外不共享任何内部点。
+请设计一个多项式时间算法，求最多有多少条两两内部点不相交的 \(s\)-\(t\) 路径。请证明你的算法是正确的。
+
+十六、带权点覆盖的 Primal-Dual 算法
+给定一个无向图 \(G = (V, E)\)，每个点 \(v \in V\) 有非负权重 \(w_v\)。带权点覆盖问题要求选择一个点集 \(C \subseteq V\)，使得每条边至少有一个端点属于 \(C\)，并最小化 \(\sum_{v \in C} w_v\)。
+请写出该问题的整数规划和线性规划松弛。请写出该线性规划松弛的对偶问题。
+请基于 primal-dual schema 设计一个 2-approximation 算法，并证明其近似比。你的证明应当说明算法构造的对偶解为什么可行，以及输出的点覆盖的权重为何至多为对偶目标值的 2 倍。
+
+十七、Set Cover 的线性规划松弛与随机取整
+给定一个全集 \(U\) 和集合族 \(\mathcal{S}\)，其中每个集合 \(S \in \mathcal{S}\) 有非负成本 \(c_S\)。Set Cover 问题要求选择若干集合，使得 \(U\) 中每个元素都被至少一个被选集合覆盖，并最小化被选集合的总成本。
+请写出 Set Cover 的整数规划和线性规划松弛。设线性规划松弛的最优解为 \(x_S^*\)。
+考虑如下随机取整算法：令 \(\alpha > 0\)，并对每个集合 \(S \in \mathcal{S}\)，独立地以概率 \(x_S' = \min\{1, \alpha x_S^*\}\) 选择集合 \(S\)。
+请证明当 \(\alpha = \Theta(\log |U|)\) 时，所有元素以高概率都被覆盖。请进一步分析该算法的期望成本，并证明它给出一个 \(O(\log |U|)\)-approximation。
+
+十八、带点容量和需求的最小费用运输问题
+有若干工厂、仓库和商店。工厂可以生产货物，商店有固定需求，货物可以通过若干运输边从工厂经过仓库运送到商店。每条运输边 \(e\) 有容量上界 \(u_e\) 和单位运输费用 \(a_e\)。每个仓库 \(v\) 有吞吐能力限制 \(c_v\)，表示通过该仓库的总货物流量不能超过 \(c_v\)。每个工厂 \(i\) 的供应上限为 \(s_i\)，每个商店 \(j\) 的需求量为 \(d_j\)。
+请设计一个最小费用流模型，判断是否存在满足所有商店需求的运输方案，并在存在时求出最小总运输成本。请说明如何在网络中表示工厂供应、商店需求、运输边容量与费用，以及仓库的点容量限制。请证明你的模型与原问题等价。
