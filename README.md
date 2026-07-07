@@ -144,7 +144,7 @@ Personnal/
 ├── inbox/                      # 课件拖入此处（按课程分文件夹）
 ├── staging/                    # 暂存区（AI生成/外部未匹配/来源不明）
 ├── archive/                    # 历史归档（旧索引/废弃配置/旧REVIEW）
-├── practice/                   # ⚠️ 历史遗留目录（资料已迁至 courses/，仅剩 cache/zip 待清理）
+├── practice/                   # 历史遗留目录，仅保留未清理/待确认资料，不作为日常学习入口
 ├── tools/                      # 课件预处理脚本
 │   └── extract_file.py         # 统一文本提取（MarkItDown 优先 → 三级回退）
 ├── .claude/                    # Claude Code 配置（执行引擎）
@@ -163,7 +163,7 @@ Personnal/
 1. `git status` — 确认工作区干净
 2. `git tag archive/<旧学期>` — 给旧学期打标签
 3. 创建 `courses/<新年份>-<spring|fall>/` 及课程子目录
-4. `mv REVIEW.md archive/reviews/REVIEW-<旧学期>.md` — 归档旧复习总控
+4. `mkdir -p archive/reviews/ && mv REVIEW.md archive/reviews/REVIEW-<旧学期>.md` — 归档旧复习总控
 5. 初始化新 `REVIEW.md`
 6. 更新 `AGENTS.md`、`CLAUDE.md`、`.claude/commands/*.md` 中的当前学期路径
 7. `git commit -m "chore: switch to <新学期>"` + `git push`
