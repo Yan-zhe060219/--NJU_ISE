@@ -8,35 +8,59 @@
 
 ```
 Personnal/
-├── inbox/                          # 待处理课件（PDF/PPTX 拖入即处理）
-├── knowledge-base/                 # 个人知识库（笔记即资产）
-│   ├── courses/                    # 按课程组织（跟随教学大纲）
-│   └── cs/ math/ software-eng/    # 按主题跨课程整合
-├── practice/                       # 练习资料：往年卷、复习思考题、exam-intel
-├── tools/                          # 课件预处理脚本（extract_file.py 统一入口）
-│   └── *.py
-├── .Codex/                        # Codex 配置
-│   ├── commands/                   # 自定义命令（learn, study, review, homework, kb-review）
-│   ├── references/                 # 共享原则和映射表
-│   ├── rules/                      # 按需加载的领域规则（paths: frontmatter）
-│   ├── agents/                     # 自定义子代理
-│   └── settings.json               # 项目级权限配置
-├── AGENTS.md                       # 本文件（宪法层：项目身份 + 全局约定）
-├── Codex.local.md                 # 个人偏好（不提交，覆盖 AGENTS.md）
+├── AGENTS.md                       # 本文件（宪法层：Codex 总控）
+├── CLAUDE.md                       # Claude Code 执行适配层
+├── CLAUDE.local.md                 # 个人偏好（不提交）
+├── .gitignore
+├── requirements.txt                # Python 依赖
 ├── REVIEW.md                       # 期末复习总控面板
-└── requirements.txt                # Python 依赖
+│
+├── courses/                        # 📚 课程学习主目录
+│   └── 2026-spring/                # 学期
+│       ├── 操作系统/
+│       ├── 互联网计算/
+│       ├── 数据库/
+│       ├── 软件工程/
+│       ├── 高级算法/
+│       └── 中国近代史纲要/
+│           ├── README.md           # 课程元数据
+│           ├── syllabus/           # 课程大纲
+│           ├── lectures/           # 课件
+│           ├── notes/              # 学习笔记
+│           ├── assignments/        # 作业资料
+│           │   └── external/       # 外部参考答案
+│           ├── exams/              # 往年卷
+│           │   └── external/       # 非本院/回忆卷
+│           ├── review/             # 错题本、exam-intel、复习资料
+│           │   └── external/       # 外部复习资料
+│           └── assets/             # 图片、附件
+│
+├── inbox/                          # 📥 课件处理管道（原始课件）
+├── staging/                        # 🚧 暂存区
+│   ├── ai-generated/               # AI 生成未验证资料
+│   ├── external-unmatched/         # 外部资料（无匹配课程）
+│   ├── unclassified/               # 来源不明待确认
+│   └── cache-review/               # OCR 缓存（待删除确认）
+├── archive/                        # 📦 历史归档
+│   ├── deprecated-config/          # 废弃配置
+│   └── old-indexes/                # 旧空索引备份
+│
+├── tools/                          # 🛠️ 课件预处理脚本
+├── .claude/                        # Claude Code 配置（执行引擎）
+├── .codex/                         # Codex 配置（总控/审计引擎）
+└── .agents/                        # Skills 目录
 ```
 
 ## 配套文件
 
-- **`.Codex/commands-speed-dial.md`** — 所有命令的速查手册（日常操作先查它）
-- **`.Codex/adr.md`** — 架构决策记录
+- **`.claude/commands-speed-dial.md`** — 所有命令的速查手册（日常操作先查它）
+- **`.claude/adr.md`** — 架构决策记录
 - **`REVIEW.md`** — 期末复习的单一真相源（考试日期、进度追踪、阶段计划）
-- **`.Codex/summer-refactor-plan.md`** — 暑假重构计划
+- **`.claude/summer-refactor-plan.md`** — 暑假重构计划
 
 ## 知识库规范
 
-详见 `.Codex/rules/note-conventions.md`。核心要点：
+详见 `.claude/rules/note-conventions.md`。核心要点：
 
 - **课程笔记**：`<序号>-<章节标题>.md`，frontmatter 含 title/course/chapter/tags/source/status/related
 - **主题笔记**：`YYYY-MM-DD-主题-标题.md`
@@ -45,7 +69,7 @@ Personnal/
 
 ## 工作流
 
-所有工作流已实现为自定义命令，详见 `.Codex/commands/`：
+所有工作流已实现为自定义命令，详见 `.claude/commands/`：
 
 | 命令 | 用途 | 何时用 |
 |------|------|--------|
@@ -64,14 +88,14 @@ Personnal/
 
 ## Python 环境
 
-详见 `.Codex/rules/python-env.md`。
+详见 `.claude/rules/python-env.md`。
 - Python 3.10+，依赖见 `requirements.txt`
 - 统一入口：`tools/extract_file.py`（MarkItDown 优先 → 三级回退 → MinerU）
 - MinerU 高质量引擎用于公式/表格/扫描件（`conda env mineru`，Python 3.10）
 
 ## 架构维护
 
-详见 `.Codex/rules/architecture.md`。
+详见 `.claude/rules/architecture.md`。
 
 **依赖拓扑**：上层不引用下层；同级不互相引用；共享定义只有法律层（`.Codex/references/`）一份。
 

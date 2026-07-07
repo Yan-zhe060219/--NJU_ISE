@@ -8,23 +8,25 @@
 
 ```
 Personnal/
-├── inbox/                          # 待处理课件（PDF/PPTX 拖入即处理）
-├── knowledge-base/                 # 个人知识库（笔记即资产）
-│   ├── courses/                    # 按课程组织（跟随教学大纲）
-│   └── cs/ math/ software-eng/    # 按主题跨课程整合
-├── practice/                       # 练习资料：往年卷、复习思考题、exam-intel
-├── tools/                          # 课件预处理脚本（extract_file.py 统一入口）
-│   └── *.py
-├── .claude/                        # Claude Code 配置
-│   ├── commands/                   # 自定义命令（learn, study, review, homework, kb-review）
-│   ├── references/                 # 共享原则和映射表
-│   ├── rules/                      # 按需加载的领域规则（paths: frontmatter）
-│   ├── agents/                     # 自定义子代理
-│   └── settings.json               # 项目级权限配置
-├── CLAUDE.md                       # 本文件（宪法层：项目身份 + 全局约定）
-├── CLAUDE.local.md                 # 个人偏好（不提交，覆盖 CLAUDE.md）
+├── AGENTS.md                       # Codex 宪法层（架构真相源）
+├── CLAUDE.md                       # 本文件（Claude Code 执行适配层）
+├── CLAUDE.local.md                 # 个人偏好（不提交）
+├── .gitignore
+├── requirements.txt
 ├── REVIEW.md                       # 期末复习总控面板
-└── requirements.txt                # Python 依赖
+│
+├── courses/                        # 课程学习主目录
+│   └── 2026-spring/                # 按学期组织
+│       ├── 操作系统/ 互联网计算/ 数据库/ 软件工程/ 高级算法/ 中国近代史纲要/
+│           ├── README.md / syllabus/ / lectures/ / notes/ / assignments/ / exams/ / review/ / assets/
+│
+├── inbox/                          # 课件处理管道
+├── staging/                        # 暂存区（ai-generated / external-unmatched / unclassified / cache-review）
+├── archive/                        # 历史归档（deprecated-config / old-indexes）
+├── tools/                          # 课件预处理脚本
+├── .claude/                        # Claude Code 配置（执行引擎）
+├── .codex/                         # Codex 配置（总控/审计引擎）
+└── .agents/                        # Skills 目录
 ```
 
 ## 配套文件
