@@ -100,10 +100,10 @@ python tools/extract_pptx.py --force inbox/<课程名>     # PPTX 专用（演�
 Personnal/
 ├── inbox/                         # 待处理课件（PDF/PPTX/DOCX）
 ├── courses/2026-spring/           # 当前学期课程（笔记 + 练习 + 考卷）
-│   └── <课程>/notes/ assignments/ exams/ review/
+│   └── <课程>/notes/ assignments/ exams/ review/ legacy/
 ├── staging/                       # 暂存区（AI生成/外部未匹配/来源不明）
 ├── archive/                       # 历史归档
-├── practice/                      # 历史遗留目录，仅保留未清理/待确认资料，不作为日常学习入口
+├── practice/                      # 已收尾归档；日常不再使用（各课程 legacy/ 保存遗留资料）
 ├── tools/extract_file.py          # 统一提取脚本
 ├── AGENTS.md                      # 项目宪法
 ├── CLAUDE.md                      # 执行适配层

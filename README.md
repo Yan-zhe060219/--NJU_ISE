@@ -136,7 +136,7 @@ Personnal/
 ├── courses/                    # 📚 课程学习主目录
 │   └── 2026-spring/            # 按学期组织（当前活跃）
 │       ├── 操作系统/            # 每门课含 README.md、syllabus/、lectures/、
-│       ├── 互联网计算/          #   notes/、assignments/、exams/、review/、assets/
+│       ├── 互联网计算/          #   notes/、assignments/、exams/、review/、assets/、legacy/
 │       ├── 数据库/
 │       ├── 软件工程/
 │       ├── 高级算法/
@@ -144,7 +144,7 @@ Personnal/
 ├── inbox/                      # 课件拖入此处（按课程分文件夹）
 ├── staging/                    # 暂存区（AI生成/外部未匹配/来源不明）
 ├── archive/                    # 历史归档（旧索引/废弃配置/旧REVIEW）
-├── practice/                   # 历史遗留目录，仅保留未清理/待确认资料，不作为日常学习入口
+├── practice/                   # 已收尾归档；日常不再使用（各课程 legacy/ 保存历史遗留资料）
 ├── tools/                      # 课件预处理脚本
 │   └── extract_file.py         # 统一文本提取（MarkItDown 优先 → 三级回退）
 ├── .claude/                    # Claude Code 配置（执行引擎）
@@ -155,6 +155,8 @@ Personnal/
 ├── REVIEW.md                   # 当前学期复习总控
 └── requirements.txt            # Python 依赖
 ```
+
+> **正式资料入口**：`notes/` `assignments/` `exams/` `review/`。`legacy/` 保存历史遗留/未精细整理资料，不作为正式学习入口，不要从 legacy/ 自动生成笔记除非明确指定。
 
 ## 切换学期
 

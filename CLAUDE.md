@@ -18,7 +18,7 @@ Personnal/
 ├── courses/                        # 课程学习主目录
 │   └── 2026-spring/                # 按学期组织
 │       ├── 操作系统/ 互联网计算/ 数据库/ 软件工程/ 高级算法/ 中国近代史纲要/
-│           ├── README.md / syllabus/ / lectures/ / notes/ / assignments/ / exams/ / review/ / assets/
+│           ├── README.md / syllabus/ / lectures/ / notes/ / assignments/ / exams/ / review/ / assets/ / legacy/
 │
 ├── inbox/                          # 课件处理管道
 ├── staging/                        # 暂存区（ai-generated / external-unmatched / unclassified / cache-review）

@@ -33,7 +33,8 @@ Personnal/
 │           │   └── external/       # 非本院/回忆卷
 │           ├── review/             # 错题本、exam-intel、复习资料
 │           │   └── external/       # 外部复习资料
-│           └── assets/             # 图片、附件
+│           ├── assets/             # 图片、附件
+│           └── legacy/             # 历史遗留/未精细整理资料，不作为正式学习入口
 │
 ├── inbox/                          # 📥 课件处理管道（原始课件）
 ├── staging/                        # 🚧 暂存区
