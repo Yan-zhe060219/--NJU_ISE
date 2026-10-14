@@ -1,197 +1,62 @@
-# Personal AI-Assisted Learning & Coding System
+# 本地学习资料与笔记
 
-大二软件工程学生的本地 AI 辅助系统。用 Claude Code (DeepSeek V4 Pro) 完成学习和编程，不依赖网页端 AI。
+按你实际学习的对象找文件：**课程 → 学期 → 课程名**，或进入**读论文 / 自主学习**。每个对象的原件与笔记放在一起。使用方式仍是本地文件和自然语言问答。
 
-> 📖 **重新上手指南**：`USER_GUIDE.md` — 隔很久回来时先读这个
-> 📖 **使用手册**：`.claude/commands-speed-dial.md` — 所有命令、工作流、常见场景
-> ⚡ **命令速查**：`.claude/commands-speed-dial.md` — 最简短的命令参考
-> 📋 **复习总控**：`REVIEW.md` — 考试日期、进度追踪、每日任务
+## 直接进入
 
-## 核心工作流
+| 我想找 | 入口 |
+|---|---|
+| 课程、课件与笔记 | [全部课程](courses/README.md) |
+| 论文原文和阅读笔记 | [读论文](papers/README.md) |
+| 技能自学、个人学习项目 | [自主学习目录](self-study/README.md) |
+| 学习系统如何保存资料与进度 | [工作流说明](learning/system/workflows.md) |
+| 不知道属于哪门课的资料 | [待归属区](learning/待归属/README.md) |
 
-```
-课件拖入 inbox/ → /learn → 笔记(draft) → 自动更新 REVIEW.md
-                      ↓
-                 /study → 深度问答 → /study done → 洞察融入笔记
-                      ↓
-                 /review → 卡片自测/强制问答 → [x]会
-                      ↓
-                 /kb-review → 查漏补缺 → mastered
-```
+## 文件夹结构与职责
 
-你只做三件事：**拖文件 → 说命令 → 回答问题**，其余全自动。
-
-## 克隆回来（换电脑/丢失本地后）
-
-### 1. 装 Git
-
-```powershell
-winget install --id Git.Git -e --source winget
-```
-
-装完**重启终端**。
-
-### 2. 配置 SSH（国内必须，否则连不上 GitHub）
-
-生成密钥（如果之前没生成过）：
-
-```powershell
-ssh-keygen -t ed25519 -C "你的邮箱"
-```
-
-把公钥添加到 GitHub：
-1. 复制公钥内容：`cat ~/.ssh/id_ed25519.pub`
-2. 打开 https://github.com/settings/keys → New SSH key → 粘贴 → 保存
-
-配置 SSH 走 443 端口（国内绕过 GFW 的关键步骤）：
-
-```powershell
-@"
-Host github.com
-    Hostname ssh.github.com
-    Port 443
-    User git
-"@ | Set-Content -Path "$env:USERPROFILE\.ssh\config" -Encoding Ascii
+```text
+课程/                         当前项目根目录
+├─ courses/                   学校课程
+│  └─ 2026-spring/            按学期区分，不因学期结束而隐藏
+│     └─ 操作系统/            其他课程同级
+│        ├─ README.md         本课程入口
+│        ├─ materials/        唯一原件入口；子目录可选
+│        ├─ MATERIALS.md      原始文件逐项清单
+│        ├─ notes/            正式笔记和原章节索引
+│        ├─ pending/          待核实内容，保留来源标记
+│        ├─ MAP.md            学习地图，只链接正文和问题
+│        ├─ goal.json         目标身份，agent管理
+│        ├─ materials.json    材料登记与指纹，agent管理
+│        ├─ records/          独立学习事件，agent管理
+│        ├─ sessions/         各聊天的续接点，agent管理
+│        └─ projects/         可选：独立课程项目或Git仓库
+├─ papers/                    每篇论文或明确阅读专题一个目录
+├─ self-study/                每个自主学习项目一个目录
+│  └─ <项目名>/               资料、笔记与阶段计划
+├─ learning/                  共享学习规则、总导航、跨目标计划
+│  ├─ 待归属/                课程或学期未确认的资料
+│  ├─ system/                agent共用规范、工作流、模板
+│  └─ plans/                 历次计划；实际完成看学习记录
+├─ tools/                     资料提取与记录工具
+├─ archive/                   本机留存的停用结构与恢复副本
+├─ .agents/                   项目技能，由agent维护
+└─ .codex/                    项目宿主配置，日常不必操作
 ```
 
-验证连接：
+论文与自学项目同样有 `materials/`、`notes/`、`pending/`、`records/`、`sessions/` 和入口文件。课程资料不再按作业、考试、复习等用途拆目录；把文件直接放入 `materials/` 即可，只有成组文件需要时才建子目录。独立Git课程项目可放在课程的 `projects/`，不会混入原件清单。
 
-```powershell
-ssh -T git@github.com
-```
+## 怎么放资料、怎么继续学习
 
-看到 `Hi <用户名>! You've successfully authenticated` 就说明通了。
+- 已有课程：直接把课件放进该课 `materials/`，然后说“登记新课件，讲第3部分”。
+- 新课程：说“建立2026秋季××课程”，确认实际学期后会给出目录。
+- 读论文 / 自学：说“建立××论文阅读”或“建立××自主学习项目”。
+- 找笔记：打开对应课程或项目的 README，或直接进入 `notes/`。
+- 继续讨论：在同一本地项目的新聊天说“继续××上次的学习”。
 
-### 3. 克隆仓库
+[完整使用说明](USER_GUIDE.md) · [agent入口](AGENTS.md) · [当前结构规格](Spec.md) · [工具说明](tools/README.md)
 
-```powershell
-git clone git@github.com:Yan-zhe060219/--NJU_ISE.git
-cd --NJU_ISE
-```
+## 原来的目录去哪了
 
-### 4. 装 Python 依赖
+原 `inbox` 中六门课程的课件已经迁入各课 `materials/`；春季旧分类下的课程文件也已归并到 `materials/`，笔记仍在 `notes/`。归属明确的旧暂存内容进入对应课程 `pending/legacy-import`，没有变成已核实正文。秋季课程已纳入同一导航；独立课程仓库仍保留自己的Git历史。
 
-```powershell
-pip install -r requirements.txt
-```
-
-### 5. 在项目目录启动 Claude Code
-
-```powershell
-claude
-```
-
----
-
-## 日常使用
-
-> 完整手册见 `.claude/commands-speed-dial.md`，下面是快速概览。
-
-### 学习课程课件
-
-```
-/learn inbox/<课程名>/              批量处理课程文件夹
-/learn inbox/<课程名>/ --single     每天学一章
-/learn <文件或URL>                  单文件自动分类
-```
-
-> `/learn` 处理完课件后**自动更新 REVIEW.md**（新增条目、重算进度、调整计划）。笔记初始状态为 `draft`，不会自动标记为"已学"——你需要通过 `/review` 来勾选。
-
-### 深度问答
-
-```
-/study start <课程名>                进入问答模式
-/study start <课程名> --chapter N    聚焦特定章节
-/study done                          结束并保存洞察
-/study status                        查看会话状态
-```
-
-### 期末复习
-
-```
-/review                              展示今日任务和倒计时
-/review done <笔记名>                 标记复习完成
-/review progress                     查看全局进度
-/review plan                         查看复习阶段计划
-```
-
-### 编程作业
-
-```
-/homework <作业描述>
-```
-
-### 复习巩固
-
-```
-/kb-review                           查漏补缺
-/kb-review 快速问答                   随机自测
-```
-
----
-
-## 目录结构
-
-```
-Personnal/
-├── courses/                    # 📚 课程学习主目录
-│   └── 2026-spring/            # 按学期组织（当前活跃）
-│       ├── 操作系统/            # 每门课含 README.md、syllabus/、lectures/、
-│       ├── 互联网计算/          #   notes/、assignments/、exams/、review/、assets/、legacy/
-│       ├── 数据库/
-│       ├── 软件工程/
-│       ├── 高级算法/
-│       └── 中国近代史纲要/
-├── inbox/                      # 课件拖入此处（按课程分文件夹）
-├── staging/                    # 暂存区（AI生成/外部未匹配/来源不明）
-├── archive/                    # 历史归档（旧索引/废弃配置/旧REVIEW）
-├── practice/                   # 已收尾归档；日常不再使用（各课程 legacy/ 保存历史遗留资料）
-├── tools/                      # 课件预处理脚本
-│   └── extract_file.py         # 统一文本提取（MarkItDown 优先 → 三级回退）
-├── .claude/                    # Claude Code 配置（执行引擎）
-├── .codex/                     # Codex 配置（总控/审计引擎）
-├── .agents/                    # Skills 目录
-├── AGENTS.md                   # 项目宪法（架构真相源）
-├── CLAUDE.md                   # Claude Code 执行适配层
-├── REVIEW.md                   # 当前学期复习总控
-└── requirements.txt            # Python 依赖
-```
-
-> **正式资料入口**：`notes/` `assignments/` `exams/` `review/`。`legacy/` 保存历史遗留/未精细整理资料，不作为正式学习入口，不要从 legacy/ 自动生成笔记除非明确指定。
-
-## 切换学期
-
-新学期开始时执行以下步骤：
-
-1. `git status` — 确认工作区干净
-2. `git tag archive/<旧学期>` — 给旧学期打标签
-3. 创建 `courses/<新年份>-<spring|fall>/` 及课程子目录
-4. `mkdir -p archive/reviews/ && mv REVIEW.md archive/reviews/REVIEW-<旧学期>.md` — 归档旧复习总控
-5. 初始化新 `REVIEW.md`
-6. 更新 `AGENTS.md`、`CLAUDE.md`、`.claude/commands/*.md` 中的当前学期路径
-7. `git commit -m "chore: switch to <新学期>"` + `git push`
-
-> 详细规则见 `AGENTS.md` § 学期管理。旧学期保留不动，不使用软链接。
-
-## 远程同步
-
-```powershell
-git add .
-git commit -m "描述你改了什么"
-git push
-```
-
-每次学完一章、改完笔记后提交一次，相当于实时备份到 GitHub。
-
----
-
-## 文档导航
-
-| 你要做什么 | 看哪个文件 |
-|-----------|-----------|
-| 隔很久后重新上手 | `USER_GUIDE.md` |
-| 快速查命令怎么用 | `.claude/commands-speed-dial.md` |
-| 了解完整工作流、常见场景 | `.claude/commands-speed-dial.md` |
-| 看考试日期、复习进度 | `REVIEW.md` |
-| 了解项目架构和规范 | `CLAUDE.md` |
-| 设置新电脑环境 | 本文件（README.md） |
+目录调整保留原件字节，不重置旧学习状态；独立课程项目保留自己的Git历史。公开仓库只同步系统文件和课程导航；个人计划、记录、待核实内容、材料清单及新放入的原件保存在本机。

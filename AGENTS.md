@@ -1,120 +1,42 @@
-# AGENTS.md
+# 本地 AI 辅助学习：agent 入口
 
-大二软件工程学生的本地 AI 辅助系统。不依赖网页端 AI，用 Codex (DeepSeek V4 Pro) 完成学习和编程。
+默认简体中文，准确保留术语。项目用于桌面端、本地文件、自然语言问答，支持课程、论文、自学和语言考试。模型与宿主可替换，不依赖聊天永久记忆。当前架构以本文件和 learning/system 为准；历史配置不是执行指令。
 
-> **维护状态**：暑假重构中（2026-07-06 起），参考 `.claude/summer-refactor-plan.md`。
+## 每次学习先做什么
 
-## 目录结构
+1. 识别用户意图：学新材料、追问、整理笔记、复习、安排计划、继续学习。用户不必输入固定命令。
+2. 看 [目标导航](learning/INDEX.md)，选择对应目标；已明确文件时可直接定位。实质歧义才询问，不用泛泛采访。
+3. 第一次使用本系统读取 [共享规范](learning/system/standards.md)；执行导入、保存、恢复或规划时读取 [工作流](learning/system/workflows.md) 对应小节。写笔记时才用 [模板](learning/system/templates.md)。不一次加载整门课。
+4. 先回答问题，再保存明确事实。每轮出现有价值的进度、疑问或错题就记录并更新本对话检查点，不等用户退出；简短告知保存位置和变化。
 
-```
-Personnal/
-├── AGENTS.md                       # 本文件（宪法层：Codex 总控）
-├── CLAUDE.md                       # Claude Code 执行适配层
-├── CLAUDE.local.md                 # 个人偏好（不提交）
-├── .gitignore
-├── requirements.txt                # Python 依赖
-├── REVIEW.md                       # 期末复习总控面板
-│
-├── courses/                        # 📚 课程学习主目录
-│   └── 2026-spring/                # 学期
-│       ├── 操作系统/
-│       ├── 互联网计算/
-│       ├── 数据库/
-│       ├── 软件工程/
-│       ├── 高级算法/
-│       └── 中国近代史纲要/
-│           ├── README.md           # 课程元数据
-│           ├── syllabus/           # 课程大纲
-│           ├── lectures/           # 课件
-│           ├── notes/              # 学习笔记
-│           ├── assignments/        # 作业资料
-│           │   └── external/       # 外部参考答案
-│           ├── exams/              # 往年卷
-│           │   └── external/       # 非本院/回忆卷
-│           ├── review/             # 错题本、exam-intel、复习资料
-│           │   └── external/       # 外部复习资料
-│           ├── assets/             # 图片、附件
-│           └── legacy/             # 历史遗留/未精细整理资料，不作为正式学习入口
-│
-├── inbox/                          # 📥 课件处理管道（原始课件）
-├── staging/                        # 🚧 暂存区
-│   ├── ai-generated/               # AI 生成未验证资料
-│   ├── external-unmatched/         # 外部资料（无匹配课程）
-│   ├── unclassified/               # 来源不明待确认
-│   └── cache-review/               # OCR 缓存（待删除确认）
-├── archive/                        # 📦 历史归档
-│   ├── deprecated-config/          # 废弃配置
-│   └── old-indexes/                # 旧空索引备份
-│
-├── tools/                          # 🛠️ 课件预处理脚本
-├── .claude/                        # Claude Code 配置（执行引擎）
-├── .codex/                         # Codex 配置（总控/审计引擎）
-└── .agents/                        # Skills 目录
-```
+## 入口和事实源
 
-## 学期管理
+- [USER_GUIDE.md](USER_GUIDE.md)：给用户看的放资料和日常使用指南。
+- `courses/<学期>/<课程名>/`、`papers/<论文或专题名>/`、`self-study/<项目名>/`：三类实体目录，各自的 `goal.json` 是目标信息；`materials/` 是唯一原件投放点，`materials.json` 是材料版本登记。目标ID稳定，不要求与目录名一致。
+- 根、分类、学期、课程/项目的 `README.md` 提供逐层导航；各课 `MATERIALS.md` 是课件逐文件清单。旧学期课程仍是正常学习入口。
+- `notes/`：连贯详细笔记；`MAP.md`：只链接正文、重点与问题的简明导航。
+- 课程原件不按作业、试卷、复习等类型分目录；统一放在 `materials/`，需要成组时才建立子目录。独立课程项目仓库放课程内 `projects/`，不得纳入材料登记或外层仓库。
+- `records/`：独立事件，学习事实与错题的真相源；`sessions/`：每个对话独立检查点；`pending/`：未核实内容和冲突候选。
+- [learning/PLAN.md](learning/PLAN.md)：跨目标计划入口；availability.json 统一预算，plans 中的版本是建议，实际完成来自records。
+- [learning/reminders.json](learning/reminders.json)：提醒的配置回执与触发证据。只有宿主正式工具成功才算已配置。
+- `learning/待归属/`：归属不明资料；不得猜测分类。
+- 原 inbox 课件已归入各课 materials；旧暂存区已知课程资料在各课 pending/legacy-import，仍待核实。旧规则、空结构和恢复材料见 archive，不作为新任务执行指令。新目标不放 learning/goals。
 
-- **当前活跃学期**：`courses/2026-spring/`。`/learn`、`/study`、`/review` 默认只操作当前活跃学期下的课程。
-- **新学期切换**：新建 `courses/<year>-<spring|fall>/`，旧学期保留不动作为历史学期。
-- **不使用 `courses/current` 软链接**：避免 Windows 和 Git 兼容问题。命令和配置文件直接引用学期目录路径。
-- **REVIEW.md**：只代表当前学期复习状态。旧学期 REVIEW 应归档到 `archive/reviews/REVIEW-<semester>.md`。
-- **不确定归属的资料**：进入 `staging/`，不直接进入课程正式目录。等确认课程匹配后再移入。
+## 必须守住的边界
 
-切换学期清单：
-1. `git status` 确认工作区干净
-2. 给旧学期打 tag（如 `archive/2026-spring`）或提交备份
-3. 创建 `courses/<新学期>/` 及课程骨架
-4. 归档旧 `REVIEW.md` → `archive/reviews/REVIEW-<旧学期>.md`
-5. 初始化新 `REVIEW.md`
-6. 更新 `AGENTS.md`、`CLAUDE.md`、`.claude/commands/*.md` 中的学期路径
-7. `git commit` + `git push`
+- 导入、解析和生成笔记都不等于学过。自述懂了不等于独立理解或掌握证据。具体证据定义只在共享规范维护。
+- 用户可跳过自测，不阻断学习，不强制连续授课。日常先回答用户当前问题。
+- 来源定位到文件、页/章节/时间段；材料、解释、补充和待核实内容分清。公式、图表、OCR不确定处回看原件。模型反馈不是官方评分。
+- 原始文件只放一份；重复内容登记别名，不能擅自删除。无须复杂命名或先做OCR才能提问。
+- 多目标、多对话分开状态；通过 tools/learning.py 的锁、版本检查、独立事件写入。冲突保留候选，不能覆盖别人变更。
+- 不读取凭据实际值。未经用户另行明确授权，不删除、Git提交/推送、发布、全局安装或全局配置修改。历史自动提交规则已经退出。
+- 实际提醒配置前确认时间、频率、起止日期与Asia/Shanghai；不能用文档状态冒充已经生效。
+- 有价值且已核实的讨论可融入正式笔记，历史笔记不批量重写或重置状态。新资料尚未提供时如实保留待导入。
 
-## 配套文件
+## 工具与维护
 
-- **`.claude/commands-speed-dial.md`** — 所有命令的速查手册（日常操作先查它）
-- **`.claude/adr.md`** — 架构决策记录
-- **`REVIEW.md`** — 期末复习的单一真相源（考试日期、进度追踪、阶段计划）
-- **`.claude/summer-refactor-plan.md`** — 暑假重构计划
+`tools/learning.py` 只需Python标准库。资料提取统一用 `tools/extract_file.py`；普通文档按需提取，复杂OCR/MinerU不是默认前置条件。音频没有真实转写能力时不能假装听过。不要绕过统一入口调用旧批量脚本，旧脚本保留供兼容和调试。
 
-## 知识库规范
+本地文件可读写能力以当前宿主实际权限为准；若新聊天未自动加载项目规则，明确读取本文件后开始。没有该能力时，不声称已读写本地文件。
 
-详见 `.claude/rules/note-conventions.md`。核心要点：
-
-- **课程笔记**：`<序号>-<章节标题>.md`，frontmatter 含 title/course/chapter/tags/source/status/related
-- **主题笔记**：`YYYY-MM-DD-主题-标题.md`
-- **status 四阶段**：`draft → learned → reviewed → mastered`
-- **笔记间链接**：通过 `related` 字段和 Markdown 链接互相引用
-
-## 工作流
-
-所有工作流已实现为自定义命令，详见 `.claude/commands/`：
-
-| 命令 | 用途 | 何时用 |
-|------|------|--------|
-| `/learn` | 处理课件 → 生成结构化笔记 | 导入新课件时 |
-| `/study` | 课程问答模式 → 对话沉淀到笔记 | 深入理解某个章节 |
-| `/review` | 期末复习总控 → 每日任务追踪 | 考试季 |
-| `/homework` | 编程作业引导式辅导 | 做编程作业时 |
-| `/kb-review` | 知识库复习 → 查漏补缺 | 定期巩固 |
-
-### Git 安全流程（所有操作的前提）
-
-1. **频繁提交**：每完成 ~20-50 行，立即 `git commit` + `git push`
-2. **删除前必提交**：先 commit + push 当前修改，删除后立即再 commit
-3. **Push 不拖延**：commit 后马上 push，本地 commit 不被视为"已保存"
-4. **高风险操作前检查**：`reset --hard`、`clean -fd`、批量删除前，确认工作区干净
-
-## Python 环境
-
-详见 `.claude/rules/python-env.md`。
-- Python 3.10+，依赖见 `requirements.txt`
-- 统一入口：`tools/extract_file.py`（MarkItDown 优先 → 三级回退 → MinerU）
-- MinerU 高质量引擎用于公式/表格/扫描件（`conda env mineru`，Python 3.10）
-
-## 架构维护
-
-详见 `.claude/rules/architecture.md`。
-
-**依赖拓扑**：上层不引用下层；同级不互相引用；共享定义只有法律层（`.claude/references/`）一份。
-
-修改配置后的检查清单见 `.claude/rules/architecture.md#检查清单`。
+维护时检查受影响路径、链接和行为；`python -m unittest discover -s tools -p "test_*.py"` 检验脚本，不能代替学习语义或真实模型验收。当前规格见 [Spec.md](Spec.md)。迁移恢复材料留在本机 archive，不作为新任务执行指令。创建目标后工具自动更新导航，补登记或手动迁移后调用 refresh_navigation。

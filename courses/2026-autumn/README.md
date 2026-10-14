@@ -1,0 +1,12 @@
+# 2026-autumn 课程
+
+[全部学期](../README.md)
+
+| 学习对象 | 资料 | 笔记 | 地图 |
+|---|---|---|---|
+| [人机交互](%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/README.md) | [原件](%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/materials) | [笔记](%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/notes) | [地图](%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/MAP.md) |
+| [大模型系统工程](%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%B3%BB%E7%BB%9F%E5%B7%A5%E7%A8%8B/README.md) | [原件](%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%B3%BB%E7%BB%9F%E5%B7%A5%E7%A8%8B/materials) | [笔记](%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%B3%BB%E7%BB%9F%E5%B7%A5%E7%A8%8B/notes) | [地图](%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%B3%BB%E7%BB%9F%E5%B7%A5%E7%A8%8B/MAP.md) |
+| [大模型网络系统](%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%BD%91%E7%BB%9C%E7%B3%BB%E7%BB%9F/README.md) | [原件](%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%BD%91%E7%BB%9C%E7%B3%BB%E7%BB%9F/materials) | [笔记](%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%BD%91%E7%BB%9C%E7%B3%BB%E7%BB%9F/notes) | [地图](%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%BD%91%E7%BB%9C%E7%B3%BB%E7%BB%9F/MAP.md) |
+| [机器学习](%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/README.md) | [原件](%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/materials) | [笔记](%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/notes) | [地图](%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/MAP.md) |
+| [编译原理](%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/README.md) | [原件](%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/materials) | [笔记](%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/notes) | [地图](%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/MAP.md) |
+| [需求与商业模式创新](%E9%9C%80%E6%B1%82%E4%B8%8E%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%E5%88%9B%E6%96%B0/README.md) | [原件](%E9%9C%80%E6%B1%82%E4%B8%8E%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%E5%88%9B%E6%96%B0/materials) | [笔记](%E9%9C%80%E6%B1%82%E4%B8%8E%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%E5%88%9B%E6%96%B0/notes) | [地图](%E9%9C%80%E6%B1%82%E4%B8%8E%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%E5%88%9B%E6%96%B0/MAP.md) |

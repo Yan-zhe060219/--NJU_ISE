@@ -1,31 +1,17 @@
----
-course: "高级算法"
-semester: "2026-spring"
-status: "completed"
----
+# 高级算法 · 2026-spring
 
-# 高级算法
+[原始资料](materials/) · [资料清单](MATERIALS.md) · [正式笔记](notes/) · [学习地图](MAP.md)
 
-## 资料入口
+各类课程原件统一放在 `materials/`，无需先选作业、考试或复习类别；只有成组文件需要时才建子目录。登记只确认文件位置和指纹，不代表已经阅读或核实。
 
-- `syllabus/` — 课程大纲和教学安排
-- `lectures/` — 课件
-- `notes/` — 学习笔记
-- `assignments/` — 作业资料
-- `exams/` — 往年卷、模拟题、考试资料
-- `review/` — 错题本、复习资料、考试情报
-- `assets/` — 图片和附件
+[原章节索引](notes/_index.md)
 
-## 学习状态
+## 笔记直达
 
-| 模块 | 状态 | 备注 |
-|---|---|---|
-| 笔记 | 待复查 | 从旧 knowledge-base 迁入 |
-| 练习 | 待迁移 | 后续从 practice/ 迁入 |
-| 课件 | 待迁移 | 后续从 inbox/ 迁入 |
+- [01-Fingerprinting](notes/01-Fingerprinting.md)
+- [02-Hashing](notes/02-Hashing.md)
+- [03-Sketching](notes/03-Sketching.md)
+- [04-Dimension](notes/04-Dimension.md)
+- [05-Flow-LP](notes/05-Flow-LP.md)
 
-## 待办
-
-- [ ] 检查迁移后的笔记链接
-- [ ] 补全课程元信息
-- [ ] 迁移练习和考试资料
+`records/` 保存学习事件，`sessions/` 保存本对话续接点，`pending/` 保存待核实内容。目标ID：`course-2026-spring-algorithms`。
