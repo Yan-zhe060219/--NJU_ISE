@@ -1,7 +1,0 @@
-                                  /             /
-                           /
-                                     COMMIT
-ROLLBACK                             OPEN
-           CLOSE
-like
-
